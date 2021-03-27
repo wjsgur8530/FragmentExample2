@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_2 extends Fragment {
+public class fragment_category_3 extends Fragment {
     private View view;
     private String result;
     private Button btn_move;
@@ -57,7 +56,7 @@ public class fragment_category_2 extends Fragment {
 
         RadioGroup rdiog_7_freestall_area_out_collision = (RadioGroup) view.findViewById(R.id.freestall_Area_Out_Collision_rdogrp7); //7번 문항(프리스톨)
 
-        rdiog_6_sit_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rdiog_7_freestall_area_out_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.freestall_Area_Out_Collision_a7_1) {

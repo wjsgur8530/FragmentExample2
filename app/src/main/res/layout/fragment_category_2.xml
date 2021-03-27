@@ -233,7 +233,7 @@
                     android:layout_height="120dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/freestall_Areaoutcollision_rdogrp7"
+                        android:id="@+id/freestall_Area_Out_Collision_rdogrp7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -397,14 +397,14 @@
                     android:layout_height="120dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/outward_HygieneLeg_rdogrp9"
+                        android:id="@+id/outward_Hygiene_Leg_rdogrp9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/outward_HygieneLeg_a9_1"
+                            android:id="@+id/outward_Hygiene_Leg_a9_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="20% 이하"
@@ -412,7 +412,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/outward_HygieneLeg_a9_2"
+                            android:id="@+id/outward_Hygiene_Leg_a9_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -420,7 +420,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/outward_HygieneLeg_a9_3"
+                            android:id="@+id/outward_Hygiene_Leg_a9_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"

@@ -57,7 +57,7 @@ public class fragment_category_2 extends Fragment {
 
         RadioGroup rdiog_7_freestall_area_out_collision = (RadioGroup) view.findViewById(R.id.freestall_Area_Out_Collision_rdogrp7); //7번 문항(프리스톨)
 
-        rdiog_6_sit_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rdiog_7_freestall_area_out_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.freestall_Area_Out_Collision_a7_1) {

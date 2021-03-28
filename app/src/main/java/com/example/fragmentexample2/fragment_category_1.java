@@ -1,12 +1,15 @@
 package com.example.fragmentexample2;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,10 +23,17 @@ public class fragment_category_1 extends Fragment {
     private EditText ed_1_poorRate;
     Integer water_Tank_Num, water_Tank_Clean, water_Tank_Time;
 
+    private TextView q3;
+    private TextView q4;
+    private ScrollView scrollview;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_1, container, false);
+        q3 = (TextView)view.findViewById(R.id.q3);
+        q4 = (TextView)view.findViewById(R.id.q4);
+        scrollview = (ScrollView)view.findViewById(R.id.scrollview);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.poorRate_a1); //1번 문항
@@ -33,6 +43,7 @@ public class fragment_category_1 extends Fragment {
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q3,scrollview,0);
                 if (checkedId == R.id.water_Tank_Num_a2_1) {
                     water_Tank_Num = 1;
                 } else if (checkedId == R.id.water_Tank_Num_a2_2) {
@@ -46,6 +57,7 @@ public class fragment_category_1 extends Fragment {
         rdiog_3_water_tank_clean.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q4,scrollview,0);
                 if (checkedId == R.id.water_Tank_Clean_a3_1) {
                     water_Tank_Clean = 1;
                 } else if (checkedId == R.id.water_Tank_Clean_a3_2) {
@@ -106,5 +118,21 @@ public class fragment_category_1 extends Fragment {
         });
 
         return view;
+    }
+    // 버튼 눌렀을 때 자동 스크롤 함수
+    public static void scrollToView(View view, final ScrollView scrollView, int count) {
+        if (view != null && view != scrollView) {
+            count += view.getTop();
+            scrollToView((View) view.getParent(), scrollView, count);
+        } else if (scrollView != null) {
+            final int finalCount = count;
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    scrollView.smoothScrollTo(0, finalCount);
+                }
+            }, 200);
+        }
     }
 }

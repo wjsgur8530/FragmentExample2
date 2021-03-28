@@ -1,12 +1,15 @@
 package com.example.fragmentexample2;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,10 +22,44 @@ public class fragment_category_2 extends Fragment {
     private Button btn_move;
     Integer freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast, shade, summer_Ventilating, mist_Spary, wind_Block_Adult, winter_Ventilating, straw, warm, wind_Block_Child;
 
+
+    private TextView q6;
+    private TextView q7;
+    private TextView q8;
+    private TextView q9;
+    private TextView q10;
+    private TextView q11;
+    private TextView q12;
+    private TextView q13;
+    private TextView q14;
+    private TextView q15;
+    private TextView q16;
+    private TextView q17;
+    private TextView q18;
+    private TextView q19;
+    private ScrollView scrollview;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_2, container, false);
+
+        scrollview = (ScrollView)view.findViewById(R.id.scrollview2);
+        q6 = (TextView)view.findViewById(R.id.q6);
+        q7 = (TextView)view.findViewById(R.id.q7);
+        q8 = (TextView)view.findViewById(R.id.q8);
+        q9 = (TextView)view.findViewById(R.id.q9);
+        q10 = (TextView)view.findViewById(R.id.q10);
+        q11 = (TextView)view.findViewById(R.id.q11);
+        q12 = (TextView)view.findViewById(R.id.q12);
+        q13 = (TextView)view.findViewById(R.id.q13);
+        q14 = (TextView)view.findViewById(R.id.q14);
+        q15 = (TextView)view.findViewById(R.id.q15);
+        q16 = (TextView)view.findViewById(R.id.q16);
+        q17 = (TextView)view.findViewById(R.id.q17);
+        q18 = (TextView)view.findViewById(R.id.q18);
+        q19 = (TextView)view.findViewById(R.id.q19);
+
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         RadioGroup rdiog_5_freestall_num = (RadioGroup) view.findViewById(R.id.freestall_Num_rdogrp5); //5번 문항(프리스톨)
@@ -30,6 +67,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_5_freestall_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q6,scrollview,0);
                 if (checkedId == R.id.freestall_Num_a5_1) {
                     freestall_Num = 1;
                 } else if (checkedId == R.id.freestall_Num_a5_2) {
@@ -45,6 +83,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_6_sit_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q7,scrollview,0);
                 if (checkedId == R.id.sit_Collision_a6_1) {
                     sit_Collision = 1;
                 } else if (checkedId == R.id.sit_Collision_a6_2) {
@@ -60,6 +99,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_7_freestall_area_out_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q8,scrollview,0);
                 if (checkedId == R.id.freestall_Area_Out_Collision_a7_1) {
                     freestall_Area_Out_Collision = 1;
                 } else if (checkedId == R.id.freestall_Area_Out_Collision_a7_2) {
@@ -75,6 +115,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_8_sit_action_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q9,scrollview,0);
                 if (checkedId == R.id.sit_Action_Time_a8_1) {
                     sit_Action_Time = 1;
                 } else if (checkedId == R.id.sit_Action_Time_a8_2) {
@@ -90,6 +131,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_9_outward_hygiene_leg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q10,scrollview,0);
                 if (checkedId == R.id.outward_Hygiene_Leg_a9_1) {
                     outward_Hygiene_Leg = 1;
                 } else if (checkedId == R.id.outward_Hygiene_Leg_a9_2) {
@@ -105,6 +147,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_10_outward_hygiene_back.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q11,scrollview,0);
                 if (checkedId == R.id.outward_Hygiene_Back_a10_1) {
                     outward_Hygiene_Back = 1;
                 } else if (checkedId == R.id.outward_Hygiene_Back_a10_2) {
@@ -120,6 +163,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_11_outward_hygiene_breast.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q12,scrollview,0);
                 if (checkedId == R.id.outward_Hygiene_Breast_a11_1) {
                     outward_Hygiene_Breast = 1;
                 } else if (checkedId == R.id.outward_Hygiene_Breast_a11_2) {
@@ -135,6 +179,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_12_shade.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q13,scrollview,0);
                 if (checkedId == R.id.shade_a12_1) {
                     shade = 1;
                 } else if (checkedId == R.id.shade_a12_2) {
@@ -148,6 +193,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_13_summer_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q14,scrollview,0);
                 if (checkedId == R.id.summer_Ventilating_a13_1) {
                     summer_Ventilating = 1;
                 } else if (checkedId == R.id.summer_Ventilating_a13_2) {
@@ -161,6 +207,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_14_mist_spary.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q15,scrollview,0);
                 if (checkedId == R.id.mist_Spary_a14_1) {
                     mist_Spary = 1;
                 } else if (checkedId == R.id.mist_Spary_a14_2) {
@@ -174,6 +221,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_15_wind_block_adult.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q16,scrollview,0);
                 if (checkedId == R.id.wind_Block_a15_1) {
                     wind_Block_Adult = 1;
                 } else if (checkedId == R.id.wind_Block_a15_2) {
@@ -187,6 +235,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_16_winter_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q17,scrollview,0);
                 if (checkedId == R.id.winter_Ventilating_a16_1) {
                     winter_Ventilating = 1;
                 } else if (checkedId == R.id.winter_Ventilating_a16_2) {
@@ -200,6 +249,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_17_straw.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q18,scrollview,0);
                 if (checkedId == R.id.straw_a17_1) {
                     straw = 1;
                 } else if (checkedId == R.id.straw_a17_2) {
@@ -213,6 +263,7 @@ public class fragment_category_2 extends Fragment {
         rdiog_18_warm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                scrollToView(q19,scrollview,0);
                 if (checkedId == R.id.warm_a18_1) {
                     warm = 1;
                 } else if (checkedId == R.id.warm_a18_2) {
@@ -292,5 +343,21 @@ public class fragment_category_2 extends Fragment {
         });
 
         return view;
+    }
+    // 버튼 눌렀을 때 자동 스크롤 함수
+    public static void scrollToView(View view, final ScrollView scrollView, int count) {
+        if (view != null && view != scrollView) {
+            count += view.getTop();
+            scrollToView((View) view.getParent(), scrollView, count);
+        } else if (scrollView != null) {
+            final int finalCount = count;
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    scrollView.smoothScrollTo(0, finalCount);
+                }
+            }, 200);
+        }
     }
 }

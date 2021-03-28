@@ -15,12 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1_freestall extends Fragment {
+public class fragment_category_1_freestall extends Fragment implements MainActivity.onKeyBackPressedListener{
     private View view;
     private String result;
     private Button btn_move;
     private EditText ed_1_poorRate;
-    Integer water_Tank_Num, water_Tank_Clean, water_Tank_Time;
+    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
 
     RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
@@ -85,7 +85,14 @@ public class fragment_category_1_freestall extends Fragment {
         });
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
 
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
@@ -119,5 +126,12 @@ public class fragment_category_1_freestall extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setOnKeyBackPressedListener(null);
+        //액티비티의 콜백을 직접호출
+        activity.onBackPressed();
     }
 }

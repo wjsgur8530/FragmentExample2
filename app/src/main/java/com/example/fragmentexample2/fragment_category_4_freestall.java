@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4_freestall extends Fragment {
+public class fragment_category_4_freestall extends Fragment implements MainActivity.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
@@ -33,6 +33,14 @@ public class fragment_category_4_freestall extends Fragment {
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
 
         //데이터 받는 곳
@@ -66,5 +74,13 @@ public class fragment_category_4_freestall extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.framelayout, new fragment_category_3_freestall())
+                .addToBackStack(null)
+                .commit();
     }
 }

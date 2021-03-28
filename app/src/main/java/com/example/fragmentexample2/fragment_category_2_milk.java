@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,7 +25,18 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_2_milk, container, false);
-
+        ScrollView scrollview_milk_2 = view.findViewById(R.id.scrollview_milk_2);
+        TextView milk_outward_Hygiene_Leg_q6 = (TextView) view.findViewById(R.id.milk_outward_Hygiene_Leg_q6);
+        TextView milk_outward_Hygiene_Back_q7 = (TextView) view.findViewById(R.id.milk_outward_Hygiene_Back_q7);
+        TextView milk_outward_Hygiene_Breast_q8 = (TextView) view.findViewById(R.id.milk_outward_Hygiene_Breast_q8);
+        TextView milk_shade_q9 = (TextView) view.findViewById(R.id.milk_shade_q9);
+        TextView milk_summer_Ventilating_q10 = (TextView) view.findViewById(R.id.milk_summer_Ventilating_q10);
+        TextView milk_mist_Spary_q11 = (TextView) view.findViewById(R.id.milk_mist_Spary_q11);
+        TextView milk_wind_Block_q12 = (TextView) view.findViewById(R.id.milk_wind_Block_q12);
+        TextView milk_winter_Ventilating_q13 = (TextView) view.findViewById(R.id.milk_winter_Ventilating_q13);
+        TextView milk_straw_q14 = (TextView) view.findViewById(R.id.milk_straw_q14);
+        TextView milk_warm_q15 = (TextView) view.findViewById(R.id.milk_warm_q15);
+        TextView milk_wind_Block_q16 = (TextView) view.findViewById(R.id.milk_wind_Block_q16);
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
 
         RadioGroup rdiog_5_sit_action_time = (RadioGroup) view.findViewById(R.id.milk_sit_Action_Time_rdogrp5);
@@ -31,6 +44,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_5_sit_action_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_outward_Hygiene_Leg_q6,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_sit_Action_Time_a5_1) {
                     sit_Action_Time = 1;
                 } else if (checkedId == R.id.milk_sit_Action_Time_a5_2) {
@@ -45,7 +59,9 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
 
         rdiog_6_outward_hygiene_leg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
+
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_outward_Hygiene_Back_q7,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_outward_Hygiene_Leg_a6_1) {
                     outward_Hygiene_Leg = 1;
                 } else if (checkedId == R.id.milk_outward_Hygiene_Leg_a6_2) {
@@ -61,6 +77,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_7_outward_hygiene_back.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_outward_Hygiene_Breast_q8,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_outward_Hygiene_Back_a7_1) {
                     outward_Hygiene_Back = 1;
                 } else if (checkedId == R.id.milk_outward_Hygiene_Back_a7_2) {
@@ -76,6 +93,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_8_outward_hygiene_breast.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_shade_q9,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_outward_Hygiene_Breast_a8_1) {
                     outward_Hygiene_Breast = 1;
                 } else if (checkedId == R.id.milk_outward_Hygiene_Breast_a8_2) {
@@ -91,6 +109,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_9_shade.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_summer_Ventilating_q10,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_shade_a9_1) {
                     shade = 1;
                 } else if (checkedId == R.id.milk_shade_a9_2) {
@@ -104,6 +123,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_10_summer_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_mist_Spary_q11,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_summer_Ventilating_a10_1) {
                     summer_Ventilating = 1;
                 } else if (checkedId == R.id.milk_summer_Ventilating_a10_2) {
@@ -117,6 +137,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_11_mist_spary.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_wind_Block_q12,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_mist_Spary_a11_1) {
                     mist_Spary = 1;
                 } else if (checkedId == R.id.milk_mist_Spary_a11_2) {
@@ -130,6 +151,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_12_wind_block_adult.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_winter_Ventilating_q13,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_wind_Block_a12_1) {
                     wind_Block_Adult = 1;
                 } else if (checkedId == R.id.milk_wind_Block_a12_2) {
@@ -143,6 +165,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_13_winter_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_straw_q14,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_winter_Ventilating_a13_1) {
                     winter_Ventilating = 1;
                 } else if (checkedId == R.id.milk_winter_Ventilating_a13_2) {
@@ -156,6 +179,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_14_straw.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_warm_q15,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_straw_a14_1) {
                     straw = 1;
                 } else if (checkedId == R.id.milk_straw_a14_2) {
@@ -169,6 +193,7 @@ public class fragment_category_2_milk extends Fragment implements MainActivity.o
         rdiog_15_warm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_wind_Block_q16,scrollview_milk_2,0);
                 if (checkedId == R.id.milk_warm_a15_1) {
                     warm = 1;
                 } else if (checkedId == R.id.milk_warm_a15_2) {

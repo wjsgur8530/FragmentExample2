@@ -6,7 +6,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="8">
+        android:layout_weight="8"
+        android:id="@+id/scrollview_milk_4"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +51,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q34"
+                        android:id="@+id/milk_head_Butt_q34"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 머리박치기 빈도는 얼마나 되는가?"
@@ -111,7 +113,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q35"
+                        android:id="@+id/milk_struggle_q35"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 투쟁행동 빈도는 얼마나 되는가?(머리박치기 제외)"
@@ -173,7 +175,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q36"
+                        android:id="@+id/milk_touch_Near_q36"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="평가자가 50cm 이내로 가까이 다가갈 수 있으나 만질 수 없는 소의 비율은 얼마나 되는가?"
@@ -235,7 +237,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q37"
+                        android:id="@+id/milk_touch_Far_q37"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="평가자가 50~100cm 이내로 접근을 허용한 소의 비율은 얼마나 되는가?"
@@ -297,7 +299,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q38"
+                        android:id="@+id/milk_touch_Impossibility_q38"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="평가자가 100cm 이내로 다가갈 수 없는 소의 비율은 얼마나 되는가?"

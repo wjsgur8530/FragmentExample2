@@ -55,7 +55,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q5"
+                        android:id="@+id/freestall_Num_q5"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="사육두수 대비 프리스톨 수의 비율이 얼마나 됩니까?(프리스톨 우사에만 해당)"
@@ -137,7 +137,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q6"
+                        android:id="@+id/freestall_sit_Collision_q6"
                         android:layout_width="wrap_content"
                         android:layout_height="110dp"
                         android:text="앉기동작 시 구조물에 닿는 소의 비율은 얼마나 됩니까?(프리스톨 우사만 해당)"
@@ -219,7 +219,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q7"
+                        android:id="@+id/freestall_Area_Out_Collision_q7"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="앉은 소 중 프리스톨 영역을 벗어난 비율은 얼마나 됩니까?(프리스톨 우사만 해당)"
@@ -301,7 +301,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q8"
+                        android:id="@+id/freestall_sit_Action_Time_q8"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="앉기동작 시 지속시간(초)은 얼마나 됩니까?"
@@ -383,7 +383,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q9"
+                        android:id="@+id/freestall_outward_Hygiene_Leg_q9"
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:text="전체 표본 중 뒤쪽 아랫다리가 더러운 소 비율은 얼마나 되는가?"
@@ -465,7 +465,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q10"
+                        android:id="@+id/freestall_outward_Hygiene_Back_q10"
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:text="전체 표본 중 뒷부분이 더러운 소 비율은 얼마나 되는가?"
@@ -547,7 +547,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q11"
+                        android:id="@+id/freestall_outward_Hygiene_Breast_q11"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본 중 유방이 더러운 소 비율은 얼마나 되는가?"
@@ -629,7 +629,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q12"
+                        android:id="@+id/freestall_shade_q12"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="더울 때 주사육시설에 모든 가축이 직사광선을 피해 쉴 수 있는 충분한 그늘이 제공되는가?(송아지 포함)"
@@ -703,7 +703,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q13"
+                        android:id="@+id/freestall_summer_Ventilating_q13"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="주사육시설에 환기팬이 갖춰져 있고 더위를 대비한 충분한 풍속을 제공할 수 있는가?(송아지 포함)"
@@ -777,7 +777,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q14"
+                        android:id="@+id/freestall_mist_Spary_q14"
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:text="주사육시설에 더위를 대비한 안개분무시설이 갖춰져 있는가?(송아지 포함)"
@@ -851,7 +851,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q15"
+                        android:id="@+id/freestall_wind_Block_q15"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:text="주사육시설에 모든 가축이 춥고 매서운 바람(북서풍 등)을 피할 수 있는 충분한 바람차단시설이 갖춰져 있는가?(포유송아지 제외)"
@@ -925,7 +925,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q16"
+                        android:id="@+id/freestall_winter_Ventilating_q16"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:text="주사육시설에 환기팬이 갖춰져 있고 추운 계절에도 환기를 위한 최소한의 풍속 시스템 운영방안을 갖추고 있는가?(포유송아지 제외)"
@@ -999,7 +999,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q17"
+                        android:id="@+id/freestall_straw_q17"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:text="포유송아지 사육시설에 추위로부터 체온을 보호할 수 있는 마른 깔짚을 충분히 갖추었는가?(포유송아지용)"
@@ -1074,7 +1074,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q18"
+                        android:id="@+id/freestall_warm_q18"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:text="포유송아지 사육시설에 추위로부터 체온을 보호할 수 있는 보온등을 갖추었고 모든 송아지가 이용 가능한가?(포유송아지용)"
@@ -1149,7 +1149,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q19"
+                        android:id="@+id/freestall_wind_Block_q19"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:text="포유송아지 사육시설에 춥고 매서운 바람(북서풍 등)을 피할 수 있는 바람차단시설이 갖춰져 있는가?"

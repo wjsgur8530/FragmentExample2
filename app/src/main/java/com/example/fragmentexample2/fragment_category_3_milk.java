@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +25,23 @@ public class fragment_category_3_milk extends Fragment implements MainActivity.o
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_3_milk, container, false);
+        ScrollView scrollview_milk_3 = view.findViewById(R.id.scrollview_milk_3);
+        TextView milk_slight_Limp_q17 = (TextView) view.findViewById(R.id.milk_slight_Limp_q17);
+        TextView milk_slight_Hairloss_q19 = (TextView) view.findViewById(R.id.milk_slight_Hairloss_q19);
+        TextView milk_critical_Hairloss_q20 = (TextView) view.findViewById(R.id.milk_critical_Hairloss_q20);
+        TextView milk_cough_q21 = (TextView) view.findViewById(R.id.milk_cough_q21);
+        TextView milk_runny_Nose_q22 = (TextView) view.findViewById(R.id.milk_runny_Nose_q22);
+        TextView milk_ophthalmic_Secretion_q23 = (TextView) view.findViewById(R.id.milk_ophthalmic_Secretion_q23);
+        TextView milk_respiratory_Failure_q24 = (TextView) view.findViewById(R.id.milk_respiratory_Failure_q24);
+        TextView milk_diarrhea_q25 = (TextView) view.findViewById(R.id.milk_diarrhea_q25);
+        TextView milk_out_Genitals_Secretion_q26 = (TextView) view.findViewById(R.id.milk_out_Genitals_Secretion_q26);
+        TextView milk_breast_Inflammation_q27 = (TextView) view.findViewById(R.id.milk_breast_Inflammation_q27);
+        TextView milk_fall_Dead_q28 = (TextView) view.findViewById(R.id.milk_fall_Dead_q28);
+        TextView milk_dystocia_q29 = (TextView) view.findViewById(R.id.milk_dystocia_q29);
+        TextView milk_astasia_q30 = (TextView) view.findViewById(R.id.milk_astasia_q30);
+        TextView milk_horn_q31 = (TextView) view.findViewById(R.id.milk_horn_q31);
+        TextView milk_horn_Anesthesia_q32 = (TextView) view.findViewById(R.id.milk_horn_Anesthesia_q32);
+        TextView milk_horn_Painkiller_q33 = (TextView) view.findViewById(R.id.milk_horn_Painkiller_q33);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         final EditText ed_17_slight_Limp = view.findViewById(R.id.milk_slight_Limp_a17);
@@ -46,6 +65,7 @@ public class fragment_category_3_milk extends Fragment implements MainActivity.o
         rdiog_31_horn.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_horn_Anesthesia_q32,scrollview_milk_3,0);
                 if (checkedId == R.id.milk_horn_a31_1) {
                     horn = 1;
                 } else if (checkedId == R.id.milk_horn_a31_2) {
@@ -63,6 +83,7 @@ public class fragment_category_3_milk extends Fragment implements MainActivity.o
         rdiog_32_horn_anesthesia.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_horn_Painkiller_q33,scrollview_milk_3,0);
                 if (checkedId == R.id.milk_horn_Anesthesia_a32_1) {
                     horn_Anesthesia = 1;
                 } else if (checkedId == R.id.milk_horn_Anesthesia_a32_2) {

@@ -317,7 +317,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/milk_touch_Impossibility_38"
+                        android:id="@+id/milk_touch_Impossibility_a38"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"

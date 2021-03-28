@@ -15,11 +15,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import org.w3c.dom.Text;
 
-public class fragment_category_2_freestall extends Fragment {
+public class fragment_category_2_freestall extends Fragment implements MainActivity.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
-    Integer freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast, shade, summer_Ventilating, mist_Spary, wind_Block_Adult, winter_Ventilating, straw, warm, wind_Block_Child;
+    Integer freestall_Num = 0, sit_Collision = 0, freestall_Area_Out_Collision = 0, sit_Action_Time = 0, outward_Hygiene_Leg = 0, outward_Hygiene_Back = 0, outward_Hygiene_Breast = 0,
+            shade = 0, summer_Ventilating = 0, mist_Spary = 0, wind_Block_Adult = 0, winter_Ventilating = 0, straw = 0, warm = 0, wind_Block_Child = 0;
 
     @Nullable
     @Override
@@ -237,6 +238,14 @@ public class fragment_category_2_freestall extends Fragment {
         });
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
@@ -293,5 +302,13 @@ public class fragment_category_2_freestall extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+            getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.framelayout, new fragment_category_1_freestall())
+                        .addToBackStack(null)
+                        .commit();
     }
 }

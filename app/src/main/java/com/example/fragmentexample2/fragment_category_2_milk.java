@@ -12,11 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_2_milk extends Fragment {
+public class fragment_category_2_milk extends Fragment implements MainActivity.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
-    Integer sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast, shade, summer_Ventilating, mist_Spary, wind_Block_Adult, winter_Ventilating, straw, warm, wind_Block_Child;
+    Integer sit_Action_Time = 0, outward_Hygiene_Leg = 0, outward_Hygiene_Back = 0, outward_Hygiene_Breast = 0, shade = 0, summer_Ventilating = 0, mist_Spary = 0,
+            wind_Block_Adult = 0, winter_Ventilating = 0, straw = 0, warm = 0, wind_Block_Child = 0;
 
     @Nullable
     @Override
@@ -190,6 +191,14 @@ public class fragment_category_2_milk extends Fragment {
         });
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
 
         //데이터 받는 곳
@@ -241,5 +250,13 @@ public class fragment_category_2_milk extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.framelayout, new fragment_category_1_milk())
+                .addToBackStack(null)
+                .commit();
     }
 }

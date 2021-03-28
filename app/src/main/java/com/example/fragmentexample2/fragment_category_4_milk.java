@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4_milk extends Fragment {
+public class fragment_category_4_milk extends Fragment implements MainActivity.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
@@ -28,11 +28,18 @@ public class fragment_category_4_milk extends Fragment {
         final EditText ed_35_struggle = view.findViewById(R.id.milk_struggle_a35);
         final EditText ed_36_touch_Near = view.findViewById(R.id.milk_touch_Near_a36);
         final EditText ed_37_touch_Far = view.findViewById(R.id.milk_touch_Far_a37);
-        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_38);
+        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_a38);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
 
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
@@ -65,5 +72,13 @@ public class fragment_category_4_milk extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.framelayout, new fragment_category_3_milk())
+                .addToBackStack(null)
+                .commit();
     }
 }

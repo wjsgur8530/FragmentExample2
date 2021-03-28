@@ -13,12 +13,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1_milk extends Fragment {
+public class fragment_category_1_milk extends Fragment implements MainActivity.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
     private EditText ed_1_poorRate;
-    Integer water_Tank_Num, water_Tank_Clean, water_Tank_Time;
+    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
     @Nullable
     @Override
@@ -72,6 +72,14 @@ public class fragment_category_1_milk extends Fragment {
         });
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
+        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackKey();
+            }
+        });
 
 
         //데이터 받는 곳
@@ -79,6 +87,8 @@ public class fragment_category_1_milk extends Fragment {
 //            result = getArguments().getString("fromFrag1"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
 //            tv_frag1.setText(result);
 //        }
+
+
 
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
             @Override
@@ -106,5 +116,12 @@ public class fragment_category_1_milk extends Fragment {
         });
 
         return view;
+    }
+    @Override
+    public void onBackKey() {
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setOnKeyBackPressedListener(null);
+        //액티비티의 콜백을 직접호출
+        activity.onBackPressed();
     }
 }

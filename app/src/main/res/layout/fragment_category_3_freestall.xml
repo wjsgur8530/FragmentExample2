@@ -54,7 +54,7 @@
                         android:id="@+id/q20"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본에서 다리절음이 있는 소의 비율은 얼마나 되는가?"
+                        android:text="전체 표본에서 경미한 다리절음이 있는 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"

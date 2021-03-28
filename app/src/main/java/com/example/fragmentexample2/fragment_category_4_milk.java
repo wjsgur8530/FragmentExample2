@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,13 +24,18 @@ public class fragment_category_4_milk extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_4_milk, container, false);
-
+        ScrollView scrollview_milk_4 = view.findViewById(R.id.scrollview_milk_4);
+        TextView milk_head_Butt_q34 = (TextView) view.findViewById(R.id.milk_head_Butt_q34);
+        TextView milk_struggle_q35 = (TextView) view.findViewById(R.id.milk_struggle_q35);
+        TextView milk_touch_Near_q36 = (TextView) view.findViewById(R.id.milk_touch_Near_q36);
+        TextView milk_touch_Far_q37 = (TextView) view.findViewById(R.id.milk_touch_Far_q37);
+        TextView milk_touch_Impossibility_q38 = (TextView) view.findViewById(R.id.milk_touch_Impossibility_q38);
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         final EditText ed_34_head_Butt = view.findViewById(R.id.milk_head_Butt_a34);
         final EditText ed_35_struggle = view.findViewById(R.id.milk_struggle_a35);
         final EditText ed_36_touch_Near = view.findViewById(R.id.milk_touch_Near_a36);
         final EditText ed_37_touch_Far = view.findViewById(R.id.milk_touch_Far_a37);
-        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_38);
+        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_a38);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");

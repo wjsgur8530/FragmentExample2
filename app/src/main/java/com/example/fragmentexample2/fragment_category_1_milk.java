@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,19 +22,25 @@ public class fragment_category_1_milk extends Fragment {
     private EditText ed_1_poorRate;
     Integer water_Tank_Num, water_Tank_Clean, water_Tank_Time;
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_1_milk, container, false);
-
+        ScrollView scrollview_milk_1 = view.findViewById(R.id.scrollview_milk_1);
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.milk_poorRate_a1); //1번 문항
-
         RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Num_rdogrp2); //2번 문항
+        RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Clean_rdogrp3); //3번 문항
+        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Time_rdogrp4); //4번 문항
+        TextView milk_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.milk_water_Tank_Clean_q3);
+        TextView milk_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.milk_water_Tank_Time_q4);
 
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_water_Tank_Clean_q3,scrollview_milk_1,0);
                 if (checkedId == R.id.milk_water_Tank_Num_a2_1) {
                     water_Tank_Num = 1;
                 } else if (checkedId == R.id.milk_water_Tank_Num_a2_2) {
@@ -41,11 +49,12 @@ public class fragment_category_1_milk extends Fragment {
             }
         });
 
-        RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Clean_rdogrp3); //3번 문항
+
 
         rdiog_3_water_tank_clean.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(milk_water_Tank_Time_q4,scrollview_milk_1,0);
                 if (checkedId == R.id.milk_water_Tank_Clean_a3_1) {
                     water_Tank_Clean = 1;
                 } else if (checkedId == R.id.milk_water_Tank_Clean_a3_2) {
@@ -56,7 +65,7 @@ public class fragment_category_1_milk extends Fragment {
             }
         });
 
-        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Time_rdogrp4); //4번 문항
+
 
         rdiog_4_water_tank_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

@@ -6,14 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4 extends Fragment {
+public class fragment_category_4_milk extends Fragment {
     private View view;
     private String result;
     private Button btn_move;
@@ -21,16 +20,17 @@ public class fragment_category_4 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_4, container, false);
+        view = inflater.inflate(R.layout.fragment_category_4_milk, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        final EditText ed_37_head_Butt = view.findViewById(R.id.head_Butt_a37);
-        final EditText ed_38_struggle = view.findViewById(R.id.struggle_a38);
-        final EditText ed_39_touch_Near = view.findViewById(R.id.touch_Near_a39);
-        final EditText ed_40_touch_Far = view.findViewById(R.id.touch_Far_a40);
-        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.touch_Impossibility_41);
+        final EditText ed_34_head_Butt = view.findViewById(R.id.milk_head_Butt_a34);
+        final EditText ed_35_struggle = view.findViewById(R.id.milk_struggle_a35);
+        final EditText ed_36_touch_Near = view.findViewById(R.id.milk_touch_Near_a36);
+        final EditText ed_37_touch_Far = view.findViewById(R.id.milk_touch_Far_a37);
+        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_38);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
+        btn_move.setText("제출");
 
 
         //데이터 받는 곳
@@ -42,11 +42,11 @@ public class fragment_category_4 extends Fragment {
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
             @Override
             public void onClick(View v) {
-                String head_butt = ed_37_head_Butt.getText().toString();
-                String struggle = ed_38_struggle.getText().toString();
-                String touch_near = ed_39_touch_Near.getText().toString();
-                String touch_far = ed_40_touch_Far.getText().toString();
-                String touch_impossibility = ed_41_touch_Impossibility.getText().toString();
+                String head_butt = ed_34_head_Butt.getText().toString();
+                String struggle = ed_35_struggle.getText().toString();
+                String touch_near = ed_36_touch_Near.getText().toString();
+                String touch_far = ed_37_touch_Far.getText().toString();
+                String touch_impossibility = ed_38_touch_Impossibility.getText().toString();
 
                 String[] protocol4 = {head_butt, struggle, touch_near, touch_far, touch_impossibility};
 

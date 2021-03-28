@@ -69,7 +69,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/head_Butt_a37"
+                        android:id="@+id/freestall_head_Butt_a37"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/struggle_a38"
+                        android:id="@+id/freestall_struggle_a38"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -193,7 +193,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/touch_Near_a39"
+                        android:id="@+id/freestall_touch_Near_a39"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -255,7 +255,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/touch_Far_a40"
+                        android:id="@+id/freestall_touch_Far_a40"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -317,7 +317,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/touch_Impossibility_41"
+                        android:id="@+id/freestall_touch_Impossibility_41"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"

@@ -16,11 +16,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="[ 편한 축사환경 ]"
+                android:text="[ 양호한 건강상태 ]"
                 android:textSize="20dp"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
                 android:gravity="center">
+
             </TextView>
 
             <LinearLayout
@@ -38,10 +39,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb5"
+                        android:id="@+id/nb20"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  5"
+                        android:text="  20"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -50,10 +51,134 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q5"
+                        android:id="@+id/q20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 다리절음이 있는 소의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_slight_Limp_a20"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb21"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  21"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 심각한 다리절음이 있는 소의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_critical_Limp_a21"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb22"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  22"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q22"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
-                        android:text="사육두수 대비 프리스톨 수의 비율이 얼마나 됩니까?(프리스톨 우사에만 해당)"
+                        android:text="전체 표본에서 경미한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 탈모부위, 병변/부종은 없음)"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -63,125 +188,23 @@
                         />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/freestall_Num_rdogrp5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/freestall_Num_a5_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1:1 이상"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/freestall_Num_a5_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="1:0.95~0.99"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/freestall_Num_a5_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1:0.94 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb6"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  6"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="110dp"
-                        android:text="앉기동작 시 구조물에 닿는 소의 비율은 얼마나 됩니까?(프리스톨 우사만 해당)"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/sit_Collision_rdogrp6"
+
+                    <EditText
+                        android:id="@+id/freestall_slight_Hairloss_a22"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/sit_Collision_a6_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="20% 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/sit_Collision_a6_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="21~30%"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/sit_Collision_a6_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="31% 이상"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -202,10 +225,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb7"
+                        android:id="@+id/nb23"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  7"
+                        android:text="  23"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -214,10 +237,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q7"
+                        android:id="@+id/q23"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
-                        android:text="앉은 소 중 프리스톨 영역을 벗어난 비율은 얼마나 됩니까?(프리스톨 우사만 해당)"
+                        android:text="전체 표본에서 심한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 병변/부종)"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -230,40 +253,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/freestall_Area_Out_Collision_rdogrp7"
+
+                    <EditText
+                        android:id="@+id/freestall_critical_Hairloss_a23"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/freestall_Area_Out_Collision_a7_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3% 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/freestall_Area_Out_Collision_a7_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="4~5%"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/freestall_Area_Out_Collision_a7_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6% 이상"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -284,10 +287,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb8"
+                        android:id="@+id/nb24"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  8"
+                        android:text="  24"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -296,10 +299,72 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q8"
+                        android:id="@+id/q24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 1마리당 15분 동안 기침하는 평균 수는 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_cough_a24"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb25"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  25"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q25"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
-                        android:text="앉기동작 시 지속시간(초)은 얼마나 됩니까?"
+                        android:text="전체 표본에서 비강 분비물이 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -309,125 +374,23 @@
                         />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/sit_Action_Time_rdogrp8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/sit_Action_Time_a8_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="5.2초 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/sit_Action_Time_a8_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="5.3~6.3초"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/sit_Action_Time_a8_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6.4초 이상"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb9"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  9"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:text="전체 표본 중 뒤쪽 아랫다리가 더러운 소 비율은 얼마나 되는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/outward_Hygiene_Leg_rdogrp9"
+
+                    <EditText
+                        android:id="@+id/freestall_runny_Nose_a25"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Leg_a9_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="20% 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Leg_a9_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="21~50%"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Leg_a9_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="51% 이상"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -448,10 +411,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb10"
+                        android:id="@+id/nb26"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  10"
+                        android:text="  26"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -460,10 +423,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q10"
+                        android:id="@+id/q26"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:text="전체 표본 중 뒷부분이 더러운 소 비율은 얼마나 되는가?"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 안구 분비물이 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -476,40 +439,19 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/outward_Hygiene_Back_rdogrp10"
+
+                    <EditText
+                        android:id="@+id/freestall_ophthalmic_Secretion_a26"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Back_a10_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10% 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Back_a10_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="11~19%"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Back_a10_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="20% 이상"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
 
                 </LinearLayout>
 
@@ -530,10 +472,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb11"
+                        android:id="@+id/nb27"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  11"
+                        android:text="  27"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -542,10 +484,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q11"
+                        android:id="@+id/q27"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본 중 유방이 더러운 소 비율은 얼마나 되는가?"
+                        android:text="전체 표본에서 호흡 장애가 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -558,40 +500,139 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/outward_Hygiene_Breast_rdogrp11"
+                    <EditText
+                        android:id="@+id/freestall_respiratory_Failure_a27"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Breast_a11_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10% 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Breast_a11_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="11~19%"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/outward_Hygiene_Breast_a11_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="20% 이상"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb28"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  28"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 설사를 하는 가축의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/freestall_diarrhea_a28"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb29"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  29"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 외음부 분비물이 있는 가축의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_out_Genitals_Secretion_a29"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
 
                 </LinearLayout>
 
@@ -612,10 +653,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb12"
+                        android:id="@+id/nb30"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  12"
+                        android:text="  30"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -624,10 +665,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q12"
+                        android:id="@+id/q30"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
-                        android:text="더울 때 주사육시설에 모든 가축이 직사광선을 피해 쉴 수 있는 충분한 그늘이 제공되는가?(송아지 포함)"
+                        android:text="전체 착유우군 유내 체세포 수가 400,000 이상인 젖소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -640,32 +681,18 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/shade_rdogrp12"
+                    <EditText
+                        android:id="@+id/freestall_breast_Inflammation_a30"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/shade_a12_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="예"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/shade_a12_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="아니오"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
 
                 </LinearLayout>
 
@@ -686,10 +713,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb13"
+                        android:id="@+id/nb31"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  13"
+                        android:text="  31"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -698,10 +725,287 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q13"
+                        android:id="@+id/q31"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
-                        android:text="주사육시설에 환기팬이 갖춰져 있고 더위를 대비한 충분한 풍속을 제공할 수 있는가?(송아지 포함)"
+                        android:text="지난 12개월 동안 농장에서 폐사, 안락사 및 긴급 도축된 가축의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/freestall_fall_Dead_a31"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb32"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  32"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:text="연간 평균 분만횟수 대비 지난 12개월 동안의 난산발생 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_dystocia_a32"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb33"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  33"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:text="연간 평균 젖소수 대비 지난 12개월 동안의 기립불능 소의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/freestall_astasia_a33"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb34"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  34"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="다음 중 제각/탈각에 해당되는 사항을 고르시오."
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/freestall_horn_rdogrp34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:paddingLeft="20dp">
+                        <RadioButton
+                            android:id="@+id/freestall_horn_a34_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="뿔 제거 또는 분리를 하지 않음"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/freestall_horn_a34_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="열 소작을 사용하여 송아지 제각 (가열 방법)"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/freestall_horn_a34_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="가성 페이스트를 사용하여 송아지 제각 (화학적 방법)"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/freestall_horn_a34_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="큰소(성우)의 뿔 제거"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb35"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  35"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="제각/탈각시 마취제를 사용하는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -717,14 +1021,14 @@
                     android:layout_height="90dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/summer_Ventilating_rdogrp13"
+                        android:id="@+id/freestall_horn_Anesthesia_rdogrp35"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/summer_Ventilating_a13_1"
+                            android:id="@+id/freestall_horn_Anesthesia_a35_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="예"
@@ -732,7 +1036,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/summer_Ventilating_a13_2"
+                            android:id="@+id/freestall_horn_Anesthesia_a35_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -760,10 +1064,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb14"
+                        android:id="@+id/nb36"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  14"
+                        android:text="  36"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -772,10 +1076,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q14"
+                        android:id="@+id/q36"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:text="주사육시설에 더위를 대비한 안개분무시설이 갖춰져 있는가?(송아지 포함)"
+                        android:layout_height="50dp"
+                        android:text="제각/탈각 후 진통제를 사용하는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -791,14 +1095,14 @@
                     android:layout_height="90dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/mist_Spary_rdogrp14"
+                        android:id="@+id/freestall_horn_Painkiller_rdogrp36"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/mist_Spary_a14_1"
+                            android:id="@+id/freestall_horn_Painkiller_a36_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="예"
@@ -806,7 +1110,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/mist_Spary_a14_2"
+                            android:id="@+id/freestall_horn_Painkiller_a36_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -819,380 +1123,6 @@
 
             </LinearLayout>//여기까지 하나
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb15"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  15"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="주사육시설에 모든 가축이 춥고 매서운 바람(북서풍 등)을 피할 수 있는 충분한 바람차단시설이 갖춰져 있는가?(포유송아지 제외)"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/wind_Block_rdogrp15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-
-                        <RadioButton
-                            android:id="@+id/wind_Block_a15_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예"
-                            android:textSize="15dp"></RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/wind_Block_a15_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="아니오"
-                            android:textSize="15dp"></RadioButton>
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb16"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  16"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="주사육시설에 환기팬이 갖춰져 있고 추운 계절에도 환기를 위한 최소한의 풍속 시스템 운영방안을 갖추고 있는가?(포유송아지 제외)"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/winter_Ventilating_rdogrp16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-
-                        <RadioButton
-                            android:id="@+id/winter_Ventilating_a16_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예"
-                            android:textSize="15dp"></RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/winter_Ventilating_a16_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="아니오"
-                            android:textSize="15dp"></RadioButton>
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb17"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  17"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="포유송아지 사육시설에 추위로부터 체온을 보호할 수 있는 마른 깔짚을 충분히 갖추었는가?(포유송아지용)"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/straw_rdogrp17"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-
-                        <RadioButton
-                            android:id="@+id/straw_a17_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예-송아지 다리가 마른 깔짚에 반 이상 묻혀있음"
-                            android:textSize="15dp"></RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/straw_a17_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="아니오-깔짚 위로 송아지 다리가 많이 보임"
-                            android:textSize="15dp"></RadioButton>
-                    </RadioGroup>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb18"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  18"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="포유송아지 사육시설에 추위로부터 체온을 보호할 수 있는 보온등을 갖추었고 모든 송아지가 이용 가능한가?(포유송아지용)"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/warm_rdogrp18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-
-                        <RadioButton
-                            android:id="@+id/warm_a18_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예-따뜻한 보온등을 모든 송아지가 이용가능함"
-                            android:textSize="15dp"></RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/warm_a18_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="아니오-보온등을 갖추지 아니하였거나 충분하지 않음"
-                            android:textSize="15dp"></RadioButton>
-                    </RadioGroup>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb19"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  19"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="포유송아지 사육시설에 춥고 매서운 바람(북서풍 등)을 피할 수 있는 바람차단시설이 갖춰져 있는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:orientation="vertical">
-
-                    <RadioGroup
-                        android:id="@+id/wind_Block_rdogrp19"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-
-                        <RadioButton
-                            android:id="@+id/wind_Block_a19_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예"
-                            android:textSize="15dp"></RadioButton>
-
-                        <RadioButton
-                            android:id="@+id/wind_Block_a19_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="아니오"
-                            android:textSize="15dp"></RadioButton>
-                    </RadioGroup>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

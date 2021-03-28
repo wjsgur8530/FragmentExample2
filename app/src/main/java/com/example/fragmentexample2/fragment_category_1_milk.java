@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1 extends Fragment {
+public class fragment_category_1_milk extends Fragment {
     private View view;
     private String result;
     private Button btn_move;
@@ -23,49 +23,49 @@ public class fragment_category_1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_1, container, false);
+        view = inflater.inflate(R.layout.fragment_category_1_milk, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        ed_1_poorRate = (EditText) view.findViewById(R.id.poorRate_a1); //1번 문항
+        ed_1_poorRate = (EditText) view.findViewById(R.id.milk_poorRate_a1); //1번 문항
 
-        RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.water_Tank_Num_rdogrp2); //2번 문항
+        RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Num_rdogrp2); //2번 문항
 
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.water_Tank_Num_a2_1) {
+                if (checkedId == R.id.milk_water_Tank_Num_a2_1) {
                     water_Tank_Num = 1;
-                } else if (checkedId == R.id.water_Tank_Num_a2_2) {
+                } else if (checkedId == R.id.milk_water_Tank_Num_a2_2) {
                     water_Tank_Num = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.water_Tank_Clean_rdogrp3); //3번 문항
+        RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Clean_rdogrp3); //3번 문항
 
         rdiog_3_water_tank_clean.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.water_Tank_Clean_a3_1) {
+                if (checkedId == R.id.milk_water_Tank_Clean_a3_1) {
                     water_Tank_Clean = 1;
-                } else if (checkedId == R.id.water_Tank_Clean_a3_2) {
+                } else if (checkedId == R.id.milk_water_Tank_Clean_a3_2) {
                     water_Tank_Clean = 2;
-                } else if (checkedId == R.id.water_Tank_Clean_a3_3) {
+                } else if (checkedId == R.id.milk_water_Tank_Clean_a3_3) {
                     water_Tank_Clean = 3;
                 }
             }
         });
 
-        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.water_Tank_Time_rdogrp4); //4번 문항
+        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.milk_water_Tank_Time_rdogrp4); //4번 문항
 
         rdiog_4_water_tank_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.water_Tank_Time_a4_1) {
+                if (checkedId == R.id.milk_water_Tank_Time_a4_1) {
                     water_Tank_Time = 1;
-                } else if (checkedId == R.id.water_Tank_Time_a4_2) {
+                } else if (checkedId == R.id.milk_water_Tank_Time_a4_2) {
                     water_Tank_Time = 2;
-                } else if (checkedId == R.id.water_Tank_Time_a4_3) {
+                } else if (checkedId == R.id.milk_water_Tank_Time_a4_3) {
                     water_Tank_Time = 3;
                 }
             }
@@ -98,9 +98,9 @@ public class fragment_category_1 extends Fragment {
                 bundle.putStringArray("submit", protocol1);
 
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_category_2 fragment_category_2 = new fragment_category_2();
-                fragment_category_2.setArguments(bundle);
-                transaction.replace(R.id.framelayout, fragment_category_2); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
+                fragment_category_2_milk fragment_category_2_milk = new fragment_category_2_milk();
+                fragment_category_2_milk.setArguments(bundle);
+                transaction.replace(R.id.framelayout, fragment_category_2_milk); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
                 transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
             }
         });

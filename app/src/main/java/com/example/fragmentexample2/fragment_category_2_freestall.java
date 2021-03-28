@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_2 extends Fragment {
+public class fragment_category_2_freestall extends Fragment {
     private View view;
     private String result;
     private Button btn_move;
@@ -22,7 +21,7 @@ public class fragment_category_2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_2, container, false);
+        view = inflater.inflate(R.layout.fragment_category_2_freestall, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         RadioGroup rdiog_5_freestall_num = (RadioGroup) view.findViewById(R.id.freestall_Num_rdogrp5); //5번 문항(프리스톨)
@@ -40,16 +39,16 @@ public class fragment_category_2 extends Fragment {
             }
         });
 
-        RadioGroup rdiog_6_sit_collision = (RadioGroup) view.findViewById(R.id.sit_Collision_rdogrp6); //6번 문항(프리스톨)
+        RadioGroup rdiog_6_sit_collision = (RadioGroup) view.findViewById(R.id.freestall_sit_Collision_rdogrp6); //6번 문항(프리스톨)
 
         rdiog_6_sit_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.sit_Collision_a6_1) {
+                if (checkedId == R.id.freestall_sit_Collision_a6_1) {
                     sit_Collision = 1;
-                } else if (checkedId == R.id.sit_Collision_a6_2) {
+                } else if (checkedId == R.id.freestall_sit_Collision_a6_2) {
                     sit_Collision = 2;
-                } else if (checkedId == R.id.sit_Collision_a6_3) {
+                } else if (checkedId == R.id.freestall_sit_Collision_a6_3) {
                     sit_Collision = 3;
                 }
             }
@@ -70,165 +69,165 @@ public class fragment_category_2 extends Fragment {
             }
         });
 
-        RadioGroup rdiog_8_sit_action_time = (RadioGroup) view.findViewById(R.id.sit_Action_Time_rdogrp8); //8번 문항
+        RadioGroup rdiog_8_sit_action_time = (RadioGroup) view.findViewById(R.id.freestall_sit_Action_Time_rdogrp8); //8번 문항
 
         rdiog_8_sit_action_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.sit_Action_Time_a8_1) {
+                if (checkedId == R.id.freestall_sit_Action_Time_a8_1) {
                     sit_Action_Time = 1;
-                } else if (checkedId == R.id.sit_Action_Time_a8_2) {
+                } else if (checkedId == R.id.freestall_sit_Action_Time_a8_2) {
                     sit_Action_Time = 2;
-                } else if (checkedId == R.id.sit_Action_Time_a8_3) {
+                } else if (checkedId == R.id.freestall_sit_Action_Time_a8_3) {
                     sit_Action_Time = 3;
                 }
             }
         });
 
-        RadioGroup rdiog_9_outward_hygiene_leg = (RadioGroup) view.findViewById(R.id.outward_Hygiene_Leg_rdogrp9); //9번 문항
+        RadioGroup rdiog_9_outward_hygiene_leg = (RadioGroup) view.findViewById(R.id.freestall_outward_Hygiene_Leg_rdogrp9); //9번 문항
 
         rdiog_9_outward_hygiene_leg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.outward_Hygiene_Leg_a9_1) {
+                if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_1) {
                     outward_Hygiene_Leg = 1;
-                } else if (checkedId == R.id.outward_Hygiene_Leg_a9_2) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_2) {
                     outward_Hygiene_Leg = 2;
-                } else if (checkedId == R.id.outward_Hygiene_Leg_a9_3) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_3) {
                     outward_Hygiene_Leg = 3;
                 }
             }
         });
 
-        RadioGroup rdiog_10_outward_hygiene_back = (RadioGroup) view.findViewById(R.id.outward_Hygiene_Back_rdogrp10); //10번 문항
+        RadioGroup rdiog_10_outward_hygiene_back = (RadioGroup) view.findViewById(R.id.freestall_outward_Hygiene_Back_rdogrp10); //10번 문항
 
         rdiog_10_outward_hygiene_back.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.outward_Hygiene_Back_a10_1) {
+                if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_1) {
                     outward_Hygiene_Back = 1;
-                } else if (checkedId == R.id.outward_Hygiene_Back_a10_2) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_2) {
                     outward_Hygiene_Back = 2;
-                } else if (checkedId == R.id.outward_Hygiene_Back_a10_3) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_3) {
                     outward_Hygiene_Back = 3;
                 }
             }
         });
 
-        RadioGroup rdiog_11_outward_hygiene_breast = (RadioGroup) view.findViewById(R.id.outward_Hygiene_Breast_rdogrp11); //11번 문항
+        RadioGroup rdiog_11_outward_hygiene_breast = (RadioGroup) view.findViewById(R.id.freestall_outward_Hygiene_Breast_rdogrp11); //11번 문항
 
         rdiog_11_outward_hygiene_breast.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.outward_Hygiene_Breast_a11_1) {
+                if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_1) {
                     outward_Hygiene_Breast = 1;
-                } else if (checkedId == R.id.outward_Hygiene_Breast_a11_2) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_2) {
                     outward_Hygiene_Breast = 2;
-                } else if (checkedId == R.id.outward_Hygiene_Breast_a11_3) {
+                } else if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_3) {
                     outward_Hygiene_Breast = 3;
                 }
             }
         });
 
-        RadioGroup rdiog_12_shade = (RadioGroup) view.findViewById(R.id.shade_rdogrp12); //11번 문항
+        RadioGroup rdiog_12_shade = (RadioGroup) view.findViewById(R.id.freestall_shade_rdogrp12); //11번 문항
 
         rdiog_12_shade.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.shade_a12_1) {
+                if (checkedId == R.id.freestall_shade_a12_1) {
                     shade = 1;
-                } else if (checkedId == R.id.shade_a12_2) {
+                } else if (checkedId == R.id.freestall_shade_a12_2) {
                     shade = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_13_summer_ventilating = (RadioGroup) view.findViewById(R.id.summer_Ventilating_rdogrp13); //11번 문항
+        RadioGroup rdiog_13_summer_ventilating = (RadioGroup) view.findViewById(R.id.freestall_summer_Ventilating_rdogrp13); //11번 문항
 
         rdiog_13_summer_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.summer_Ventilating_a13_1) {
+                if (checkedId == R.id.freestall_summer_Ventilating_a13_1) {
                     summer_Ventilating = 1;
-                } else if (checkedId == R.id.summer_Ventilating_a13_2) {
+                } else if (checkedId == R.id.freestall_summer_Ventilating_a13_2) {
                     summer_Ventilating = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_14_mist_spary = (RadioGroup) view.findViewById(R.id.mist_Spary_rdogrp14); //11번 문항
+        RadioGroup rdiog_14_mist_spary = (RadioGroup) view.findViewById(R.id.freestall_mist_Spary_rdogrp14); //11번 문항
 
         rdiog_14_mist_spary.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.mist_Spary_a14_1) {
+                if (checkedId == R.id.freestall_mist_Spary_a14_1) {
                     mist_Spary = 1;
-                } else if (checkedId == R.id.mist_Spary_a14_2) {
+                } else if (checkedId == R.id.freestall_mist_Spary_a14_2) {
                     mist_Spary = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_15_wind_block_adult = (RadioGroup) view.findViewById(R.id.wind_Block_rdogrp15); //11번 문항
+        RadioGroup rdiog_15_wind_block_adult = (RadioGroup) view.findViewById(R.id.freestall_wind_Block_rdogrp15); //11번 문항
 
         rdiog_15_wind_block_adult.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.wind_Block_a15_1) {
+                if (checkedId == R.id.freestall_wind_Block_a15_1) {
                     wind_Block_Adult = 1;
-                } else if (checkedId == R.id.wind_Block_a15_2) {
+                } else if (checkedId == R.id.freestall_wind_Block_a15_2) {
                     wind_Block_Adult = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_16_winter_ventilating = (RadioGroup) view.findViewById(R.id.winter_Ventilating_rdogrp16); //11번 문항
+        RadioGroup rdiog_16_winter_ventilating = (RadioGroup) view.findViewById(R.id.freestall_winter_Ventilating_rdogrp16); //11번 문항
 
         rdiog_16_winter_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.winter_Ventilating_a16_1) {
+                if (checkedId == R.id.freestall_winter_Ventilating_a16_1) {
                     winter_Ventilating = 1;
-                } else if (checkedId == R.id.winter_Ventilating_a16_2) {
+                } else if (checkedId == R.id.freestall_winter_Ventilating_a16_2) {
                     winter_Ventilating = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_17_straw = (RadioGroup) view.findViewById(R.id.straw_rdogrp17); //11번 문항
+        RadioGroup rdiog_17_straw = (RadioGroup) view.findViewById(R.id.freestall_straw_rdogrp17); //11번 문항
 
         rdiog_17_straw.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.straw_a17_1) {
+                if (checkedId == R.id.freestall_straw_a17_1) {
                     straw = 1;
-                } else if (checkedId == R.id.straw_a17_2) {
+                } else if (checkedId == R.id.freestall_straw_a17_2) {
                     straw = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_18_warm = (RadioGroup) view.findViewById(R.id.warm_rdogrp18); //11번 문항
+        RadioGroup rdiog_18_warm = (RadioGroup) view.findViewById(R.id.freestall_warm_rdogrp18); //11번 문항
 
         rdiog_18_warm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.warm_a18_1) {
+                if (checkedId == R.id.freestall_warm_a18_1) {
                     warm = 1;
-                } else if (checkedId == R.id.warm_a18_2) {
+                } else if (checkedId == R.id.freestall_warm_a18_2) {
                     warm = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_19_wind_block_child = (RadioGroup) view.findViewById(R.id.wind_Block_rdogrp19); //11번 문항
+        RadioGroup rdiog_19_wind_block_child = (RadioGroup) view.findViewById(R.id.freestall_wind_Block_rdogrp19); //11번 문항
 
         rdiog_19_wind_block_child.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.wind_Block_a19_1) {
+                if (checkedId == R.id.freestall_wind_Block_a19_1) {
                     wind_Block_Child = 1;
-                } else if (checkedId == R.id.wind_Block_a19_2) {
+                } else if (checkedId == R.id.freestall_wind_Block_a19_2) {
                     wind_Block_Child = 2;
                 }
             }
@@ -284,9 +283,9 @@ public class fragment_category_2 extends Fragment {
                 bundle.putStringArray("submit", protocol2);
 
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_category_3 fragment_category_3 = new fragment_category_3();
-                fragment_category_3.setArguments(bundle);
-                transaction.replace(R.id.framelayout, fragment_category_3); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
+                fragment_category_3_freestall fragment_category_3_freestall = new fragment_category_3_freestall();
+                fragment_category_3_freestall.setArguments(bundle);
+                transaction.replace(R.id.framelayout, fragment_category_3_freestall); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
                 transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
             }
         });

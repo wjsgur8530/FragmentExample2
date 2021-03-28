@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_3 extends Fragment {
+public class fragment_category_3_freestall extends Fragment {
     private View view;
     private String result;
     private Button btn_move;
@@ -22,63 +22,63 @@ public class fragment_category_3 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_3, container, false);
+        view = inflater.inflate(R.layout.fragment_category_3_freestall, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        final EditText ed_20_slight_Limp = view.findViewById(R.id.slight_Limp_a20);
-        final EditText ed_21_critical_Limp = view.findViewById(R.id.critical_Limp_a21);
-        final EditText ed_22_slight_Hairloss = view.findViewById(R.id.slight_Hairloss_a22);
-        final EditText ed_23_critical_Hairloss = view.findViewById(R.id.critical_Hairloss_a23);
-        final EditText ed_24_cought = view.findViewById(R.id.cough_a24);
-        final EditText ed_25_runny_Nose = view.findViewById(R.id.cough_a24);
-        final EditText ed_26_ophthalmic_Secretion = view.findViewById(R.id.ophthalmic_Secretion_a26);
-        final EditText ed_27_respiratory_Failure = view.findViewById(R.id.respiratory_Failure_a27);
-        final EditText ed_28_diarrhea = view.findViewById(R.id.diarrhea_a28);
-        final EditText ed_29_out_Genitals_Secretion = view.findViewById(R.id.out_Genitals_Secretion_a29);
-        final EditText ed_30_breast_Inflammation = view.findViewById(R.id.breast_Inflammation_a30);
-        final EditText ed_31_fall_Dead = view.findViewById(R.id.fall_Dead_a31);
-        final EditText ed_32_dystocia = view.findViewById(R.id.dystocia_a32);
-        final EditText ed_33_astasia = view.findViewById(R.id.astasia_a33);
+        final EditText ed_20_slight_Limp = view.findViewById(R.id.freestall_slight_Limp_a20);
+        final EditText ed_21_critical_Limp = view.findViewById(R.id.freestall_critical_Limp_a21);
+        final EditText ed_22_slight_Hairloss = view.findViewById(R.id.freestall_slight_Hairloss_a22);
+        final EditText ed_23_critical_Hairloss = view.findViewById(R.id.freestall_critical_Hairloss_a23);
+        final EditText ed_24_cought = view.findViewById(R.id.freestall_cough_a24);
+        final EditText ed_25_runny_Nose = view.findViewById(R.id.freestall_runny_Nose_a25);
+        final EditText ed_26_ophthalmic_Secretion = view.findViewById(R.id.freestall_ophthalmic_Secretion_a26);
+        final EditText ed_27_respiratory_Failure = view.findViewById(R.id.freestall_respiratory_Failure_a27);
+        final EditText ed_28_diarrhea = view.findViewById(R.id.freestall_diarrhea_a28);
+        final EditText ed_29_out_Genitals_Secretion = view.findViewById(R.id.freestall_out_Genitals_Secretion_a29);
+        final EditText ed_30_breast_Inflammation = view.findViewById(R.id.freestall_breast_Inflammation_a30);
+        final EditText ed_31_fall_Dead = view.findViewById(R.id.freestall_fall_Dead_a31);
+        final EditText ed_32_dystocia = view.findViewById(R.id.freestall_dystocia_a32);
+        final EditText ed_33_astasia = view.findViewById(R.id.freestall_astasia_a33);
 
 
-        RadioGroup rdiog_34_horn = (RadioGroup) view.findViewById(R.id.horn_rdogrp34); //11번 문항
+        RadioGroup rdiog_34_horn = (RadioGroup) view.findViewById(R.id.freestall_horn_rdogrp34); //11번 문항
 
         rdiog_34_horn.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.horn_a34_1) {
+                if (checkedId == R.id.freestall_horn_a34_1) {
                     horn = 1;
-                } else if (checkedId == R.id.horn_a34_2) {
+                } else if (checkedId == R.id.freestall_horn_a34_2) {
                     horn = 2;
-                } else if (checkedId == R.id.horn_a34_3) {
+                } else if (checkedId == R.id.freestall_horn_a34_3) {
                     horn = 3;
-                } else if (checkedId == R.id.horn_a34_4) {
+                } else if (checkedId == R.id.freestall_horn_a34_4) {
                     horn = 4;
                 }
             }
         });
 
-        RadioGroup rdiog_35_horn_anesthesia = (RadioGroup) view.findViewById(R.id.horn_Anesthesia_rdogrp35); //11번 문항
+        RadioGroup rdiog_35_horn_anesthesia = (RadioGroup) view.findViewById(R.id.freestall_horn_Anesthesia_rdogrp35); //11번 문항
 
         rdiog_35_horn_anesthesia.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.horn_Anesthesia_a35_1) {
+                if (checkedId == R.id.freestall_horn_Anesthesia_a35_1) {
                     horn_Anesthesia = 1;
-                } else if (checkedId == R.id.horn_Anesthesia_a35_2) {
+                } else if (checkedId == R.id.freestall_horn_Anesthesia_a35_2) {
                     horn_Anesthesia = 2;
                 }
             }
         });
 
-        RadioGroup rdiog_36_horn_painkiller = (RadioGroup) view.findViewById(R.id.horn_Painkiller_rdogrp36); //11번 문항
+        RadioGroup rdiog_36_horn_painkiller = (RadioGroup) view.findViewById(R.id.freestall_horn_Painkiller_rdogrp36); //11번 문항
 
         rdiog_36_horn_painkiller.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.horn_Painkiller_a36_1) {
+                if (checkedId == R.id.freestall_horn_Painkiller_a36_1) {
                     horn_Painkiller = 1;
-                } else if (checkedId == R.id.horn_Painkiller_a36_2) {
+                } else if (checkedId == R.id.freestall_horn_Painkiller_a36_2) {
                     horn_Painkiller = 2;
                 }
             }
@@ -138,9 +138,9 @@ public class fragment_category_3 extends Fragment {
                 bundle.putStringArray("submit", protocol3);
 
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_category_4 fragment_category_4 = new fragment_category_4();
-                fragment_category_4.setArguments(bundle);
-                transaction.replace(R.id.framelayout, fragment_category_4); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
+                fragment_category_4_freestall fragment_category_4_freestall = new fragment_category_4_freestall();
+                fragment_category_4_freestall.setArguments(bundle);
+                transaction.replace(R.id.framelayout, fragment_category_4_freestall); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
                 transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
             }
         });

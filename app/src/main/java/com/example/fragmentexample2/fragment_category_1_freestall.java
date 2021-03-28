@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1_freestall extends Fragment implements MainActivity.onKeyBackPressedListener{
+public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener{
     private View view;
     private String result;
     private Button btn_move;
@@ -129,9 +129,11 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
     }
     @Override
     public void onBackKey() {
-        MainActivity activity = (MainActivity) getActivity();
-        activity.setOnKeyBackPressedListener(null);
+        category1 activity = (category1) getActivity();
+
         //액티비티의 콜백을 직접호출
+        activity.setOnKeyBackPressedListener(null);
         activity.onBackPressed();
+
     }
 }

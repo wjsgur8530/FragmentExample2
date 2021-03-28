@@ -58,10 +58,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb14"
+                        android:id="@+id/nb17"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  14"
+                        android:text="  17"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -70,10 +70,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q14"
+                        android:id="@+id/q17"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본에서 경미한 다리절음이 있는 소의 비율은 얼마나 되는가?"
+                        android:text="전체 표본군 중 경미한 다리절음을 보이는 개체의 비율이 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -90,7 +90,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_slight_Limp_a14"
+                        android:id="@+id/breed_batch_slight_Limp_a17"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -120,10 +120,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb15"
+                        android:id="@+id/nb18"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  15"
+                        android:text="  18"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -132,10 +132,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q15"
+                        android:id="@+id/q18"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본에서 심각한 다리절음이 있는 소의 비율은 얼마나 되는가?"
+                        android:text="전체 표본군 중 심각한 다리절음을 보이는 개체의 비율이 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -152,7 +152,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_critical_Limp_a15"
+                        android:id="@+id/breed_batch_critical_Limp_a18"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -182,10 +182,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb16"
+                        android:id="@+id/nb19"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  16"
+                        android:text="  19"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -194,7 +194,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q16"
+                        android:id="@+id/q19"
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:text="전체 표본에서 경미한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 탈모부위, 병변/부종은 없음)"
@@ -214,7 +214,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_slight_Hairloss_a16"
+                        android:id="@+id/breed_batch_slight_Hairloss_a19"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -244,10 +244,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb17"
+                        android:id="@+id/nb20"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  17"
+                        android:text="  20"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -256,7 +256,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q17"
+                        android:id="@+id/q20"
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:text="전체 표본에서 심각한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 탈모부위, 병변/부종은 없음)"
@@ -276,7 +276,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_critical_Hairloss_a17"
+                        android:id="@+id/breed_batch_critical_Hairloss_a20"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -306,10 +306,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb18"
+                        android:id="@+id/nb21"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  18"
+                        android:text="  21"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -318,7 +318,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q18"
+                        android:id="@+id/q21"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본에서 1마리당 15분 동안 기침하는 평균 수는 얼마나 되는가?(펜이나 축사동당 평균 25마리 이하를 120분간 관찰)"
@@ -338,193 +338,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_cough_a18"
-                        android:imeOptions="actionNext"
-                        android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="숫자 입력"
-                        android:layout_margin="10dp"
-                        android:inputType="number">
-                    </EditText>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb19"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  19"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:text="전체 표본에서 비강 분비물이 있는 가축의 비율은 얼마나 되는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/fatten_runny_Nose_a19"
-                        android:imeOptions="actionNext"
-                        android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="숫자 입력"
-                        android:layout_margin="10dp"
-                        android:inputType="number">
-                    </EditText>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb20"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  20"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:text="전체 표본에서 안구 분비물이 있는 가축의 비율은 얼마나 되는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/fatten_ophthalmic_Secretion_a20"
-                        android:imeOptions="actionNext"
-                        android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="숫자 입력"
-                        android:layout_margin="10dp"
-                        android:inputType="number">
-                    </EditText>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb21"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  21"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:text="전체 표본에서 호흡 장애가 있는 가축의 비율은 얼마나 되는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/fatten_respiratory_Failure_a21"
+                        android:id="@+id/breed_batch_cough_a21"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -569,7 +383,7 @@
                         android:id="@+id/q22"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본에서 설사를 하는 가축의 비율은 얼마나 되는가?"
+                        android:text="전체 표본에서 비강 분비물이 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -586,7 +400,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_diarrhea_a22"
+                        android:id="@+id/breed_batch_runny_Nose_a22"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -631,7 +445,7 @@
                         android:id="@+id/q23"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본에서 반추위가 부풀어 오른 가축의 비율은 얼마나 되는가?"
+                        android:text="전체 표본에서 안구 분비물이 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -648,7 +462,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_ruminant_a23"
+                        android:id="@+id/breed_batch_ophthalmic_Secretion_a23"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -674,7 +488,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -692,8 +506,8 @@
                     <TextView
                         android:id="@+id/q24"
                         android:layout_width="wrap_content"
-                        android:layout_height="90dp"
-                        android:text="전체 표본에서 지난 12개월 동안 농장에서 폐사, 안락사 및 긴급 도축된 가축의 비율은 얼마나 되는가?"
+                        android:layout_height="50dp"
+                        android:text="전체 표본에서 호흡 장애가 있는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -710,8 +524,8 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_fall_Dead_a24"
-                        android:imeOptions="actionDone"
+                        android:id="@+id/breed_batch_respiratory_Failure_a24"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -755,7 +569,7 @@
                         android:id="@+id/q25"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="다음 중 제각/탈각에 해당되는 사항을 고르시오."
+                        android:text="전체 표본에서 설사를 하는 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -768,48 +582,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_horn_rdogrp25"
+
+                    <EditText
+                        android:id="@+id/breed_batch_diarrhea_a25"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_horn_a25_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="뿔 제거 또는 분리를 하지 않음"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_horn_a25_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="열 소작을 사용하여 송아지 제각 (가열 방법)"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_horn_a25_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="가성 페이스트를 사용하여 송아지 제각 (화학적 방법)"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_horn_a25_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="큰소의 뿔 제거"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -845,7 +631,7 @@
                         android:id="@+id/q26"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="제각/탈각시 마취제를 사용하는가?"
+                        android:text="전체 표본에서 반추위가 부풀어 오른 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -858,32 +644,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_horn_Anesthesia_rdogrp26"
+
+                    <EditText
+                        android:id="@+id/breed_batch_ruminant_a26"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_horn_Anesthesia_a26_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="예"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_horn_Anesthesia_a26_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="아니오"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -900,7 +674,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -918,8 +692,8 @@
                     <TextView
                         android:id="@+id/q27"
                         android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:text="제각/탈각 후 진통제를 사용하는가?"
+                        android:layout_height="90dp"
+                        android:text="전체 표본에서 지난 12개월 동안 농장에서 폐사, 안락사 및 긴급 도축된 가축의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -932,32 +706,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_horn_Painkiller_rdogrp27"
+
+                    <EditText
+                        android:id="@+id/breed_batch_fall_Dead_a27"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_horn_Painkiller_a27_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="예"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_horn_Painkiller_a27_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="아니오"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -993,7 +755,7 @@
                         android:id="@+id/q28"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="거세를 어떤 방법으로 진행하는가?"
+                        android:text="다음 중 제각/탈각에 해당되는 사항을 고르시오."
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -1006,44 +768,44 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="140dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_castration_rdogrp28"
+                        android:id="@+id/breed_batch_horn_rdogrp28"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_castration_a28_1"
+                            android:id="@+id/breed_batch_horn_a28_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="거세 안함"
+                            android:text="뿔 제거 또는 분리를 하지 않음"
                             android:textSize="15dp"
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_castration_a28_2"
+                            android:id="@+id/breed_batch_horn_a28_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
-                            android:text="고무링을 사용한 거세"
+                            android:text="열 소작을 사용하여 송아지 제각 (가열 방법)"
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_castration_a28_3"
+                            android:id="@+id/breed_batch_horn_a28_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Burdizzo를 사용한 거세"
+                            android:text="가성 페이스트를 사용하여 송아지 제각 (화학적 방법)"
                             android:textSize="15dp"
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_castration_a28_4"
+                            android:id="@+id/breed_batch_horn_a28_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="외과적 수술을 통한 거세"
+                            android:text="큰소의 뿔 제거"
                             android:textSize="15dp"
                             android:layout_weight="1">
                         </RadioButton>
@@ -1083,7 +845,7 @@
                         android:id="@+id/q29"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="거세를 할 때 마취제를 사용하는가?"
+                        android:text="제각/탈각시 마취제를 사용하는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -1099,14 +861,14 @@
                     android:layout_height="90dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_castration_Anesthesia_rdogrp29"
+                        android:id="@+id/breed_batch_horn_Anesthesia_rdogrp29"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_castration_Anesthesia_a29_1"
+                            android:id="@+id/breed_batch_horn_Anesthesia_a29_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="예"
@@ -1114,7 +876,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_castration_Anesthesia_a29_2"
+                            android:id="@+id/breed_batch_horn_Anesthesia_a29_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -1157,6 +919,244 @@
                         android:id="@+id/q30"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
+                        android:text="제각/탈각 후 진통제를 사용하는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="vertical">
+                    <RadioGroup
+                        android:id="@+id/breed_batch_horn_Painkiller_rdogrp30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:paddingLeft="20dp">
+                        <RadioButton
+                            android:id="@+id/breed_batch_horn_Painkiller_a30_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="예"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/breed_batch_horn_Painkiller_a30_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="아니오"
+                            android:layout_weight="1">
+                        </RadioButton>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb31"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  31"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="거세를 어떤 방법으로 진행하는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+                    <RadioGroup
+                        android:id="@+id/breed_batch_castration_rdogrp31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:paddingLeft="20dp">
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_a31_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="거세 안함"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_a31_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="고무링을 사용한 거세"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_a31_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Burdizzo를 사용한 거세"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_a31_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="외과적 수술을 통한 거세"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb32"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  32"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="거세를 할 때 마취제를 사용하는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="vertical">
+                    <RadioGroup
+                        android:id="@+id/breed_batch_castration_Anesthesia_rdogrp32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:paddingLeft="20dp">
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_Anesthesia_a32_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="예"
+                            android:textSize="15dp"
+                            android:layout_weight="1">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/breed_batch_castration_Anesthesia_a32_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="아니오"
+                            android:layout_weight="1">
+                        </RadioButton>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb33"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  33"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
                         android:text="거세를 할 때 진통제를 사용하는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -1173,14 +1173,14 @@
                     android:layout_height="90dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_castration_Painkiller_rdogrp30"
+                        android:id="@+id/breed_batch_castration_Painkiller_rdogrp33"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_castration_Painkiller_a30_1"
+                            android:id="@+id/breed_batch_castration_Painkiller_a33_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="예"
@@ -1188,7 +1188,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_castration_Painkiller_a30_2"
+                            android:id="@+id/breed_batch_castration_Painkiller_a33_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"

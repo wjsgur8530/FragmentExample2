@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4_freestall extends Fragment implements MainActivity.onKeyBackPressedListener {
+public class fragment_category_4_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
@@ -41,6 +41,7 @@ public class fragment_category_4_freestall extends Fragment implements MainActiv
                 onBackKey();
             }
         });
+        //뒤로갈때 제출로 바뀜.
 
 
         //데이터 받는 곳

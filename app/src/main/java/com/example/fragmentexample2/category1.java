@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 public class category1 extends AppCompatActivity {
 
+    private onKeyBackPressedListener mOnKeyBackPressedListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,18 @@ public class category1 extends AppCompatActivity {
             fragment_category_1_freestall fragment_category_1_freestall = new fragment_category_1_freestall();
             transaction.replace(R.id.framelayout, fragment_category_1_freestall); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
             transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
+        }
+    }
+    public interface onKeyBackPressedListener{
+        void onBackKey();
+    }
+    public void setOnKeyBackPressedListener(onKeyBackPressedListener listener){
+        mOnKeyBackPressedListener = listener;
+        //Fragment 로 뒤로가기 callback 보내기위한 로직
+        if (mOnKeyBackPressedListener != null) {
+            mOnKeyBackPressedListener.onBackKey();
+        }else{
+            super.onBackPressed();
         }
     }
 }

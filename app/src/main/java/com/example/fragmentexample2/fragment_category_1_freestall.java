@@ -23,9 +23,6 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
     Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
 
-    RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
-    RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Clean_rdogrp3); //3번 문항
-    RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Time_rdogrp4); //4번 문항
 
     @Nullable
     @Override
@@ -33,6 +30,9 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
         view = inflater.inflate(R.layout.fragment_category_1_freestall, container, false);
         ScrollView scrollview_freestall_1 = view.findViewById(R.id.scrollview_freestall_1);
 
+        RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
+        RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Clean_rdogrp3); //3번 문항
+        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Time_rdogrp4); //4번 문항
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.freestall_poorRate_a1); //1번 문항
 

@@ -1,45 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="동물복지수준\n자가평가"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:layout_weight="4"
+        android:textSize="50dp"
+        android:gravity="center|bottom">
+    </TextView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:src="@drawable/sheep"></ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="착유우"
-            android:textColor="@color/colorWhite"
-            android:background="@color/colorPrimary"/>
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/input_farm">
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/input_1"
-                android:text="일반우사"/>
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/input_2"
-                android:text="프리스톨"/>
-        </RadioGroup>
+        android:orientation="vertical"
+        android:layout_weight="5">
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/startbtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/farm_selector"
-            android:text="평가하기"
+            android:textStyle="bold"
+            android:text="시작(Start)"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorPrimaryDark"/>
+            android:textSize="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:background="@drawable/button_circle"
+            android:layout_gravity="center"></Button>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="15dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="15dp"
+            android:text="로그인"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"></Button>
     </LinearLayout>
+
 
 </LinearLayout>

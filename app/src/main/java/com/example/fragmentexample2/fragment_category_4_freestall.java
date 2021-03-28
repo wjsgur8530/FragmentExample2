@@ -1,11 +1,13 @@
 package com.example.fragmentexample2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,8 +37,8 @@ public class fragment_category_4_freestall extends Fragment {
 
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
-//            result = getArguments().getString("fromFrag1"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
-//            tv_frag1.setText(result);
+//            result = getArguments().getString("submit"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
+//            tv_1.setText(result);
 //        }
 
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
@@ -58,11 +60,8 @@ public class fragment_category_4_freestall extends Fragment {
                 bundle.putString("submit", touch_impossibility);
                 bundle.putStringArray("submit", protocol4);
 
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_result_1 fragment_result_1 = new fragment_result_1();
-                fragment_result_1.setArguments(bundle);
-                transaction.replace(R.id.framelayout, fragment_result_1); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
-                transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
+                Intent intent = new Intent(getActivity(), Result.class);
+                startActivity(intent);
             }
         });
 

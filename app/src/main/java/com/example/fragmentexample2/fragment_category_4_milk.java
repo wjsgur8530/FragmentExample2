@@ -1,5 +1,6 @@
 package com.example.fragmentexample2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,11 +59,8 @@ public class fragment_category_4_milk extends Fragment {
                 bundle.putString("submit", touch_impossibility);
                 bundle.putStringArray("submit", protocol4);
 
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_result_1 fragment_result_1 = new fragment_result_1();
-                fragment_result_1.setArguments(bundle);
-                transaction.replace(R.id.framelayout, fragment_result_1); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
-                transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
+                Intent intent = new Intent(getActivity(), Result.class);
+                startActivity(intent);
             }
         });
 

@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import org.w3c.dom.Text;
 
 public class fragment_category_2_freestall extends Fragment {
     private View view;
@@ -235,11 +238,10 @@ public class fragment_category_2_freestall extends Fragment {
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
 
-
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
-//            result = getArguments().getString("fromFrag1"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
-//            tv_frag1.setText(result);
+//            result = getArguments().getString("submit"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
+//            submit_test2.setText(result);
 //        }
 
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동

@@ -331,8 +331,6 @@
                 </LinearLayout>
 
             </LinearLayout>//여기까지 하나
-
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

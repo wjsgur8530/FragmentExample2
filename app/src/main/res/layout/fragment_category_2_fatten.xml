@@ -4,24 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@color/colorPrimary"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/input"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textColor="@color/colorWhite"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="평가"
-            android:textSize="30dp" />
-    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +35,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -71,7 +53,7 @@
                     <TextView
                         android:id="@+id/q5"
                         android:layout_width="wrap_content"
-                        android:layout_height="90dp"
+                        android:layout_height="120dp"
                         android:text="사료조 근처의 '즉시 깔짚교체 시기'의 비율이 얼마나 되는가? (즉시 깔짚교체 시기-깔집을 쥐었을때 수분방울이 맺히거나 흘러내림)"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -233,7 +215,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -251,7 +233,7 @@
                     <TextView
                         android:id="@+id/q7"
                         android:layout_width="wrap_content"
-                        android:layout_height="90dp"
+                        android:layout_height="120dp"
                         android:text="주 휴식장소사이의 '즉시 깔짚교체 시기'의 비율이 얼마나 되는가? (즉시 깔짚교체 시기-깔집을 쥐었을때 수분방울이 맺히거나 흘러내림)"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -323,7 +305,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -341,7 +323,7 @@
                     <TextView
                         android:id="@+id/q8"
                         android:layout_width="wrap_content"
-                        android:layout_height="90dp"
+                        android:layout_height="120dp"
                         android:text="전체 몸통 부위 면적 중 고상 이물질 분포 25% 초과하고 액상 이물질 분포 50% 초과하는 개체의 비율이 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -385,7 +367,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="90dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -403,7 +385,7 @@
                     <TextView
                         android:id="@+id/q9"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
+                        android:layout_height="90dp"
                         android:text="더울 때 주사육시설에 모든 가축이 직사광선을 피해 쉴 수 있는 충분한 그늘이 제공되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -459,7 +441,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="90dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -477,7 +459,7 @@
                     <TextView
                         android:id="@+id/q10"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
+                        android:layout_height="90dp"
                         android:text="주사육시설에 환기팬이 갖춰져 있고 더위를 대비한 충분한 풍속을 제공하는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"

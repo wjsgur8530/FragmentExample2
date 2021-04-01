@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,13 +24,18 @@ public class fragment_category_4_freestall extends Fragment implements MainActiv
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_4_freestall, container, false);
-
+        ScrollView scrollview_freestall_4 = view.findViewById(R.id.scrollview_freestall_4);
+        TextView freestall_head_Butt_q37 = (TextView) view.findViewById(R.id.freestall_head_Butt_q37);
+        TextView freestall_struggle_q38 = (TextView) view.findViewById(R.id.freestall_struggle_q38);
+        TextView freestall_touch_Near_q39 = (TextView) view.findViewById(R.id.freestall_touch_Near_q39);
+        TextView freestall_touch_Far_q40 = (TextView) view.findViewById(R.id.freestall_touch_Far_q40);
+        TextView freestall_touch_Impossibility_q41 = (TextView) view.findViewById(R.id.freestall_touch_Impossibility_q41);
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         final EditText ed_37_head_Butt = view.findViewById(R.id.freestall_head_Butt_a37);
         final EditText ed_38_struggle = view.findViewById(R.id.freestall_struggle_a38);
         final EditText ed_39_touch_Near = view.findViewById(R.id.freestall_touch_Near_a39);
         final EditText ed_40_touch_Far = view.findViewById(R.id.freestall_touch_Far_a40);
-        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_41);
+        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_a41);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");

@@ -1,71 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Input_userinfo">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="동물복지 수준평가 농장 기본정보"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="농장명"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/fram_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext"
+                    android:hint="농장명 입력"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        // 농장명 끝
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="소재지"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fram_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="소재지 입력"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            // 소재지 끝
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="대표자"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/farm_rep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="대표자 입력"
+                        android:inputType="text" />
+
+            </LinearLayout>
+        </LinearLayout>
+        // 대표자 끝
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:text="한육우(레이아웃 없어서 선택 불가)"
-            android:textSize="16dp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorPrimary"/> //category1
+            android:textSize="16dp" />
+        //category1
+
         <RadioGroup
+            android:id="@+id/input_farm"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/input_farm">
+            android:layout_height="wrap_content">
+
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/input_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="비육 농장(송아지 없음)" />
+
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/input_2"
-                android:text="번식 농장"/>
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="번식 농장" />
+
+            <RadioButton
                 android:id="@+id/input_3"
-                android:text="일괄 사육 농장"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="일괄 사육 농장" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
                 android:text="착유우"
-                android:textSize="16dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/colorPrimary"/> //category2
+                android:textSize="16dp" />
+            //category2
 
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/input_4"
-                android:text="일반 우사" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="일반 우사" />
+
+            <RadioButton
                 android:id="@+id/input_5"
-                android:text="프리스톨 우사"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="프리스톨 우사" />
         </RadioGroup>
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/farm_selector"
-            android:text="평가하기"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:orientation="vertical">// 사육규모 시작
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="사육규모"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="총 두수"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/total_cow"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="총 두수 입력"
+                        android:textSize="12dp"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="성우 두수"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/total_adult_cow"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="성우 두수 입력"
+                        android:textSize="12dp"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="6개월이하 (송아지) 두수 "
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/total_child_cow"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="송아지 두수 입력"
+                        android:textSize="12dp"
+                        android:inputType="number" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        // 대표자 끝
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="위 개인정보 수집에 대한 동의 여부"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorPrimaryDark"/>
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="프로토콜 표본 규모"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sample_size"
+
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/farm_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="평가하기"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

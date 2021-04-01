@@ -1,6 +1,9 @@
 package com.example.fragmentexample2;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +27,9 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
 
 
 
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,7 +45,10 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
         TextView freestall_water_Tank_Num_q2 = (TextView) view.findViewById(R.id.freestall_water_Tank_Num_q2);
         TextView freestall_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.freestall_water_Tank_Clean_q3);
         TextView freestall_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.freestall_water_Tank_Time_q4);
+        Button freestall_poorRate_btn = view.findViewById(R.id.freestall_poorRate_btn);
 
+        // 1번문항 버튼 생기고, 다음 화면으로 넘어가는 동작
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_1_poorRate,freestall_poorRate_btn,scrollview_freestall_1,freestall_water_Tank_Num_q2);
 
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -134,4 +143,7 @@ public class fragment_category_1_freestall extends Fragment implements MainActiv
         //액티비티의 콜백을 직접호출
         activity.onBackPressed();
     }
+
+
+
 }

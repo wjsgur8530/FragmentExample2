@@ -29,4 +29,5 @@ public class category1 extends AppCompatActivity {
             transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
         }
     }
+
 }

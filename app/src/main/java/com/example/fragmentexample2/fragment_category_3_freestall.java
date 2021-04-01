@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,34 +20,98 @@ public class fragment_category_3_freestall extends Fragment implements MainActiv
     private String result;
     private Button btn_move;
     Integer horn = 0, horn_Anesthesia = 0, horn_Painkiller = 0;
-
+    private EditText ed_20_slight_Limp;
+    private EditText ed_21_critical_Limp;
+    private EditText ed_22_slight_Hairloss;
+    private EditText ed_23_critical_Hairloss;
+    private EditText ed_24_cought;
+    private EditText ed_25_runny_Nose;
+    private EditText ed_26_ophthalmic_Secretion;
+    private EditText ed_27_respiratory_Failure;
+    private EditText ed_28_diarrhea;
+    private EditText ed_29_out_Genitals_Secretion;
+    private EditText ed_30_breast_Inflammation;
+    private EditText ed_31_fall_Dead;
+    private EditText ed_32_dystocia;
+    private EditText ed_33_astasia;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_3_freestall, container, false);
+        ScrollView scrollview_freestall_3 = view.findViewById(R.id.scrollview_freestall_3);
+        TextView freestall_slight_Limp_q20 = (TextView) view.findViewById(R.id.freestall_slight_Limp_q20);
+        TextView freestall_critical_Limp_q21 = (TextView) view.findViewById(R.id.freestall_critical_Limp_q21);
+        TextView freestall_slight_Hairloss_q22 = (TextView) view.findViewById(R.id.freestall_slight_Hairloss_q22);
+        TextView freestall_critical_Hairloss_q23 = (TextView) view.findViewById(R.id.freestall_critical_Hairloss_q23);
+        TextView freestall_cough_q24 = (TextView) view.findViewById(R.id.freestall_cough_q24);
+        TextView freestall_runny_Nose_q25 = (TextView) view.findViewById(R.id.freestall_runny_Nose_q25);
+        TextView freestall_ophthalmic_Secretion_q26 = (TextView) view.findViewById(R.id.freestall_ophthalmic_Secretion_q26);
+        TextView freestall_respiratory_Failure_q27 = (TextView) view.findViewById(R.id.freestall_respiratory_Failure_q27);
+        TextView freestall_diarrhea_q28 = (TextView) view.findViewById(R.id.freestall_diarrhea_q28);
+        TextView freestall_out_Genitals_Secretion_q29 = (TextView) view.findViewById(R.id.freestall_out_Genitals_Secretion_q29);
+        TextView freestall_breast_Inflammation_q30 = (TextView) view.findViewById(R.id.freestall_breast_Inflammation_q30);
+        TextView freestall_fall_Dead_q31 = (TextView) view.findViewById(R.id.freestall_fall_Dead_q31);
+        TextView freestall_dystocia_q32 = (TextView) view.findViewById(R.id.freestall_dystocia_q32);
+        TextView freestall_astasia_q33 = (TextView) view.findViewById(R.id.freestall_astasia_q33);
+        TextView freestall_horn_q34 = (TextView) view.findViewById(R.id.freestall_horn_q34);
+        TextView freestall_horn_Anesthesia_q35 = (TextView) view.findViewById(R.id.freestall_horn_Anesthesia_q35);
+        TextView freestall_horn_Painkiller_q36 = (TextView) view.findViewById(R.id.freestall_horn_Painkiller_q36);
+
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        final EditText ed_20_slight_Limp = view.findViewById(R.id.freestall_slight_Limp_a20);
-        final EditText ed_21_critical_Limp = view.findViewById(R.id.freestall_critical_Limp_a21);
-        final EditText ed_22_slight_Hairloss = view.findViewById(R.id.freestall_slight_Hairloss_a22);
-        final EditText ed_23_critical_Hairloss = view.findViewById(R.id.freestall_critical_Hairloss_a23);
-        final EditText ed_24_cought = view.findViewById(R.id.freestall_cough_a24);
-        final EditText ed_25_runny_Nose = view.findViewById(R.id.freestall_runny_Nose_a25);
-        final EditText ed_26_ophthalmic_Secretion = view.findViewById(R.id.freestall_ophthalmic_Secretion_a26);
-        final EditText ed_27_respiratory_Failure = view.findViewById(R.id.freestall_respiratory_Failure_a27);
-        final EditText ed_28_diarrhea = view.findViewById(R.id.freestall_diarrhea_a28);
-        final EditText ed_29_out_Genitals_Secretion = view.findViewById(R.id.freestall_out_Genitals_Secretion_a29);
-        final EditText ed_30_breast_Inflammation = view.findViewById(R.id.freestall_breast_Inflammation_a30);
-        final EditText ed_31_fall_Dead = view.findViewById(R.id.freestall_fall_Dead_a31);
-        final EditText ed_32_dystocia = view.findViewById(R.id.freestall_dystocia_a32);
-        final EditText ed_33_astasia = view.findViewById(R.id.freestall_astasia_a33);
+        ed_20_slight_Limp = (EditText) view.findViewById(R.id.freestall_slight_Limp_a20);
+        ed_21_critical_Limp = (EditText) view.findViewById(R.id.freestall_critical_Limp_a21);
+        ed_22_slight_Hairloss =(EditText)  view.findViewById(R.id.freestall_slight_Hairloss_a22);
+        ed_23_critical_Hairloss = (EditText) view.findViewById(R.id.freestall_critical_Hairloss_a23);
+        ed_24_cought = (EditText) view.findViewById(R.id.freestall_cough_a24);
+        ed_25_runny_Nose = (EditText) view.findViewById(R.id.freestall_runny_Nose_a25);
+        ed_26_ophthalmic_Secretion = (EditText) view.findViewById(R.id.freestall_ophthalmic_Secretion_a26);
+        ed_27_respiratory_Failure = (EditText) view.findViewById(R.id.freestall_respiratory_Failure_a27);
+        ed_28_diarrhea =(EditText)  view.findViewById(R.id.freestall_diarrhea_a28);
+        ed_29_out_Genitals_Secretion = (EditText) view.findViewById(R.id.freestall_out_Genitals_Secretion_a29);
+        ed_30_breast_Inflammation = (EditText) view.findViewById(R.id.freestall_breast_Inflammation_a30);
+        ed_31_fall_Dead = (EditText) view.findViewById(R.id.freestall_fall_Dead_a31);
+        ed_32_dystocia = (EditText) view.findViewById(R.id.freestall_dystocia_a32);
+        ed_33_astasia =(EditText)  view.findViewById(R.id.freestall_astasia_a33);
+
+// 버튼 이용할 때
+  /*      Button freestall_slight_Limp_btn = view.findViewById(R.id.freestall_slight_Limp_btn);
+        Button freestall_critical_Limp_btn = view.findViewById(R.id.freestall_critical_Limp_btn);
+        Button freestall_slight_Hairloss_btn = view.findViewById(R.id.freestall_slight_Hairloss_btn);
+        Button freestall_critical_Hairloss_btn = view.findViewById(R.id.freestall_critical_Hairloss_btn);
+        Button freestall_cough_btn = view.findViewById(R.id.freestall_cough_btn);
+        Button freestall_runny_Nose_btn = view.findViewById(R.id.freestall_runny_Nose_btn);
+        Button freestall_ophthalmic_Secretion_btn = view.findViewById(R.id.freestall_ophthalmic_Secretion_btn);
+        Button freestall_respiratory_Failure_btn = view.findViewById(R.id.freestall_respiratory_Failure_btn);
+        Button freestall_diarrhea_btn = view.findViewById(R.id.freestall_diarrhea_btn);
+        Button freestall_out_Genitals_Secretion_btn = view.findViewById(R.id.freestall_out_Genitals_Secretion_btn);
+        Button freestall_breast_Inflammation_btn = view.findViewById(R.id.freestall_breast_Inflammation_btn);
+        Button freestall_fall_Dead_btn = view.findViewById(R.id.freestall_fall_Dead_btn);
+        Button freestall_dystocia_btn = view.findViewById(R.id.freestall_dystocia_btn);
+        Button freestall_astasia_btn = view.findViewById(R.id.freestall_astasia_btn);*/
 
 
+     /*   ((MainActivity)MainActivity.mContext).addButtonScroll(ed_20_slight_Limp,freestall_slight_Limp_btn,scrollview_freestall_3,freestall_critical_Limp_q21);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_21_critical_Limp,freestall_critical_Limp_btn,scrollview_freestall_3,freestall_slight_Hairloss_q22);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_22_slight_Hairloss,freestall_slight_Hairloss_btn,scrollview_freestall_3,freestall_critical_Hairloss_q23);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_23_critical_Hairloss,freestall_critical_Hairloss_btn,scrollview_freestall_3,freestall_cough_q24);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_24_cought,freestall_cough_btn,scrollview_freestall_3,freestall_runny_Nose_q25);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_25_runny_Nose,freestall_runny_Nose_btn,scrollview_freestall_3,freestall_ophthalmic_Secretion_q26);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_26_ophthalmic_Secretion,freestall_ophthalmic_Secretion_btn,scrollview_freestall_3,freestall_respiratory_Failure_q27);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_27_respiratory_Failure,freestall_respiratory_Failure_btn,scrollview_freestall_3,freestall_diarrhea_q28);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_28_diarrhea,freestall_diarrhea_btn,scrollview_freestall_3,freestall_out_Genitals_Secretion_q29);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_29_out_Genitals_Secretion,freestall_out_Genitals_Secretion_btn,scrollview_freestall_3,freestall_breast_Inflammation_q30);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_30_breast_Inflammation,freestall_breast_Inflammation_btn,scrollview_freestall_3,freestall_fall_Dead_q31);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_31_fall_Dead,freestall_fall_Dead_btn,scrollview_freestall_3,freestall_dystocia_q32);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_32_dystocia,freestall_dystocia_btn,scrollview_freestall_3,freestall_astasia_q33);
+        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_33_astasia,freestall_astasia_btn,scrollview_freestall_3,freestall_horn_q34);
+*/
         RadioGroup rdiog_34_horn = (RadioGroup) view.findViewById(R.id.freestall_horn_rdogrp34); //11번 문항
 
         rdiog_34_horn.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_horn_Anesthesia_q35,scrollview_freestall_3,0);
                 if (checkedId == R.id.freestall_horn_a34_1) {
                     horn = 1;
                 } else if (checkedId == R.id.freestall_horn_a34_2) {
@@ -63,6 +129,7 @@ public class fragment_category_3_freestall extends Fragment implements MainActiv
         rdiog_35_horn_anesthesia.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_horn_Painkiller_q36,scrollview_freestall_3,0);
                 if (checkedId == R.id.freestall_horn_Anesthesia_a35_1) {
                     horn_Anesthesia = 1;
                 } else if (checkedId == R.id.freestall_horn_Anesthesia_a35_2) {

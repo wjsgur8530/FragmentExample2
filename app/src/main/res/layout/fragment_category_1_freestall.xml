@@ -71,22 +71,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:orientation="vertical">
-
+            android:orientation="horizontal">
             <EditText
                 android:id="@+id/freestall_poorRate_a1"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionNext"
                 android:background="@drawable/edittext"
-                android:layout_width="match_parent"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:hint="숫자 입력"
                 android:layout_margin="10dp"
                 android:inputType="number">
             </EditText>
 
+            <Button
+                android:id="@+id/freestall_poorRate_btn"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop ="5dp"
+                android:visibility="invisible"
+                android:text="다음" />
+
 
         </LinearLayout>
-
     </LinearLayout>//여기까지 하나
 
     <LinearLayout

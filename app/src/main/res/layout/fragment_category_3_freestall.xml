@@ -6,7 +6,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="8">
+        android:layout_weight="8"
+        android:id="@+id/scrollview_freestall_3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +52,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q20"
+                        android:id="@+id/freestall_slight_Limp_q20"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 경미한 다리절음이 있는 소의 비율은 얼마나 되는가?"
@@ -68,18 +69,28 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_slight_Limp_a20"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_critical_Limp_a21"
+                        >
                     </EditText>
+
+                    <Button
+                        android:id="@+id/freestall_slight_Limp_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="다음"
+                        android:visibility="invisible" />
 
 
                 </LinearLayout>
@@ -113,7 +124,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q21"
+                        android:id="@+id/freestall_critical_Limp_q21"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 심각한 다리절음이 있는 소의 비율은 얼마나 되는가?"
@@ -130,18 +141,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_critical_Limp_a21"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_slight_Hairloss_a22"
+                        >
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_critical_Limp_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -175,7 +195,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q22"
+                        android:id="@+id/freestall_slight_Hairloss_q22"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본에서 경미한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 탈모부위, 병변/부종은 없음)"
@@ -192,18 +212,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_slight_Hairloss_a22"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_critical_Hairloss_a23">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_slight_Hairloss_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -237,7 +265,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q23"
+                        android:id="@+id/freestall_critical_Hairloss_q23"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본에서 심한 외피 변형이 있는 가축의 비율은 얼마나 되는가?(한 개 이상의 병변/부종)"
@@ -254,18 +282,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
 
                     <EditText
                         android:id="@+id/freestall_critical_Hairloss_a23"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_cough_a24">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_critical_Hairloss_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -299,7 +336,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q24"
+                        android:id="@+id/freestall_cough_q24"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 1마리당 15분 동안 기침하는 평균 수는 얼마나 되는가?"
@@ -316,19 +353,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_cough_a24"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_runny_Nose_a25">
                     </EditText>
-
+                    <Button
+                        android:id="@+id/freestall_cough_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
                 </LinearLayout>
 
@@ -361,7 +405,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q25"
+                        android:id="@+id/freestall_runny_Nose_q25"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 표본에서 비강 분비물이 있는 가축의 비율은 얼마나 되는가?"
@@ -378,18 +422,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
 
                     <EditText
                         android:id="@+id/freestall_runny_Nose_a25"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_ophthalmic_Secretion_a26">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_runny_Nose_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -423,7 +476,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q26"
+                        android:id="@+id/freestall_ophthalmic_Secretion_q26"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 안구 분비물이 있는 가축의 비율은 얼마나 되는가?"
@@ -440,18 +493,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_ophthalmic_Secretion_a26"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_respiratory_Failure_a27"
+                        >
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_ophthalmic_Secretion_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
                 </LinearLayout>
 
@@ -484,7 +546,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q27"
+                        android:id="@+id/freestall_respiratory_Failure_q27"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 호흡 장애가 있는 가축의 비율은 얼마나 되는가?"
@@ -501,17 +563,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/freestall_respiratory_Failure_a27"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_diarrhea_a28">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_respiratory_Failure_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
                 </LinearLayout>
 
@@ -544,7 +615,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q28"
+                        android:id="@+id/freestall_diarrhea_q28"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 설사를 하는 가축의 비율은 얼마나 되는가?"
@@ -561,17 +632,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/freestall_diarrhea_a28"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_out_Genitals_Secretion_a29">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_diarrhea_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
                 </LinearLayout>
 
@@ -604,7 +684,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q29"
+                        android:id="@+id/freestall_out_Genitals_Secretion_q29"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본에서 외음부 분비물이 있는 가축의 비율은 얼마나 되는가?"
@@ -621,18 +701,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_out_Genitals_Secretion_a29"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_breast_Inflammation_a30">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_out_Genitals_Secretion_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
                 </LinearLayout>
 
@@ -665,7 +753,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q30"
+                        android:id="@+id/freestall_breast_Inflammation_q30"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="전체 착유우군 유내 체세포 수가 400,000 이상인 젖소의 비율은 얼마나 되는가?"
@@ -682,17 +770,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/freestall_breast_Inflammation_a30"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_fall_Dead_a31">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_breast_Inflammation_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
+
 
                 </LinearLayout>
 
@@ -725,7 +823,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q31"
+                        android:id="@+id/freestall_fall_Dead_q31"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="지난 12개월 동안 농장에서 폐사, 안락사 및 긴급 도축된 가축의 비율은 얼마나 되는가?"
@@ -742,18 +840,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/freestall_fall_Dead_a31"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_dystocia_a32">
                     </EditText>
-
+                    <Button
+                        android:id="@+id/freestall_fall_Dead_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
                 </LinearLayout>
 
             </LinearLayout>//여기까지 하나
@@ -786,7 +892,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q32"
+                        android:id="@+id/freestall_dystocia_q32"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="연간 평균 분만횟수 대비 지난 12개월 동안의 난산발생 비율은 얼마나 되는가?"
@@ -803,18 +909,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
 
                     <EditText
                         android:id="@+id/freestall_dystocia_a32"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/freestall_astasia_a33">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_dystocia_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -848,7 +963,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q33"
+                        android:id="@+id/freestall_astasia_q33"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:text="연간 평균 젖소수 대비 지난 12개월 동안의 기립불능 소의 비율은 얼마나 되는가?"
@@ -865,18 +980,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/freestall_astasia_a33"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
                         android:inputType="number">
                     </EditText>
+                    <Button
+                        android:id="@+id/freestall_astasia_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop ="5dp"
+                        android:visibility="invisible"
+                        android:text="다음" />
 
 
                 </LinearLayout>
@@ -910,7 +1032,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q34"
+                        android:id="@+id/freestall_horn_q34"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="다음 중 제각/탈각에 해당되는 사항을 고르시오."
@@ -1002,7 +1124,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q35"
+                        android:id="@+id/freestall_horn_Anesthesia_q35"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="제각/탈각시 마취제를 사용하는가?"
@@ -1076,7 +1198,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q36"
+                        android:id="@+id/freestall_horn_Painkiller_q36"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="제각/탈각 후 진통제를 사용하는가?"

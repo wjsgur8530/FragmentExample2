@@ -383,7 +383,7 @@
 
                     <EditText
                         android:id="@+id/milk_runny_Nose_a22"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -445,7 +445,7 @@
 
                     <EditText
                         android:id="@+id/milk_ophthalmic_Secretion_a23"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -505,7 +505,7 @@
                     android:orientation="vertical">
                     <EditText
                         android:id="@+id/milk_respiratory_Failure_a24"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -565,7 +565,7 @@
                     android:orientation="vertical">
                     <EditText
                         android:id="@+id/milk_diarrhea_a25"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -626,7 +626,7 @@
 
                     <EditText
                         android:id="@+id/milk_out_Genitals_Secretion_a26"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -686,7 +686,7 @@
                     android:orientation="vertical">
                     <EditText
                         android:id="@+id/milk_breast_Inflammation_a27"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -746,7 +746,7 @@
                     android:orientation="vertical">
                     <EditText
                         android:id="@+id/milk_fall_Dead_a28"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

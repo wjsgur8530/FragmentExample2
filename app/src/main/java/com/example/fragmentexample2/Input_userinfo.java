@@ -35,15 +35,15 @@ public class Input_userinfo extends AppCompatActivity {
         input_farm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.input_1) {
+                if (checkedId == R.id.input_1) { // 비육 농장
                     input_checked = 1;
-                } else if (checkedId == R.id.input_2) {
+                } else if (checkedId == R.id.input_2) { // 번식 농장
                     input_checked = 2;
-                } else if (checkedId == R.id.input_3) {
+                } else if (checkedId == R.id.input_3) { // 일괄 사육 농장
                     input_checked = 3;
-                } else if (checkedId == R.id.input_4) {
+                } else if (checkedId == R.id.input_4) { // 젖소 일반 우사
                     input_checked = 4;
-                } else if (checkedId == R.id.input_5) {
+                } else if (checkedId == R.id.input_5) { // 젖소 프리스톨 우사
                     input_checked = 5;
                 }
             }

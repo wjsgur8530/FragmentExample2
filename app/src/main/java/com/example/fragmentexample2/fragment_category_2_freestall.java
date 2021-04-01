@@ -16,7 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import org.w3c.dom.Text;
 
-public class fragment_category_2_freestall extends Fragment implements MainActivity.onKeyBackPressedListener {
+public class fragment_category_2_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;

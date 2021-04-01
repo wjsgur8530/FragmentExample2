@@ -73,7 +73,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_poor_Rate_a1"
+                        android:id="@+id/breed_batch_poor_Rate_a1"
                         android:imeOptions="actionDone"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -134,14 +134,14 @@
                     android:layout_height="90dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Num_rdogrp2"
+                        android:id="@+id/breed_batch_water_Tank_Num_rdogrp2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Num_a2_1"
+                            android:id="@+id/breed_batch_water_Tank_Num_a2_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="음수조 1개당 10두 이하 사용"
@@ -149,7 +149,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Num_a2_2"
+                            android:id="@+id/breed_batch_water_Tank_Num_a2_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -208,14 +208,14 @@
                     android:layout_height="150dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Clean_rdogrp3"
+                        android:id="@+id/breed_batch_water_Tank_Clean_rdogrp3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_1"
+                            android:id="@+id/breed_batch_water_Tank_Clean_a3_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="검사시 음수조 내부 이물질 없이 맑은 물 확인가능"
@@ -223,7 +223,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_2"
+                            android:id="@+id/breed_batch_water_Tank_Clean_a3_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -231,7 +231,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_3"
+                            android:id="@+id/breed_batch_water_Tank_Clean_a3_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="이끼, 분변, 다량의 사료, 벌레 등 다수의 이물질로 인한 탁한 물 확인가능"
@@ -290,14 +290,14 @@
                     android:layout_height="140dp"
                     android:orientation="vertical">
                     <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Time_rdogrp4"
+                        android:id="@+id/breed_batch_water_Tank_Time_rdogrp4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_margin="10dp"
                         android:paddingLeft="20dp">
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_1"
+                            android:id="@+id/breed_batch_water_Tank_Time_a4_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="대기 우 없고, 음수시간 5분 이하"
@@ -305,7 +305,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_2"
+                            android:id="@+id/breed_batch_water_Tank_Time_a4_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp"
@@ -313,7 +313,7 @@
                             android:layout_weight="1">
                         </RadioButton>
                         <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_3"
+                            android:id="@+id/breed_batch_water_Tank_Time_a4_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="대기우 20% 이상, 음수 시간 10분 이상"

@@ -22,8 +22,6 @@ import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
     public static Context mContext;
-    private onKeyBackPressedListener mOnKeyBackPressedListener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }, 200);
         }
     }
+
 
     public interface onKeyBackPressedListener{
         void onBackKey();
@@ -116,9 +115,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     };
-
-
-
 }
 
 

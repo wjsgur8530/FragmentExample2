@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_3_freestall extends Fragment implements MainActivity.onKeyBackPressedListener {
+public class fragment_category_3_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;

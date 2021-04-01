@@ -17,14 +17,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="[ 좋은 사료와 물 ]"
+                android:text="[ 적절한 행동( 정신적 건강상태 ) ]"
                 android:textSize="20dp"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
                 android:gravity="center">
 
             </TextView>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,10 +40,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb1"
+                        android:id="@+id/nb31"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  1"
+                        android:text="  31"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -53,10 +52,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q1"
+                        android:id="@+id/q31"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="수척, 또는 부실 단계인 개체의 비율이 얼마나 됩니까?"
+                        android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 투쟁행동의 빈도가 어떻게 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -73,8 +72,8 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_poor_Rate_a1"
-                        android:imeOptions="actionDone"
+                        android:id="@+id/fatten_struggle_a31"
+                        android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -103,10 +102,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb2"
+                        android:id="@+id/nb32"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  2"
+                        android:text="  32"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -115,10 +114,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q2"
+                        android:id="@+id/q32"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="음수조의 수가 얼마나 됩니까?"
+                        android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 화합행동의 빈도가 어떻게 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -131,32 +130,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Num_rdogrp2"
+
+                    <EditText
+                        android:id="@+id/fatten_harmony_a32"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Num_a2_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="음수조 1개당 10두 이하 사용"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Num_a2_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="음수조 1개당 11두 이상 사용"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -177,10 +164,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb3"
+                        android:id="@+id/nb33"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  3"
+                        android:text="  33"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -189,10 +176,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q3"
+                        android:id="@+id/q33"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="음수조의 위생상태가 어떻습니까?"
+                        android:text="평가자가 50cm 이상 가까이 다가갈 수 있으나 만질 수 없는 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -205,40 +192,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Clean_rdogrp3"
+
+                    <EditText
+                        android:id="@+id/fatten_touch_Near_a33"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="검사시 음수조 내부 이물질 없이 맑은 물 확인가능"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="부분적 사료와 같은 이물질 보이나 신선한 물 확인가능"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Clean_a3_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="이끼, 분변, 다량의 사료, 벌레 등 다수의 이물질로 인한 탁한 물 확인가능"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 
@@ -259,10 +226,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb4"
+                        android:id="@+id/nb34"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  4"
+                        android:text="  34"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -271,10 +238,10 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q4"
+                        android:id="@+id/q34"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="음수 대기 우의 여부와 음수 시간은 어떠합니까?"
+                        android:text="평가자가 50~100cm 이내로 접근하는 것을 허용한 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -287,40 +254,82 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="60dp"
                     android:orientation="vertical">
-                    <RadioGroup
-                        android:id="@+id/fatten_water_Tank_Time_rdogrp4"
+
+                    <EditText
+                        android:id="@+id/fatten_touch_Far_a34"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:paddingLeft="20dp">
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="대기 우 없고, 음수시간 5분 이하"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="대기우 20% 이하, 음수 시간 10분 이하"
-                            android:layout_weight="1">
-                        </RadioButton>
-                        <RadioButton
-                            android:id="@+id/fatten_water_Tank_Time_a4_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="대기우 20% 이상, 음수 시간 10분 이상"
-                            android:textSize="15dp"
-                            android:layout_weight="1">
-                        </RadioButton>
-                    </RadioGroup>
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb35"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  35"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="평가자가 100cm 이내로 다가갈 수 없는 소의 비율은 얼마나 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/fatten_touch_Impossibility_a35"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
 
                 </LinearLayout>
 

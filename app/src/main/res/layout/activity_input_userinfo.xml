@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="한육우(레이아웃 없어서 선택 불가)"
+            android:text="한육우"
             android:textSize="16dp"
             android:textColor="@color/colorWhite"
             android:background="@color/colorPrimary"/> //category1

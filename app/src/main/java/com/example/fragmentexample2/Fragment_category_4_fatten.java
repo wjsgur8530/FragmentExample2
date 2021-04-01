@@ -7,29 +7,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4_freestall extends Fragment implements category1.onKeyBackPressedListener {
+public class Fragment_category_4_fatten extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
+    private EditText ed_31_struggle, ed_32_harmony, ed_33_touch_Near, ed_34_touch_Far, ed_35_touch_Impossibility;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_4_freestall, container, false);
+        view = inflater.inflate(R.layout.fragment_category_4_fatten, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        final EditText ed_37_head_Butt = view.findViewById(R.id.freestall_head_Butt_a37);
-        final EditText ed_38_struggle = view.findViewById(R.id.freestall_struggle_a38);
-        final EditText ed_39_touch_Near = view.findViewById(R.id.freestall_touch_Near_a39);
-        final EditText ed_40_touch_Far = view.findViewById(R.id.freestall_touch_Far_a40);
-        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_41);
+        ed_31_struggle = view.findViewById(R.id.fatten_struggle_a31);
+        ed_32_harmony = view.findViewById(R.id.fatten_harmony_a32);
+        ed_33_touch_Near = view.findViewById(R.id.fatten_touch_Near_a33);
+        ed_34_touch_Far = view.findViewById(R.id.fatten_touch_Far_a34);
+        ed_35_touch_Impossibility = view.findViewById(R.id.fatten_touch_Impossibility_a35);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");
@@ -53,17 +52,17 @@ public class fragment_category_4_freestall extends Fragment implements category1
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
             @Override
             public void onClick(View v) {
-                String head_butt = ed_37_head_Butt.getText().toString();
-                String struggle = ed_38_struggle.getText().toString();
-                String touch_near = ed_39_touch_Near.getText().toString();
-                String touch_far = ed_40_touch_Far.getText().toString();
-                String touch_impossibility = ed_41_touch_Impossibility.getText().toString();
+                String struggle = ed_31_struggle.getText().toString();
+                String harmony = ed_32_harmony.getText().toString();
+                String touch_near = ed_33_touch_Near.getText().toString();
+                String touch_far = ed_34_touch_Far.getText().toString();
+                String touch_impossibility = ed_35_touch_Impossibility.getText().toString();
 
-                String[] protocol4 = {head_butt, struggle, touch_near, touch_far, touch_impossibility};
+                String[] protocol4 = {struggle, harmony, touch_near, touch_far, touch_impossibility};
 
                 Bundle bundle = new Bundle(); // 무언가를 담는 공간
-                bundle.putString("submit", head_butt); //id, content 마지막 페이지로 데이터 전달
                 bundle.putString("submit", struggle);
+                bundle.putString("submit", harmony);
                 bundle.putString("submit", touch_near);
                 bundle.putString("submit", touch_far);
                 bundle.putString("submit", touch_impossibility);
@@ -80,7 +79,7 @@ public class fragment_category_4_freestall extends Fragment implements category1
     public void onBackKey() {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.framelayout, new fragment_category_3_freestall())
+                .replace(R.id.framelayout, new Fragment_category_3_fatten())
                 .addToBackStack(null)
                 .commit();
     }

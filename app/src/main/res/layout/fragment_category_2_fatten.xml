@@ -575,7 +575,19 @@
                     </RadioGroup>
 
                 </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="세부기준점수"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/summer_rest_score"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp" />
             </LinearLayout>//여기까지 하나
 
             <LinearLayout
@@ -723,7 +735,19 @@
                     </RadioGroup>
 
                 </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="세부기준점수"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/winter_rest_score"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp" />
             </LinearLayout>//여기까지 하나
         </LinearLayout>
     </ScrollView>

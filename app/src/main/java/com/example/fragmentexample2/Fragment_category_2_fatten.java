@@ -7,11 +7,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import org.w3c.dom.Text;
 
 public class Fragment_category_2_fatten extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
@@ -31,8 +34,8 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
         RadioGroup rdiog_6_straw_normal = (RadioGroup) view.findViewById(R.id.fatten_straw_Normal_rdogrp6);
         RadioGroup rdiog_7_straw_resting_place = (RadioGroup) view.findViewById(R.id.fatten_straw_Resting_Place_rdogrp7); //7번 문항(프리스톨)
         ed_8_outward_Hygiene = (EditText) view.findViewById(R.id.fatten_outward_Hygiene_a8);
-
-
+        TextView summer_rest_score = (TextView)view.findViewById(R.id.summer_rest_score);
+        TextView winter_rest_score = (TextView)view.findViewById(R.id.winter_rest_score);
         rdiog_5_straw_feed_tank.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -83,10 +86,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.fatten_shade_a9_1) {
-                    outward_Hygiene = 1;
+                    shade = 1;
                 } else if (checkedId == R.id.fatten_shade_a9_2) {
-                    outward_Hygiene = 2;
+                    shade = 2;
                 }
+                summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
 
@@ -100,6 +104,7 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_summer_Ventilating_a10_2) {
                     summer_Ventilating = 2;
                 }
+                summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
 
@@ -113,8 +118,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_mist_Spary_a11_2) {
                     mist_Spary = 2;
                 }
+
+                summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
+
 
         RadioGroup rdiog_12_wind_block = (RadioGroup) view.findViewById(R.id.fatten_wind_Block_rdogrp12); //11번 문항
 
@@ -126,6 +134,7 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_wind_Block_a12_2) {
                     wind_Block = 2;
                 }
+                winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
             }
         });
 
@@ -139,6 +148,7 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_winter_Ventilating_a13_2) {
                     winter_Ventilating = 2;
                 }
+                winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
             }
         });
 
@@ -203,5 +213,64 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                         .replace(R.id.framelayout, new Fragment_category_1_fatten())
                         .addToBackStack(null)
                         .commit();
+    }
+     // 혹서기 - 그늘, 환기팬, 안개분무 시설 점수 계산
+     public int getSummerRestScore(int shade,int summerVentilating, int mistSpary)
+    {
+        int summerRestScore = 0;
+        // 충분한 그늘 항목 "예"인 경우
+        if (shade == 1) {
+            // 충분한 풍속 항목 "예"인 경우
+            if (summerVentilating  == 1) {
+                //안개분무 풍속 "예"인 경우
+                if (mistSpary == 1) {
+                    summerRestScore = 100;
+                } else {
+                    summerRestScore = 80;
+                }
+            } else {
+                if (mistSpary == 1) {
+                    summerRestScore = 60;
+                } else {
+                    summerRestScore = 45;
+                }
+            }
+        } else {
+            if (summerVentilating == 1) {
+                if (mistSpary == 1) {
+                    summerRestScore = 55;
+                } else {
+                    summerRestScore = 40;
+                }
+            } else {
+                if (mistSpary == 1) {
+                    summerRestScore = 20;
+                } else {
+                    summerRestScore = 0;
+                }
+            }
+        }
+        return summerRestScore;
+    }
+    public int getWinterRestScore(int windBlock, int winterVentilating)
+    {
+        int windRestScore = 0;
+        // 바람차단시설 항목 "예"인 경우
+        if (windBlock == 1) {
+            // 최소 풍속시설 항목 "예"인 경우
+            if (winterVentilating == 1) {
+                windRestScore = 100;
+            } else {
+                windRestScore = 70;
+            }
+            // 바람차단시설 항목 "아니오 "인 경우
+        } else {
+            if (winterVentilating == 1) {
+                windRestScore = 40;
+            } else {
+                windRestScore = 20;
+            }
+        }
+        return windRestScore;
     }
 }

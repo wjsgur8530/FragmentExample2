@@ -2,6 +2,7 @@ package com.example.fragmentexample2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,6 +18,9 @@ import android.widget.TextView;
 public class Input_userinfo extends AppCompatActivity {
     private static EditText editText;
     private static TextView textView;
+    public static Context context_userinfo;
+    public String result;
+    public String total_cow_count;
 
 
     Integer input_checked;
@@ -25,7 +29,7 @@ public class Input_userinfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_userinfo);
-
+        context_userinfo = this;
         Button farm_selector = (Button) findViewById(R.id.farm_selector);
         RadioGroup input_farm = (RadioGroup) findViewById(R.id.input_farm);
 
@@ -66,8 +70,9 @@ public class Input_userinfo extends AppCompatActivity {
                 if(TextUtils.isEmpty(total_cow.getText().toString())) {
                     sample_size.setText("값을 입력해주세요");
                 } else {
-                    String result = getSampleSizeScore(total_cow.getText().toString());
+                    result = getSampleSizeScore(total_cow.getText().toString());
                     sample_size.setText(result);
+                    total_cow_count = total_cow.getText().toString();
                 }
             }
             @Override

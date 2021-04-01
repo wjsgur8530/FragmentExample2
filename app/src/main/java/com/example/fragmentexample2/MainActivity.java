@@ -22,6 +22,7 @@ import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
     public static Context mContext;
+    private onKeyBackPressedListener OnKeyBackPressedListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
         void onBackKey();
     }
     public void setOnKeyBackPressedListener(onKeyBackPressedListener listener){
-        mOnKeyBackPressedListener = listener;
+        OnKeyBackPressedListener = listener;
         //Fragment 로 뒤로가기 callback 보내기위한 로직
-        if (mOnKeyBackPressedListener != null) {
-            mOnKeyBackPressedListener.onBackKey();
+        if (OnKeyBackPressedListener != null) {
+            OnKeyBackPressedListener.onBackKey();
         }else{
             super.onBackPressed();
         }

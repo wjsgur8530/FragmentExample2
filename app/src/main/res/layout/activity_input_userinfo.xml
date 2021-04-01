@@ -130,7 +130,7 @@
             android:textSize="16dp"
 
             android:textColor="@color/colorWhite"
-            android:textSize="16dp" />
+       />
         //category1
 
         <RadioGroup

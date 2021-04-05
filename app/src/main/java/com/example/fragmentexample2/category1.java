@@ -5,8 +5,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 
 public class category1 extends AppCompatActivity {
+
+    Button btn_move;
+    ProgressBar progressBar;
 
     private onKeyBackPressedListener mOnKeyBackPressedListener;
 
@@ -43,6 +50,7 @@ public class category1 extends AppCompatActivity {
             transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
         }
     }
+
     public interface onKeyBackPressedListener{
         void onBackKey();
     }
@@ -55,4 +63,5 @@ public class category1 extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
 }

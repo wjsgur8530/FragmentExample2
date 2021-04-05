@@ -56,7 +56,7 @@
                         android:id="@+id/q1"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="수척, 또는 부실 단계인 개체의 비율이 얼마나 됩니까?"
+                        android:text="여윈(수척 또는 부실) 개체의 두수가 얼마나 됩니까?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -85,7 +85,32 @@
 
 
                 </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="전체 두수의 여윈 개체의 비율 "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/breed_batch_poor_Rate_ratio"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="세부기준점수"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/breed_batch_Rate_score"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp" />
             </LinearLayout>//여기까지 하나
 
             <LinearLayout

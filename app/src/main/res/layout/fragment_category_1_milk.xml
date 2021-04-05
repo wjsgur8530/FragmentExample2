@@ -76,7 +76,7 @@
 
             <EditText
                 android:id="@+id/milk_poorRate_a1"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionNext"
                 android:background="@drawable/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

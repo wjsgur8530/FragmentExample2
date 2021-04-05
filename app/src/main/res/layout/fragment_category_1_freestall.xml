@@ -71,22 +71,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:orientation="vertical">
-
+            android:orientation="horizontal">
             <EditText
                 android:id="@+id/freestall_poorRate_a1"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionNext"
                 android:background="@drawable/edittext"
-                android:layout_width="match_parent"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:hint="숫자 입력"
                 android:layout_margin="10dp"
                 android:inputType="number">
             </EditText>
-
-
         </LinearLayout>
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="전체 두수의 여윈 개체의 비율 "
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/freestall_poor_Rate_ratio"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="세부기준점수"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/freestall_poor_Rate_score"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp" />
     </LinearLayout>//여기까지 하나
 
     <LinearLayout

@@ -2,11 +2,16 @@ package com.example.fragmentexample2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,18 +23,145 @@ public class fragment_category_4_freestall extends Fragment implements category1
     private View view;
     private String result;
     private Button btn_move;
-
+    public String total_cow_count = ((Input_userinfo)Input_userinfo.context_userinfo).total_cow_count;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_4_freestall, container, false);
+        ScrollView scrollview_freestall_4 = view.findViewById(R.id.scrollview_freestall_4);
+        TextView freestall_head_Butt_q37 = (TextView) view.findViewById(R.id.freestall_head_Butt_q37);
+        TextView freestall_struggle_q38 = (TextView) view.findViewById(R.id.freestall_struggle_q38);
+        TextView freestall_touch_Near_q39 = (TextView) view.findViewById(R.id.freestall_touch_Near_q39);
+        TextView freestall_touch_Far_q40 = (TextView) view.findViewById(R.id.freestall_touch_Far_q40);
+        TextView freestall_touch_Impossibility_q41 = (TextView) view.findViewById(R.id.freestall_touch_Impossibility_q41);
+        TextView freestall_struggle_score = (TextView) view.findViewById(R.id.freestall_struggle_score);
+        TextView freestall_untouchable_score = (TextView) view.findViewById(R.id.freestall_untouchable_score);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         final EditText ed_37_head_Butt = view.findViewById(R.id.freestall_head_Butt_a37);
         final EditText ed_38_struggle = view.findViewById(R.id.freestall_struggle_a38);
         final EditText ed_39_touch_Near = view.findViewById(R.id.freestall_touch_Near_a39);
         final EditText ed_40_touch_Far = view.findViewById(R.id.freestall_touch_Far_a40);
-        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_41);
+        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_a41);
+
+        ed_37_head_Butt.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                Log.d("37번 머리박치기", "현재값은: " + ed_37_head_Butt.getText().toString());
+                if(TextUtils.isEmpty(ed_37_head_Butt.getText().toString())) {
+                    freestall_struggle_score.setText("37번 값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(TextUtils.isEmpty(ed_38_struggle.getText().toString())) {
+                    freestall_struggle_score.setText("38번 값을 입력해주세요");
+                } else if(Integer.parseInt(total_cow_count) < Double.parseDouble(ed_37_head_Butt.getText().toString())){
+                    freestall_struggle_score.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+//                    freestall_struggle_score.setText(getStruggleScore(ed_37_head_Butt.getText().toString(), ed_38_struggle.getText().toString()));
+                    freestall_struggle_score.setText(((Milk_cow)Milk_cow.context).getStruggleScore(ed_37_head_Butt.getText().toString(), ed_38_struggle.getText().toString()));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+        ed_38_struggle.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                Log.d("38번 머리박치기", "현재값은: " + ed_38_struggle.getText().toString());
+                if(TextUtils.isEmpty(ed_37_head_Butt.getText().toString())) {
+                    freestall_struggle_score.setText("37번 값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(TextUtils.isEmpty(ed_38_struggle.getText().toString())) {
+                    freestall_struggle_score.setText("38번 값을 입력해주세요");
+                } else if(Integer.parseInt(total_cow_count) < Double.parseDouble(ed_38_struggle.getText().toString())){
+                    freestall_struggle_score.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+//                    freestall_struggle_score.setText(getStruggleScore(ed_37_head_Butt.getText().toString(), ed_38_struggle.getText().toString()));
+                    freestall_struggle_score.setText(((Milk_cow)Milk_cow.context).getStruggleScore(ed_37_head_Butt.getText().toString(), ed_38_struggle.getText().toString()));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+        ed_39_touch_Near.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                Log.d("39번 가까이", "현재값은: " + ed_39_touch_Near.getText().toString());
+                if(TextUtils.isEmpty(ed_39_touch_Near.getText().toString())) {
+                    freestall_untouchable_score.setText("39번 값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(TextUtils.isEmpty(ed_40_touch_Far.getText().toString())) {
+                    freestall_untouchable_score.setText("40번 값을 입력해주세요");
+                } else if(TextUtils.isEmpty(ed_41_touch_Impossibility.getText().toString())) {
+                    freestall_untouchable_score.setText("41번 값을 입력해주세요");
+                } else if(Integer.parseInt(total_cow_count) < Double.parseDouble(ed_39_touch_Near.getText().toString())){
+                    freestall_untouchable_score.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+                    freestall_untouchable_score.setText(((Milk_cow)Milk_cow.context).getUntouchableCowScore(ed_39_touch_Near.getText().toString(), ed_40_touch_Far.getText().toString(), ed_41_touch_Impossibility.getText().toString()));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+        ed_40_touch_Far.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                Log.d("40번 중간", "현재값은: " + ed_40_touch_Far.getText().toString());
+                if(TextUtils.isEmpty(ed_39_touch_Near.getText().toString())) {
+                    freestall_untouchable_score.setText("39번 값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(TextUtils.isEmpty(ed_40_touch_Far.getText().toString())) {
+                    freestall_untouchable_score.setText("40번 값을 입력해주세요");
+                } else if(TextUtils.isEmpty(ed_41_touch_Impossibility.getText().toString())) {
+                    freestall_untouchable_score.setText("41번 값을 입력해주세요");
+                } else if(Integer.parseInt(total_cow_count) < Double.parseDouble(ed_40_touch_Far.getText().toString())){
+                    freestall_untouchable_score.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+                    freestall_untouchable_score.setText(((Milk_cow)Milk_cow.context).getUntouchableCowScore(ed_39_touch_Near.getText().toString(), ed_40_touch_Far.getText().toString(), ed_41_touch_Impossibility.getText().toString()));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+        ed_41_touch_Impossibility.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                Log.d("41번 못만지는", "현재값은: " + ed_41_touch_Impossibility.getText().toString());
+                if(TextUtils.isEmpty(ed_39_touch_Near.getText().toString())) {
+                    freestall_untouchable_score.setText("39번 값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(TextUtils.isEmpty(ed_40_touch_Far.getText().toString())) {
+                    freestall_untouchable_score.setText("40번 값을 입력해주세요");
+                } else if(TextUtils.isEmpty(ed_41_touch_Impossibility.getText().toString())) {
+                    freestall_untouchable_score.setText("41번 값을 입력해주세요");
+                } else if(Integer.parseInt(total_cow_count) < Integer.parseInt(ed_41_touch_Impossibility.getText().toString())){
+                    freestall_untouchable_score.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+                    freestall_untouchable_score.setText(((Milk_cow)Milk_cow.context).getUntouchableCowScore(ed_39_touch_Near.getText().toString(), ed_40_touch_Far.getText().toString(), ed_41_touch_Impossibility.getText().toString()));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,26 @@ public class fragment_category_2_freestall extends Fragment implements category1
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_2_freestall, container, false);
+        ScrollView scrollview_freestall_2 = view.findViewById(R.id.scrollview_freestall_2);
+        TextView freestall_Num_q5 = (TextView) view.findViewById(R.id.freestall_Num_q5);
+        TextView freestall_sit_Collision_q6 = (TextView) view.findViewById(R.id.freestall_sit_Collision_q6);
+        TextView freestall_Area_Out_Collision_q7 = (TextView) view.findViewById(R.id.freestall_Area_Out_Collision_q7);
+        TextView freestall_sit_Action_Time_q8 = (TextView) view.findViewById(R.id.freestall_sit_Action_Time_q8);
+        TextView freestall_outward_Hygiene_Leg_q9 = (TextView) view.findViewById(R.id.freestall_outward_Hygiene_Leg_q9);
+        TextView freestall_outward_Hygiene_Back_q10 = (TextView) view.findViewById(R.id.freestall_outward_Hygiene_Back_q10);
+        TextView freestall_outward_Hygiene_Breast_q11 = (TextView) view.findViewById(R.id.freestall_outward_Hygiene_Breast_q11);
+        TextView freestall_shade_q12 = (TextView) view.findViewById(R.id.freestall_shade_q12);
+        TextView freestall_summer_Ventilating_q13 = (TextView) view.findViewById(R.id.freestall_summer_Ventilating_q13);
+        TextView freestall_mist_Spary_q14 = (TextView) view.findViewById(R.id.freestall_mist_Spary_q14);
+        TextView freestall_wind_Block_q15 = (TextView) view.findViewById(R.id.freestall_wind_Block_q15);
+        TextView freestall_winter_Ventilating_q16 = (TextView) view.findViewById(R.id.freestall_winter_Ventilating_q16);
+        TextView freestall_straw_q17 = (TextView) view.findViewById(R.id.freestall_straw_q17);
+        TextView freestall_warm_q18 = (TextView) view.findViewById(R.id.freestall_warm_q18);
+        TextView freestall_wind_Block_q19 = (TextView) view.findViewById(R.id.freestall_wind_Block_q19);
+        TextView freestall_rest_score = (TextView) view.findViewById(R.id.freestall_rest_score);
+        TextView freestall_summer_rest_score = (TextView) view.findViewById(R.id.freestall_summer_rest_score);
+        TextView freestall_winter_adult_rest_score = (TextView) view.findViewById(R.id.freestall_winter_adult_rest_score);
+        TextView freestall_winter_child_rest_score = (TextView) view.findViewById(R.id.freestall_winter_child_rest_score);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         RadioGroup rdiog_5_freestall_num = (RadioGroup) view.findViewById(R.id.freestall_Num_rdogrp5); //5번 문항(프리스톨)
@@ -33,6 +54,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_5_freestall_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_sit_Collision_q6,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_Num_a5_1) {
                     freestall_Num = 1;
                 } else if (checkedId == R.id.freestall_Num_a5_2) {
@@ -40,6 +62,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_Num_a5_3) {
                     freestall_Num = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -48,6 +71,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_6_sit_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_Area_Out_Collision_q7,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_sit_Collision_a6_1) {
                     sit_Collision = 1;
                 } else if (checkedId == R.id.freestall_sit_Collision_a6_2) {
@@ -55,6 +79,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_sit_Collision_a6_3) {
                     sit_Collision = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -63,6 +88,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_7_freestall_area_out_collision.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_sit_Action_Time_q8,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_Area_Out_Collision_a7_1) {
                     freestall_Area_Out_Collision = 1;
                 } else if (checkedId == R.id.freestall_Area_Out_Collision_a7_2) {
@@ -70,6 +96,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_Area_Out_Collision_a7_3) {
                     freestall_Area_Out_Collision = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -78,6 +105,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_8_sit_action_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_outward_Hygiene_Leg_q9,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_sit_Action_Time_a8_1) {
                     sit_Action_Time = 1;
                 } else if (checkedId == R.id.freestall_sit_Action_Time_a8_2) {
@@ -85,6 +113,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_sit_Action_Time_a8_3) {
                     sit_Action_Time = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -93,6 +122,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_9_outward_hygiene_leg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_outward_Hygiene_Back_q10,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_1) {
                     outward_Hygiene_Leg = 1;
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_2) {
@@ -100,6 +130,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_3) {
                     outward_Hygiene_Leg = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -108,6 +139,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_10_outward_hygiene_back.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_outward_Hygiene_Breast_q11,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_1) {
                     outward_Hygiene_Back = 1;
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_2) {
@@ -115,6 +147,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_3) {
                     outward_Hygiene_Back = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -123,6 +156,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_11_outward_hygiene_breast.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_shade_q12,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_1) {
                     outward_Hygiene_Breast = 1;
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_2) {
@@ -130,6 +164,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_3) {
                     outward_Hygiene_Breast = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -138,11 +173,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_12_shade.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_summer_Ventilating_q13,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_shade_a12_1) {
                     shade = 1;
                 } else if (checkedId == R.id.freestall_shade_a12_2) {
                     shade = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -151,11 +188,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_13_summer_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_mist_Spary_q14,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_summer_Ventilating_a13_1) {
                     summer_Ventilating = 1;
                 } else if (checkedId == R.id.freestall_summer_Ventilating_a13_2) {
                     summer_Ventilating = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -164,11 +203,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_14_mist_spary.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_wind_Block_q15,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_mist_Spary_a14_1) {
                     mist_Spary = 1;
                 } else if (checkedId == R.id.freestall_mist_Spary_a14_2) {
                     mist_Spary = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -177,11 +218,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_15_wind_block_adult.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_winter_Ventilating_q16,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_wind_Block_a15_1) {
                     wind_Block_Adult = 1;
                 } else if (checkedId == R.id.freestall_wind_Block_a15_2) {
                     wind_Block_Adult = 2;
                 }
+                freestall_winter_adult_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterAdultRestScore(wind_Block_Adult, winter_Ventilating)));
             }
         });
 
@@ -190,11 +233,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_16_winter_ventilating.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_straw_q17,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_winter_Ventilating_a16_1) {
                     winter_Ventilating = 1;
                 } else if (checkedId == R.id.freestall_winter_Ventilating_a16_2) {
                     winter_Ventilating = 2;
                 }
+                freestall_winter_adult_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterAdultRestScore(wind_Block_Adult, winter_Ventilating)));
             }
         });
 
@@ -203,11 +248,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_17_straw.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_warm_q18,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_straw_a17_1) {
                     straw = 1;
                 } else if (checkedId == R.id.freestall_straw_a17_2) {
                     straw = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 
@@ -216,11 +263,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         rdiog_18_warm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                ((MainActivity)MainActivity.mContext).scrollToView(freestall_wind_Block_q19,scrollview_freestall_2,0);
                 if (checkedId == R.id.freestall_warm_a18_1) {
                     warm = 1;
                 } else if (checkedId == R.id.freestall_warm_a18_2) {
                     warm = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 
@@ -234,6 +283,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_wind_Block_a19_2) {
                     wind_Block_Child = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 

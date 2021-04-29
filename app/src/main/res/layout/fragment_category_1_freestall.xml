@@ -311,39 +311,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:orientation="vertical">
-            <RadioGroup
-                android:id="@+id/freestall_water_Tank_Time_rdogrp4"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="축사동 수를 입력하세요"
+                android:id="@+id/freestall_water_Tank_Clean_a4"/>
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="10dp"
-                android:paddingLeft="20dp">
-                <RadioButton
-                    android:id="@+id/freestall_water_Tank_Time_a4_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대기 우 없고, 음수시간 5분 이하"
-                    android:textSize="15dp"
-                    android:layout_weight="1">
-                </RadioButton>
-                <RadioButton
-                    android:id="@+id/freestall_water_Tank_Time_a4_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:text="대기우 20% 이하, 음수 시간 10분 이하"
-                    android:layout_weight="1">
-                </RadioButton>
-                <RadioButton
-                    android:id="@+id/freestall_water_Tank_Time_a4_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대기우 20% 이상, 음수 시간 10분 이상"
-                    android:textSize="15dp"
-                    android:layout_weight="1">
-                </RadioButton>
-            </RadioGroup>
+                android:text="입력"
+                android:textSize="20dp"
+                android:background="@drawable/button_circle"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:id="@+id/freestall_water_Tank_Clean_btn"/>
 
         </LinearLayout>
 

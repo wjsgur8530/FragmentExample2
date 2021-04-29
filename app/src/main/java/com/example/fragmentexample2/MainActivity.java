@@ -23,7 +23,10 @@ import java.util.Stack;
 public class MainActivity extends AppCompatActivity {
     public static Context mContext;
     private onKeyBackPressedListener OnKeyBackPressedListener;
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

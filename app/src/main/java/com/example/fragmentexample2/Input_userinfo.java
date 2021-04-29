@@ -9,13 +9,19 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+<<<<<<< HEAD
+=======
 import android.view.MotionEvent;
+>>>>>>> master
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+<<<<<<< HEAD
+=======
 import android.widget.Toast;
+>>>>>>> master
 
 public class Input_userinfo extends AppCompatActivity {
     private static EditText editText;
@@ -23,6 +29,11 @@ public class Input_userinfo extends AppCompatActivity {
     public static Context context_userinfo;
     public String result;
     public String total_cow_count;
+<<<<<<< HEAD
+    public String sample_size_count;
+
+=======
+>>>>>>> master
 
     private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
     private EditText et_address;
@@ -42,8 +53,11 @@ public class Input_userinfo extends AppCompatActivity {
         EditText total_cow = (EditText)findViewById(R.id.total_cow);
         TextView sample_size = (TextView)findViewById(R.id.sample_size);
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> master
         input_farm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -92,6 +106,28 @@ public class Input_userinfo extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
         });
+<<<<<<< HEAD
+        total_cow.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                if(TextUtils.isEmpty(total_cow.getText().toString())) {
+                    sample_size.setText("값을 입력해주세요");
+                } else {
+                    result = getSampleSizeScore(total_cow.getText().toString());
+                    sample_size.setText(result);
+                    total_cow_count = total_cow.getText().toString();
+                    sample_size_count = result;
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+    }
+=======
         //-------------------------------
         et_address = (EditText) findViewById(R.id.et_address);
 
@@ -129,6 +165,7 @@ public class Input_userinfo extends AppCompatActivity {
         }
     }
     //--------------------------------
+>>>>>>> master
     public String getSampleSizeScore(String inputVal){
         int inputIntval = Integer.parseInt(inputVal);
 
@@ -189,9 +226,12 @@ public class Input_userinfo extends AppCompatActivity {
         }else {
             return "73";
         }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> master
     }
 
 }

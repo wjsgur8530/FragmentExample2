@@ -1,11 +1,18 @@
 package com.example.fragmentexample2.Fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -24,9 +31,9 @@ public class fragment_category_1_freestall extends Fragment implements category1
     private String result;
     private Button btn_move;
     private EditText ed_1_poorRate;
-    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
+    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0, water_Tank_Clean_Num = 0;
 
-
+    public String total_cow_count = ((Input_userinfo)Input_userinfo.context_userinfo).total_cow_count;
 
 
 
@@ -35,26 +42,32 @@ public class fragment_category_1_freestall extends Fragment implements category1
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_1_freestall, container, false);
+
         ScrollView scrollview_freestall_1 = view.findViewById(R.id.scrollview_freestall_1);
 
         RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
         RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Clean_rdogrp3); //3번 문항
-        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Time_rdogrp4); //4번 문항
+
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.freestall_poorRate_a1); //1번 문항
 
         TextView freestall_water_Tank_Num_q2 = (TextView) view.findViewById(R.id.freestall_water_Tank_Num_q2);
         TextView freestall_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.freestall_water_Tank_Clean_q3);
         TextView freestall_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.freestall_water_Tank_Time_q4);
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/fragment_category_1_freestall.java
+        TextView freestall_poor_Rate_ratio = (TextView) view.findViewById(R.id.freestall_poor_Rate_ratio);
+        TextView freestall_poor_Rate_score = (TextView) view.findViewById(R.id.freestall_poor_Rate_score);
+=======
         Button freestall_poorRate_btn = view.findViewById(R.id.freestall_poorRate_btn);
 
         // 1번문항 버튼 생기고, 다음 화면으로 넘어가는 동작
         ((MainActivity)MainActivity.mContext).addButtonScroll(ed_1_poorRate,freestall_poorRate_btn,scrollview_freestall_1,freestall_water_Tank_Num_q2);
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/fragment_category_1_freestall.java
 
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                ((MainActivity)MainActivity.mContext).scrollToView(freestall_water_Tank_Clean_q3,scrollview_freestall_1,0);
+                ((MainActivity) MainActivity.mContext).scrollToView(freestall_water_Tank_Clean_q3, scrollview_freestall_1, 0);
                 if (checkedId == R.id.freestall_water_Tank_Num_a2_1) {
                     water_Tank_Num = 1;
                 } else if (checkedId == R.id.freestall_water_Tank_Num_a2_2) {
@@ -64,11 +77,10 @@ public class fragment_category_1_freestall extends Fragment implements category1
         });
 
 
-
         rdiog_3_water_tank_clean.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                ((MainActivity)MainActivity.mContext).scrollToView(freestall_water_Tank_Time_q4,scrollview_freestall_1,0);
+                ((MainActivity) MainActivity.mContext).scrollToView(freestall_water_Tank_Time_q4, scrollview_freestall_1, 0);
                 if (checkedId == R.id.freestall_water_Tank_Clean_a3_1) {
                     water_Tank_Clean = 1;
                 } else if (checkedId == R.id.freestall_water_Tank_Clean_a3_2) {
@@ -78,24 +90,20 @@ public class fragment_category_1_freestall extends Fragment implements category1
                 }
             }
         });
-
-
-
-        rdiog_4_water_tank_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        EditText freestall_water_Tank_Clean_a4 = (EditText) view.findViewById(R.id.freestall_water_Tank_Clean_a4);
+        Button water_tank_clean_btn = (Button) view.findViewById(R.id.freestall_water_Tank_Clean_btn);
+        water_tank_clean_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.freestall_water_Tank_Time_a4_1) {
-                    water_Tank_Time = 1;
-                } else if (checkedId == R.id.freestall_water_Tank_Time_a4_2) {
-                    water_Tank_Time = 2;
-                } else if (checkedId == R.id.freestall_water_Tank_Time_a4_3) {
-                    water_Tank_Time = 3;
-                }
+            public void onClick(View v) {
+                water_Tank_Clean_Num = Integer.parseInt(freestall_water_Tank_Clean_a4.getText().toString());
+                Intent intent = new Intent(getActivity(), WaterTankClean.class);
+                intent.putExtra("water_Tank_Clean_Num", water_Tank_Clean_Num);
+                startActivity(intent);
             }
         });
 
-        Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
-        Button btn_back = ((Button)getActivity().findViewById(R.id.btn_back));
+        Button btn_move = ((Button) getActivity().findViewById(R.id.btn_move1));
+        Button btn_back = ((Button) getActivity().findViewById(R.id.btn_back));
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +140,30 @@ public class fragment_category_1_freestall extends Fragment implements category1
                 fragment_category_2_freestall.setArguments(bundle);
                 transaction.replace(R.id.framelayout, fragment_category_2_freestall); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
                 transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
+
+            }
+        });
+
+        ed_1_poorRate.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                if(TextUtils.isEmpty(ed_1_poorRate.getText().toString())) {
+                    freestall_poor_Rate_ratio.setText("값을 입력해주세요");
+                    // 총 두수 보다 입력한 값이 클 때
+                } else if(Integer.parseInt(total_cow_count) < Integer.parseInt(ed_1_poorRate.getText().toString())){
+                    freestall_poor_Rate_ratio.setText("총 두수보다 큰 값을 입력할 수 없습니다.");
+                } else {
+                    String total_cow = ((Milk_cow)Milk_cow.context).getPoorRateRatio(total_cow_count, ed_1_poorRate.getText().toString());
+                    freestall_poor_Rate_ratio.setText(total_cow + "%");
+
+                    freestall_poor_Rate_score.setText(((Milk_cow)Milk_cow.context).getPoorRateScore(total_cow));
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
         });
 

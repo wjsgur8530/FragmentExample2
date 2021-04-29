@@ -17,6 +17,8 @@ public class fragment_result_1 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_result, container, false);
 
+
+
         return view;
     }
 }

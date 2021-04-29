@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,28 +7,38 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment_category_4_breed_batch extends Fragment implements category1.onKeyBackPressedListener {
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.Result;
+import com.example.fragmentexample2.category1;
+
+public class fragment_category_4_milk extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
-    private EditText ed_34_struggle, ed_35_harmony, ed_36_touch_Near, ed_37_touch_Far, ed_38_touch_Impossibility;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_4_breed_batch, container, false);
-
+        view = inflater.inflate(R.layout.fragment_category_4_milk, container, false);
+        ScrollView scrollview_milk_4 = view.findViewById(R.id.scrollview_milk_4);
+        TextView milk_head_Butt_q34 = (TextView) view.findViewById(R.id.milk_head_Butt_q34);
+        TextView milk_struggle_q35 = (TextView) view.findViewById(R.id.milk_struggle_q35);
+        TextView milk_touch_Near_q36 = (TextView) view.findViewById(R.id.milk_touch_Near_q36);
+        TextView milk_touch_Far_q37 = (TextView) view.findViewById(R.id.milk_touch_Far_q37);
+        TextView milk_touch_Impossibility_q38 = (TextView) view.findViewById(R.id.milk_touch_Impossibility_q38);
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        ed_34_struggle = view.findViewById(R.id.breed_batch_struggle_a34);
-        ed_35_harmony = view.findViewById(R.id.breed_batch_harmony_a35);
-        ed_36_touch_Near = view.findViewById(R.id.breed_batch_touch_Near_a36);
-        ed_37_touch_Far = view.findViewById(R.id.breed_batch_touch_Far_a37);
-        ed_38_touch_Impossibility = view.findViewById(R.id.breed_batch_touch_Impossibility_a38);
+        final EditText ed_34_head_Butt = view.findViewById(R.id.milk_head_Butt_a34);
+        final EditText ed_35_struggle = view.findViewById(R.id.milk_struggle_a35);
+        final EditText ed_36_touch_Near = view.findViewById(R.id.milk_touch_Near_a36);
+        final EditText ed_37_touch_Far = view.findViewById(R.id.milk_touch_Far_a37);
+        final EditText ed_38_touch_Impossibility = view.findViewById(R.id.milk_touch_Impossibility_a38);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");
@@ -40,29 +50,27 @@ public class Fragment_category_4_breed_batch extends Fragment implements categor
                 onBackKey();
             }
         });
-        //뒤로갈때 제출로 바뀜.
-
 
         //데이터 받는 곳
 //        if(getArguments() != null) { //null
-//            result = getArguments().getString("submit"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
-//            tv_1.setText(result);
+//            result = getArguments().getString("fromFrag1"); //프래그먼트1로부터 setArguments된 데이터를 받아옴.
+//            tv_frag1.setText(result);
 //        }
 
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
             @Override
             public void onClick(View v) {
-                String struggle = ed_34_struggle.getText().toString();
-                String harmony = ed_35_harmony.getText().toString();
+                String head_butt = ed_34_head_Butt.getText().toString();
+                String struggle = ed_35_struggle.getText().toString();
                 String touch_near = ed_36_touch_Near.getText().toString();
                 String touch_far = ed_37_touch_Far.getText().toString();
                 String touch_impossibility = ed_38_touch_Impossibility.getText().toString();
 
-                String[] protocol4 = {struggle, harmony, touch_near, touch_far, touch_impossibility};
+                String[] protocol4 = {head_butt, struggle, touch_near, touch_far, touch_impossibility};
 
                 Bundle bundle = new Bundle(); // 무언가를 담는 공간
+                bundle.putString("submit", head_butt); //id, content 마지막 페이지로 데이터 전달
                 bundle.putString("submit", struggle);
-                bundle.putString("submit", harmony);
                 bundle.putString("submit", touch_near);
                 bundle.putString("submit", touch_far);
                 bundle.putString("submit", touch_impossibility);
@@ -79,7 +87,7 @@ public class Fragment_category_4_breed_batch extends Fragment implements categor
     public void onBackKey() {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.framelayout, new Fragment_category_3_breed_batch())
+                .replace(R.id.framelayout, new fragment_category_3_milk())
                 .addToBackStack(null)
                 .commit();
     }

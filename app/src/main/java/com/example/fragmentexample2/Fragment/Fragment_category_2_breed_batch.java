@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,11 +7,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
 
 public class Fragment_category_2_breed_batch extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
@@ -39,6 +43,10 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
         RadioGroup rdiog_14_straw = (RadioGroup) view.findViewById(R.id.breed_batch_straw_rdogrp14);
         RadioGroup rdiog_15_warm = (RadioGroup) view.findViewById(R.id.breed_batch_warm_rdogrp15);
         RadioGroup rdiog_16_wind_block = (RadioGroup) view.findViewById(R.id.breed_batch_wind_Block_rdogrp16);
+
+        TextView breed_summer_rest_score = (TextView)view.findViewById(R.id.breed_summer_rest_score);
+        TextView breed_winter_rest_score = (TextView)view.findViewById(R.id.breed_winter_rest_score);
+        TextView breed_calf_winter_rest_score = (TextView)view.findViewById(R.id.breed_calf_winter_rest_score);
 
         rdiog_5_straw_feed_tank.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -88,10 +96,11 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.breed_batch_shade_a9_1) {
-                    outward_Hygiene = 1;
+                    shade = 1;
                 } else if (checkedId == R.id.breed_batch_shade_a9_2) {
-                    outward_Hygiene = 2;
+                    shade = 2;
                 }
+                breed_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
 
@@ -103,6 +112,7 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_summer_Ventilating_a10_2) {
                     summer_Ventilating = 2;
                 }
+                breed_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
 
@@ -114,6 +124,7 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_mist_Spary_a11_2) {
                     mist_Spary = 2;
                 }
+                breed_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
             }
         });
 
@@ -125,6 +136,7 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_wind_Block_a12_2) {
                     wind_Block_Adult = 2;
                 }
+                breed_winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block_Adult,winter_Ventilating)));
             }
         });
 
@@ -136,6 +148,7 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_winter_Ventilating_a13_2) {
                     winter_Ventilating = 2;
                 }
+                breed_winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block_Adult,winter_Ventilating)));
             }
         });
 
@@ -147,7 +160,10 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_straw_a14_2) {
                     straw = 2;
                 }
+                breed_calf_winter_rest_score.setText(Integer.toString(getWinterCalfRestScore(
+                        straw,warm,wind_Block_Child)));
             }
+
         });
 
         rdiog_15_warm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -158,6 +174,9 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_warm_a15_2) {
                     warm = 2;
                 }
+
+                breed_calf_winter_rest_score.setText(Integer.toString(getWinterCalfRestScore(
+                        straw,warm,wind_Block_Child)));
             }
         });
 
@@ -169,6 +188,8 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                 } else if (checkedId == R.id.breed_batch_wind_Block_a16_2) {
                     wind_Block_Child = 2;
                 }
+                breed_calf_winter_rest_score.setText(Integer.toString(getWinterCalfRestScore(
+                        straw,warm,wind_Block_Child)));
             }
         });
 
@@ -240,4 +261,105 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
                         .addToBackStack(null)
                         .commit();
     }
+    // 혹서기 - 그늘, 환기팬, 안개분무 시설 점수 계산
+    public int getSummerRestScore(int shade,int summerVentilating, int mistSpary)
+    {
+        int summerRestScore = 0;
+        // 충분한 그늘 항목 "예"인 경우
+        if (shade == 1) {
+            // 충분한 풍속 항목 "예"인 경우
+            if (summerVentilating  == 1) {
+                //안개분무 풍속 "예"인 경우
+                if (mistSpary == 1) {
+                    summerRestScore = 100;
+                } else {
+                    summerRestScore = 80;
+                }
+            } else {
+                if (mistSpary == 1) {
+                    summerRestScore = 60;
+                } else {
+                    summerRestScore = 45;
+                }
+            }
+        } else {
+            if (summerVentilating == 1) {
+                if (mistSpary == 1) {
+                    summerRestScore = 55;
+                } else {
+                    summerRestScore = 40;
+                }
+            } else {
+                if (mistSpary == 1) {
+                    summerRestScore = 20;
+                } else {
+                    summerRestScore = 0;
+                }
+            }
+        }
+        return summerRestScore;
+    }
+    public int getWinterRestScore(int windBlock, int winterVentilating)
+    {
+        int windRestScore = 0;
+        // 바람차단시설 항목 "예"인 경우
+        if (windBlock == 1) {
+            // 최소 풍속시설 항목 "예"인 경우
+            if (winterVentilating == 1) {
+                windRestScore = 100;
+            } else {
+                windRestScore = 70;
+            }
+            // 바람차단시설 항목 "아니오 "인 경우
+        } else {
+            if (winterVentilating == 1) {
+                windRestScore = 40;
+            } else {
+                windRestScore = 20;
+            }
+        }
+        return windRestScore;
+    }
+    public int getWinterCalfRestScore(int straw, int warm, int windBlock)
+    {
+        int winterCalfRestScore = 0;
+        // 충분한 깔짚 항목 "예"
+        if (straw == 1) {
+            // 충분한 보온 항목 "예"
+            if (warm == 1) {
+                // 바람 차단 시설 "예"
+                if (windBlock == 1) {
+                    winterCalfRestScore = 100;
+                } else {
+                    winterCalfRestScore = 80;
+                }
+            }
+            // 충분한 보온 항목 "아니오"
+            else {
+                if (windBlock == 1) {
+                    winterCalfRestScore = 60;
+                } else {
+                    winterCalfRestScore = 45;
+                }
+            }
+        }
+        // 충분한 깔짚 항목 "아니오"
+        else {
+            if (warm == 1) {
+                if (windBlock == 1) {
+                    winterCalfRestScore = 55;
+                } else {
+                    winterCalfRestScore = 40;
+                }
+            } else {
+                if (windBlock == 1) {
+                    winterCalfRestScore = 20;
+                } else {
+                    winterCalfRestScore = 0;
+                }
+            }
+        }
+        return winterCalfRestScore;
+    }
 }
+

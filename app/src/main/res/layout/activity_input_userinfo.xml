@@ -19,94 +19,75 @@
             android:textColor="@color/colorWhite"
             android:textSize="16dp" />
 
-        <LinearLayout
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="10dp"
-                    android:text="농장명"
-                    android:textSize="17dp"
-                    android:textStyle="bold" />
+            android:background="@color/colorPrimary"
+            android:text="농장명"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/fram_name"
+                    android:id="@+id/farm_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:background="@drawable/edittext"
-                    android:hint="농장명 입력"
+                    android:hint="농장명을 입력하세요"
+                    android:textSize="12dp"
                     android:inputType="text" />
 
-            </LinearLayout>
-
-        </LinearLayout>
-        // 농장명 끝
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingLeft="10dp"
-                        android:text="소재지"
-                        android:textSize="17dp"
-                        android:textStyle="bold" />
+                        android:background="@color/colorPrimary"
+                        android:text="주소"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
 
                     <EditText
-                        android:id="@+id/fram_location"
+                        android:id="@+id/et_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edittext"
-                        android:hint="소재지 입력"
+                        android:hint="주소를 입력하세요"
+                        android:textSize="12dp"
                         android:inputType="text" />
 
-                </LinearLayout>
 
-            </LinearLayout>
-            // 소재지 끝
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingLeft="10dp"
-                        android:text="대표자"
-                        android:textSize="17dp"
-                        android:textStyle="bold" />
+                        android:background="@color/colorPrimary"
+                        android:text="상세 주소"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/et_address_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edittext"
+                        android:hint="상세 주소를 입력하세요"
+                        android:textSize="12dp"
+                        android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="대표자"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
 
                     <EditText
                         android:id="@+id/farm_rep"
@@ -114,12 +95,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edittext"
-                        android:hint="대표자 입력"
+                        android:hint="대표자 이름을 입력하세요"
+                        android:textSize="12dp"
                         android:inputType="text" />
 
-            </LinearLayout>
-        </LinearLayout>
-        // 대표자 끝
 
         <TextView
             android:layout_width="match_parent"
@@ -196,85 +175,69 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="16dp" />
 
-                <LinearLayout
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="총 두수"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingLeft="10dp"
-                        android:text="총 두수"
-                        android:textSize="17dp"
-                        android:textStyle="bold" />
-
-                    <EditText
+                <EditText
                         android:id="@+id/total_cow"
-                        android:layout_width="140dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edittext"
-                        android:hint="총 두수 입력"
+                        android:hint="총 두수를 입력하세요"
                         android:textSize="12dp"
+                        android:maxLength="6"
                         android:inputType="number" />
 
-                </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
+
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingLeft="10dp"
+                        android:background="@color/colorPrimary"
                         android:text="성우 두수"
-                        android:textSize="17dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
 
                     <EditText
                         android:id="@+id/total_adult_cow"
-                        android:layout_width="140dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edittext"
-                        android:hint="성우 두수 입력"
+                        android:hint="성우 두수를 입력하세요"
                         android:textSize="12dp"
                         android:inputType="number" />
-                </LinearLayout>
 
-                <LinearLayout
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingLeft="10dp"
-                        android:text="6개월이하 (송아지) 두수 "
-                        android:textSize="17dp"
-                        android:textStyle="bold" />
-
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="6개월 이하(송아지)"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
                     <EditText
                         android:id="@+id/total_child_cow"
-                        android:layout_width="150dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/edittext"
-                        android:hint="송아지 두수 입력"
+                        android:hint="송아지 두수를 입력하세요"
                         android:textSize="12dp"
                         android:inputType="number" />
-                </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
-        // 대표자 끝
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -294,9 +257,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sample_size"
-
             android:textColor="@color/colorBlack"
             android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="평가자"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+        <EditText
+            android:id="@+id/eva_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext"
+            android:hint="평가자 이름을 입력하세요"
+            android:textSize="12dp"
+            android:inputType="text" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="평가일"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_gravity="center_horizontal"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"/>
+
         <Button
             android:id="@+id/farm_selector"
             android:layout_width="match_parent"
@@ -306,6 +299,7 @@
             android:textColor="@color/colorWhite"
             android:textSize="20dp"
             android:textStyle="bold" />
+
 
     </LinearLayout>
 

@@ -1,9 +1,6 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener{
+import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
+
+public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;

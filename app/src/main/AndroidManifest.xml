@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WaterTankClean"></activity>
+        <activity android:name=".WaterTankClean"/>
+
+
+        <activity android:name=".getStrawScore"/>
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".Result" />
         <activity android:name=".Input_userinfo" />
         <activity android:name=".category1" />

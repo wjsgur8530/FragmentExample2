@@ -1,5 +1,6 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
 import org.w3c.dom.Text;
+=======
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
+import com.example.fragmentexample2.getStrawScore;
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
 
 public class Fragment_category_2_fatten extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
@@ -34,8 +41,31 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
         RadioGroup rdiog_6_straw_normal = (RadioGroup) view.findViewById(R.id.fatten_straw_Normal_rdogrp6);
         RadioGroup rdiog_7_straw_resting_place = (RadioGroup) view.findViewById(R.id.fatten_straw_Resting_Place_rdogrp7); //7번 문항(프리스톨)
         ed_8_outward_Hygiene = (EditText) view.findViewById(R.id.fatten_outward_Hygiene_a8);
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
         TextView summer_rest_score = (TextView)view.findViewById(R.id.summer_rest_score);
         TextView winter_rest_score = (TextView)view.findViewById(R.id.winter_rest_score);
+=======
+        TextView fatten_summer_rest_score = (TextView)view.findViewById(R.id.fatten_summer_rest_score);
+        TextView fatten_winter_rest_score = (TextView)view.findViewById(R.id.fatten_winter_rest_score);
+        //---------------
+        Button exBtn = (Button) view.findViewById(R.id.exampleButton);
+        EditText exText = (EditText) view.findViewById(R.id.examplesize);
+
+        exBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String exString = exText.getText().toString();
+                int exInt = Integer.parseInt(exString);
+                Intent intent = new Intent(getActivity(), getStrawScore.class);
+                intent.putExtra("exSize",exInt); /*송신*/
+
+                startActivity(intent);
+            }
+        });
+        //---------------
+
+
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
         rdiog_5_straw_feed_tank.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -90,7 +120,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_shade_a9_2) {
                     shade = 2;
                 }
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
                 summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+=======
+                fatten_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
             }
         });
 
@@ -104,7 +138,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_summer_Ventilating_a10_2) {
                     summer_Ventilating = 2;
                 }
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
                 summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+=======
+                fatten_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
             }
         });
 
@@ -119,7 +157,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                     mist_Spary = 2;
                 }
 
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
                 summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+=======
+                fatten_summer_rest_score.setText(Integer.toString(getSummerRestScore(shade,summer_Ventilating,mist_Spary)));
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
             }
         });
 
@@ -134,7 +176,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_wind_Block_a12_2) {
                     wind_Block = 2;
                 }
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
                 winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
+=======
+                fatten_winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
             }
         });
 
@@ -148,7 +194,11 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
                 } else if (checkedId == R.id.fatten_winter_Ventilating_a13_2) {
                     winter_Ventilating = 2;
                 }
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
                 winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
+=======
+                fatten_winter_rest_score.setText(Integer.toString(getWinterRestScore(wind_Block,winter_Ventilating)));
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
             }
         });
 
@@ -273,4 +323,8 @@ public class Fragment_category_2_fatten extends Fragment implements category1.on
         }
         return windRestScore;
     }
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/Fragment_category_2_fatten.java
+=======
+
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/Fragment_category_2_fatten.java
 }

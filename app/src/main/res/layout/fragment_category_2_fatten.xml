@@ -14,6 +14,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -24,6 +26,22 @@
                 android:gravity="center">
             </TextView>
 
+            <EditText
+                android:id="@+id/examplesize"
+                android:imeOptions="actionDone"
+                android:background="@drawable/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="숫자 입력"
+                android:layout_margin="10dp"
+                android:inputType="number">
+            </EditText>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="button"
+                android:id="@+id/exampleButton"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -585,7 +603,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:id="@+id/summer_rest_score"
+=======
+                    android:id="@+id/fatten_summer_rest_score"
+>>>>>>> master
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
             </LinearLayout>//여기까지 하나
@@ -745,7 +767,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:id="@+id/winter_rest_score"
+=======
+                    android:id="@+id/fatten_winter_rest_score"
+>>>>>>> master
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
             </LinearLayout>//여기까지 하나

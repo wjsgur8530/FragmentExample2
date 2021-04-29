@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,35 +7,32 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_4_freestall extends Fragment implements category1.onKeyBackPressedListener {
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.Result;
+import com.example.fragmentexample2.category1;
+
+public class Fragment_category_4_fatten extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
+    private EditText ed_30_struggle, ed_31_harmony, ed_32_touch_Near, ed_33_touch_Far, ed_34_touch_Impossibility;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_category_4_freestall, container, false);
-        ScrollView scrollview_freestall_4 = view.findViewById(R.id.scrollview_freestall_4);
-        TextView freestall_head_Butt_q37 = (TextView) view.findViewById(R.id.freestall_head_Butt_q37);
-        TextView freestall_struggle_q38 = (TextView) view.findViewById(R.id.freestall_struggle_q38);
-        TextView freestall_touch_Near_q39 = (TextView) view.findViewById(R.id.freestall_touch_Near_q39);
-        TextView freestall_touch_Far_q40 = (TextView) view.findViewById(R.id.freestall_touch_Far_q40);
-        TextView freestall_touch_Impossibility_q41 = (TextView) view.findViewById(R.id.freestall_touch_Impossibility_q41);
+        view = inflater.inflate(R.layout.fragment_category_4_fatten, container, false);
+
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        final EditText ed_37_head_Butt = view.findViewById(R.id.freestall_head_Butt_a37);
-        final EditText ed_38_struggle = view.findViewById(R.id.freestall_struggle_a38);
-        final EditText ed_39_touch_Near = view.findViewById(R.id.freestall_touch_Near_a39);
-        final EditText ed_40_touch_Far = view.findViewById(R.id.freestall_touch_Far_a40);
-        final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_a41);
+        ed_30_struggle = view.findViewById(R.id.fatten_struggle_a30);
+        ed_31_harmony = view.findViewById(R.id.fatten_harmony_a31);
+        ed_32_touch_Near = view.findViewById(R.id.fatten_touch_Near_a32);
+        ed_33_touch_Far = view.findViewById(R.id.fatten_touch_Far_a33);
+        ed_34_touch_Impossibility = view.findViewById(R.id.fatten_touch_Impossibility_a34);
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");
@@ -59,17 +56,17 @@ public class fragment_category_4_freestall extends Fragment implements category1
         btn_move.setOnClickListener(new View.OnClickListener() { //fragment1로 이동
             @Override
             public void onClick(View v) {
-                String head_butt = ed_37_head_Butt.getText().toString();
-                String struggle = ed_38_struggle.getText().toString();
-                String touch_near = ed_39_touch_Near.getText().toString();
-                String touch_far = ed_40_touch_Far.getText().toString();
-                String touch_impossibility = ed_41_touch_Impossibility.getText().toString();
+                String struggle = ed_30_struggle.getText().toString();
+                String harmony = ed_31_harmony.getText().toString();
+                String touch_near = ed_32_touch_Near.getText().toString();
+                String touch_far = ed_33_touch_Far.getText().toString();
+                String touch_impossibility = ed_34_touch_Impossibility.getText().toString();
 
-                String[] protocol4 = {head_butt, struggle, touch_near, touch_far, touch_impossibility};
+                String[] protocol4 = {struggle, harmony, touch_near, touch_far, touch_impossibility};
 
                 Bundle bundle = new Bundle(); // 무언가를 담는 공간
-                bundle.putString("submit", head_butt); //id, content 마지막 페이지로 데이터 전달
                 bundle.putString("submit", struggle);
+                bundle.putString("submit", harmony);
                 bundle.putString("submit", touch_near);
                 bundle.putString("submit", touch_far);
                 bundle.putString("submit", touch_impossibility);
@@ -86,7 +83,7 @@ public class fragment_category_4_freestall extends Fragment implements category1
     public void onBackKey() {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.framelayout, new fragment_category_3_freestall())
+                .replace(R.id.framelayout, new Fragment_category_3_fatten())
                 .addToBackStack(null)
                 .commit();
     }

@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
 
 public class fragment_category_2_milk extends Fragment implements category1.onKeyBackPressedListener {
     private View view;

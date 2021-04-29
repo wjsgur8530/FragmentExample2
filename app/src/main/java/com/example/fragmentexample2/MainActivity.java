@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static Context mContext;
     private onKeyBackPressedListener OnKeyBackPressedListener;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
+
 
     // 버튼 눌렀을 때 자동 스크롤 함수
     public static void scrollToView(View view, final ScrollView scrollView, int count) {

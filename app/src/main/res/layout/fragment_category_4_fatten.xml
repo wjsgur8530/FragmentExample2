@@ -40,10 +40,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/nb31"
+                        android:id="@+id/nb30"
                         android:layout_width="40dp"
                         android:layout_height="50dp"
-                        android:text="  31"
+                        android:text="  30"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         android:paddingBottom="10dp"
@@ -52,7 +52,7 @@
                         android:background="@drawable/survey_number"
                         />
                     <TextView
-                        android:id="@+id/q31"
+                        android:id="@+id/q30"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 투쟁행동의 빈도가 어떻게 되는가?"
@@ -72,7 +72,69 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_struggle_a31"
+                        android:id="@+id/fatten_struggle_a30"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="숫자 입력"
+                        android:layout_margin="10dp"
+                        android:inputType="number">
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </LinearLayout>//여기까지 하나
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_circle_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">//여기부터
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nb31"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:text="  31"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/survey_number"
+                        />
+                    <TextView
+                        android:id="@+id/q31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 화합행동의 빈도가 어떻게 되는가?"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="top"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/fatten_harmony_a31"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -117,7 +179,7 @@
                         android:id="@+id/q32"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="전체 표본무리 내 소 한 마리가 한 시간 안에 발현한 평균 화합행동의 빈도가 어떻게 되는가?"
+                        android:text="평가자가 50cm 이상 가까이 다가갈 수 있으나 만질 수 없는 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -134,7 +196,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_harmony_a32"
+                        android:id="@+id/fatten_touch_Near_a32"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -179,7 +241,7 @@
                         android:id="@+id/q33"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="평가자가 50cm 이상 가까이 다가갈 수 있으나 만질 수 없는 소의 비율은 얼마나 되는가?"
+                        android:text="평가자가 50~100cm 이내로 접근하는 것을 허용한 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:layout_marginRight="10dp"
@@ -196,7 +258,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_touch_Near_a33"
+                        android:id="@+id/fatten_touch_Far_a33"
                         android:imeOptions="actionNext"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"
@@ -241,68 +303,6 @@
                         android:id="@+id/q34"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="평가자가 50~100cm 이내로 접근하는 것을 허용한 소의 비율은 얼마나 되는가?"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:paddingTop="0dp"
-                        android:textColor="@color/colorBlack"
-                        android:gravity="top"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/fatten_touch_Far_a34"
-                        android:imeOptions="actionNext"
-                        android:background="@drawable/edittext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="숫자 입력"
-                        android:layout_margin="10dp"
-                        android:inputType="number">
-                    </EditText>
-
-
-                </LinearLayout>
-
-            </LinearLayout>//여기까지 하나
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/button_circle_line"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">//여기부터
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/nb35"
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:text="  35"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/survey_number"
-                        />
-                    <TextView
-                        android:id="@+id/q35"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
                         android:text="평가자가 100cm 이내로 다가갈 수 없는 소의 비율은 얼마나 되는가?"
                         android:textSize="18dp"
                         android:textStyle="bold"
@@ -320,7 +320,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/fatten_touch_Impossibility_a35"
+                        android:id="@+id/fatten_touch_Impossibility_a34"
                         android:imeOptions="actionDone"
                         android:background="@drawable/edittext"
                         android:layout_width="match_parent"

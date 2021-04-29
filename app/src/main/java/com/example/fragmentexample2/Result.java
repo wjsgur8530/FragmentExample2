@@ -11,6 +11,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.example.fragmentexample2.Fragment.fragment_result_1;
+import com.example.fragmentexample2.Fragment.fragment_result_2;
+import com.example.fragmentexample2.Fragment.fragment_result_3;
+import com.example.fragmentexample2.Fragment.fragment_result_4;
+import com.example.fragmentexample2.Fragment.fragment_result_5;
 import com.google.android.material.tabs.TabLayout;
 
 public class Result extends AppCompatActivity {

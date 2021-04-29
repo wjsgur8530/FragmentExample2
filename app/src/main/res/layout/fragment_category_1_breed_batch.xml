@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/breed_batch_poor_Rate_ratio"
+                    android:id="@+id/breed_poor_Rate_ratio"
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
                 <TextView
@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/breed_batch_Rate_score"
+                    android:id="@+id/breed_poor_Rate_score"
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
             </LinearLayout>//여기까지 하나

@@ -603,7 +603,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
+                    android:id="@+id/summer_rest_score"
+=======
                     android:id="@+id/fatten_summer_rest_score"
+>>>>>>> master
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
             </LinearLayout>//여기까지 하나
@@ -763,7 +767,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
+                    android:id="@+id/winter_rest_score"
+=======
                     android:id="@+id/fatten_winter_rest_score"
+>>>>>>> master
                     android:textColor="@color/colorBlack"
                     android:textSize="16dp" />
             </LinearLayout>//여기까지 하나

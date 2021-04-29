@@ -45,6 +45,13 @@ public class fragment_category_2_freestall extends Fragment implements category1
         TextView freestall_straw_q17 = (TextView) view.findViewById(R.id.freestall_straw_q17);
         TextView freestall_warm_q18 = (TextView) view.findViewById(R.id.freestall_warm_q18);
         TextView freestall_wind_Block_q19 = (TextView) view.findViewById(R.id.freestall_wind_Block_q19);
+<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/fragment_category_2_freestall.java
+        TextView freestall_rest_score = (TextView) view.findViewById(R.id.freestall_rest_score);
+        TextView freestall_summer_rest_score = (TextView) view.findViewById(R.id.freestall_summer_rest_score);
+        TextView freestall_winter_adult_rest_score = (TextView) view.findViewById(R.id.freestall_winter_adult_rest_score);
+        TextView freestall_winter_child_rest_score = (TextView) view.findViewById(R.id.freestall_winter_child_rest_score);
+=======
+>>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/fragment_category_2_freestall.java
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         RadioGroup rdiog_5_freestall_num = (RadioGroup) view.findViewById(R.id.freestall_Num_rdogrp5); //5번 문항(프리스톨)
@@ -60,6 +67,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_Num_a5_3) {
                     freestall_Num = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -76,6 +84,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_sit_Collision_a6_3) {
                     sit_Collision = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -92,6 +101,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_Area_Out_Collision_a7_3) {
                     freestall_Area_Out_Collision = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -108,6 +118,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_sit_Action_Time_a8_3) {
                     sit_Action_Time = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -124,6 +135,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Leg_a9_3) {
                     outward_Hygiene_Leg = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -140,6 +152,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Back_a10_3) {
                     outward_Hygiene_Back = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -156,6 +169,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_outward_Hygiene_Breast_a11_3) {
                     outward_Hygiene_Breast = 3;
                 }
+                freestall_rest_score.setText(Double.toString(((Milk_cow)Milk_cow.context).getFreeStallScore(freestall_Num, sit_Collision, freestall_Area_Out_Collision, sit_Action_Time, outward_Hygiene_Leg, outward_Hygiene_Back, outward_Hygiene_Breast)));
             }
         });
 
@@ -170,6 +184,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_shade_a12_2) {
                     shade = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -184,6 +199,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_summer_Ventilating_a13_2) {
                     summer_Ventilating = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -198,6 +214,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_mist_Spary_a14_2) {
                     mist_Spary = 2;
                 }
+                freestall_summer_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getSummerRestScore(shade, summer_Ventilating, mist_Spary)));
             }
         });
 
@@ -212,6 +229,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_wind_Block_a15_2) {
                     wind_Block_Adult = 2;
                 }
+                freestall_winter_adult_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterAdultRestScore(wind_Block_Adult, winter_Ventilating)));
             }
         });
 
@@ -226,6 +244,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_winter_Ventilating_a16_2) {
                     winter_Ventilating = 2;
                 }
+                freestall_winter_adult_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterAdultRestScore(wind_Block_Adult, winter_Ventilating)));
             }
         });
 
@@ -240,6 +259,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_straw_a17_2) {
                     straw = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 
@@ -254,6 +274,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_warm_a18_2) {
                     warm = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 
@@ -267,6 +288,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
                 } else if (checkedId == R.id.freestall_wind_Block_a19_2) {
                     wind_Block_Child = 2;
                 }
+                freestall_winter_child_rest_score.setText(Integer.toString(((Milk_cow)Milk_cow.context).getWinterChildRestScore(straw, warm, wind_Block_Child)));
             }
         });
 

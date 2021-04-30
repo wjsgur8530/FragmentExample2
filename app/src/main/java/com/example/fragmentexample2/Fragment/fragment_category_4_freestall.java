@@ -18,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.fragmentexample2.Input_userinfo;
+import com.example.fragmentexample2.Milk_cow;
 import com.example.fragmentexample2.R;
 import com.example.fragmentexample2.Result;
 import com.example.fragmentexample2.category1;
@@ -37,19 +39,18 @@ public class fragment_category_4_freestall extends Fragment implements category1
         TextView freestall_touch_Near_q39 = (TextView) view.findViewById(R.id.freestall_touch_Near_q39);
         TextView freestall_touch_Far_q40 = (TextView) view.findViewById(R.id.freestall_touch_Far_q40);
         TextView freestall_touch_Impossibility_q41 = (TextView) view.findViewById(R.id.freestall_touch_Impossibility_q41);
-<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/fragment_category_4_freestall.java
+
         TextView freestall_struggle_score = (TextView) view.findViewById(R.id.freestall_struggle_score);
         TextView freestall_untouchable_score = (TextView) view.findViewById(R.id.freestall_untouchable_score);
 
-=======
->>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/fragment_category_4_freestall.java
+
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         final EditText ed_37_head_Butt = view.findViewById(R.id.freestall_head_Butt_a37);
         final EditText ed_38_struggle = view.findViewById(R.id.freestall_struggle_a38);
         final EditText ed_39_touch_Near = view.findViewById(R.id.freestall_touch_Near_a39);
         final EditText ed_40_touch_Far = view.findViewById(R.id.freestall_touch_Far_a40);
         final EditText ed_41_touch_Impossibility = view.findViewById(R.id.freestall_touch_Impossibility_a41);
-<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/fragment_category_4_freestall.java
+
 
         ed_37_head_Butt.addTextChangedListener(new TextWatcher(){
             @Override
@@ -169,8 +170,6 @@ public class fragment_category_4_freestall extends Fragment implements category1
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
         });
-=======
->>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/fragment_category_4_freestall.java
 
         Button btn_move = ((Button)getActivity().findViewById(R.id.btn_move1));
         btn_move.setText("제출");

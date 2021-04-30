@@ -19,6 +19,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.fragmentexample2.Fragment.fragment_category_2_freestall;
+import com.example.fragmentexample2.Fragment.fragment_category_4_freestall;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -727,11 +730,12 @@ public class fragment_category_3_freestall extends Fragment implements category1
                 bundle.putString("submit", horn_painkiller);
                 bundle.putStringArray("submit", protocol3);
 
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragment_category_4_freestall fragment_category_4_freestall = new fragment_category_4_freestall();
+                // 오류
+                /*FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragment_category_4_freestall_freestall fragment_category_4_freestall = new fragment_category_4_freestall();
                 fragment_category_4_freestall.setArguments(bundle);
                 transaction.replace(R.id.framelayout, fragment_category_4_freestall); //프레임레이아웃은 가만히 있는 상태에서 프래그먼트만 교체, (frame, 교체될 fragment)
-                transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.
+                transaction.commit(); // 저장, 저장하지 않으면 바뀌지 않음.*/
             }
         });
 

@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.Milk_cow;
 import com.example.fragmentexample2.R;
 import com.example.fragmentexample2.category1;
 
@@ -45,13 +46,11 @@ public class fragment_category_2_freestall extends Fragment implements category1
         TextView freestall_straw_q17 = (TextView) view.findViewById(R.id.freestall_straw_q17);
         TextView freestall_warm_q18 = (TextView) view.findViewById(R.id.freestall_warm_q18);
         TextView freestall_wind_Block_q19 = (TextView) view.findViewById(R.id.freestall_wind_Block_q19);
-<<<<<<< HEAD:app/src/main/java/com/example/fragmentexample2/fragment_category_2_freestall.java
+
         TextView freestall_rest_score = (TextView) view.findViewById(R.id.freestall_rest_score);
         TextView freestall_summer_rest_score = (TextView) view.findViewById(R.id.freestall_summer_rest_score);
         TextView freestall_winter_adult_rest_score = (TextView) view.findViewById(R.id.freestall_winter_adult_rest_score);
         TextView freestall_winter_child_rest_score = (TextView) view.findViewById(R.id.freestall_winter_child_rest_score);
-=======
->>>>>>> master:app/src/main/java/com/example/fragmentexample2/Fragment/fragment_category_2_freestall.java
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         RadioGroup rdiog_5_freestall_num = (RadioGroup) view.findViewById(R.id.freestall_Num_rdogrp5); //5번 문항(프리스톨)

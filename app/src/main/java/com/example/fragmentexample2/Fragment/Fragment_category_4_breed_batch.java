@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +27,9 @@ public class Fragment_category_4_breed_batch extends Fragment implements categor
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         view = inflater.inflate(R.layout.fragment_category_4_breed_batch, container, false);
+
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_33_struggle = view.findViewById(R.id.breed_batch_struggle_a33);

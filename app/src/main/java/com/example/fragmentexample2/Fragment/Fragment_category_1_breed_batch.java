@@ -1,16 +1,23 @@
 package com.example.fragmentexample2.Fragment;
 
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,14 +27,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.fragmentexample2.Input_userinfo;
 import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.Qustion_dong.Breed_q4;
 import com.example.fragmentexample2.R;
 import com.example.fragmentexample2.category1;
+import com.example.fragmentexample2.getStrawScore;
 
 public class Fragment_category_1_breed_batch extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
     private String result;
     private Button btn_move;
     private EditText ed_1_poorRate;
+
     Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
     public String total_cow_count = ((Input_userinfo) Input_userinfo.context_userinfo).total_cow_count;
@@ -37,10 +47,9 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_1_breed_batch, container, false);
         ScrollView scrollview_freestall_1 = view.findViewById(R.id.scrollview_freestall_1); //fatten으로
-
+        Spinner Spinner_breed_q4 = view.findViewById(R.id.spinner_breed_q4);
         RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.breed_batch_water_Tank_Num_rdogrp2);//2번 문항
         RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.breed_batch_water_Tank_Clean_rdogrp3); //3번 문항
-        RadioGroup rdiog_4_water_tank_time = (RadioGroup) view.findViewById(R.id.breed_batch_water_Tank_Time_rdogrp4); //4번 문항
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.breed_batch_poor_Rate_a1); //1번 문항
         TextView breed_poor_Rate_ratio = (TextView) view.findViewById(R.id.breed_poor_Rate_ratio);
@@ -49,7 +58,42 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
         TextView freestall_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.freestall_water_Tank_Clean_q3);
         TextView freestall_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.freestall_water_Tank_Time_q4);
 
+        ArrayAdapter spinnerAdapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.dong_size,
+                android.R.layout.simple_spinner_item);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        Spinner mSpinner = view.findViewById(R.id.spinner_breed_q4);
+        mSpinner.setAdapter( spinnerAdapter );
+        final int[] selectedItemIndex = new int[1];
+        Spinner_breed_q4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // 선택된 데이터 값
+                String selectedItem = parent.getSelectedItem().toString();
+
+                // 선택된 데이터 위치( 0 부터 )
+                selectedItemIndex[0] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        Button breed_btn_q4 = view.findViewById(R.id.breed_btn_q4);
+
+
+        breed_btn_q4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String dong_count = Integer.toString(selectedItemIndex[0]);
+                int exInt = Integer.parseInt(dong_count);
+                Intent intent = new Intent(getActivity(), Breed_q4.class);
+                intent.putExtra("dong_count",dong_count); /*송신*/
+
+                startActivity(intent);
+            }
+        });
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -76,18 +120,7 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
             }
         });
 
-        rdiog_4_water_tank_time.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.breed_batch_water_Tank_Time_a4_1) {
-                    water_Tank_Time = 1;
-                } else if (checkedId == R.id.breed_batch_water_Tank_Time_a4_2) {
-                    water_Tank_Time = 2;
-                } else if (checkedId == R.id.breed_batch_water_Tank_Time_a4_3) {
-                    water_Tank_Time = 3;
-                }
-            }
-        });
+
 
         Button btn_move = ((Button) getActivity().findViewById(R.id.btn_move1));
         Button btn_back = ((Button) getActivity().findViewById(R.id.btn_back));
@@ -154,8 +187,6 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
             }});
         return view;
     }
-
-
 
     @Override
     public void onBackKey() {

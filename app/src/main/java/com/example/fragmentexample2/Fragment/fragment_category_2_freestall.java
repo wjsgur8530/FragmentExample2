@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import org.w3c.dom.Text;
+import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.Milk_cow;
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
 
 public class fragment_category_2_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
@@ -43,6 +46,7 @@ public class fragment_category_2_freestall extends Fragment implements category1
         TextView freestall_straw_q17 = (TextView) view.findViewById(R.id.freestall_straw_q17);
         TextView freestall_warm_q18 = (TextView) view.findViewById(R.id.freestall_warm_q18);
         TextView freestall_wind_Block_q19 = (TextView) view.findViewById(R.id.freestall_wind_Block_q19);
+
         TextView freestall_rest_score = (TextView) view.findViewById(R.id.freestall_rest_score);
         TextView freestall_summer_rest_score = (TextView) view.findViewById(R.id.freestall_summer_rest_score);
         TextView freestall_winter_adult_rest_score = (TextView) view.findViewById(R.id.freestall_winter_adult_rest_score);

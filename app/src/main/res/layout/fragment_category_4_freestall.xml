@@ -78,7 +78,9 @@
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="numberDecimal"
+
+                        android:inputType="number"
+
                         android:nextFocusDown="@+id/freestall_struggle_a38">
                     </EditText>
 
@@ -141,7 +143,9 @@
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="numberDecimal"
+
+                        android:inputType="number"
+
                         android:nextFocusDown="@+id/freestall_touch_Near_a39">
                     </EditText>
 
@@ -216,7 +220,9 @@
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="numberDecimal"
+
+                        android:inputType="number"
+
                         android:nextFocusDown="@+id/freestall_touch_Far_a40">
                     </EditText>
 
@@ -279,7 +285,9 @@
                         android:layout_height="wrap_content"
                         android:hint="숫자 입력"
                         android:layout_margin="10dp"
-                        android:inputType="numberDecimal"
+
+                        android:inputType="number"
+
                         android:nextFocusDown="@+id/freestall_touch_Impossibility_a41">
                     </EditText>
 

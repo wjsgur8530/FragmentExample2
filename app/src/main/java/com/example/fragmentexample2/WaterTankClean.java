@@ -58,105 +58,17 @@ public class WaterTankClean extends AppCompatActivity {
         LinearLayout stable19 = findViewById(R.id.stable19);
         LinearLayout stable20 = findViewById(R.id.stable20);
         LinearLayout[] stable = {stable1, stable2, stable3, stable4, stable5, stable6, stable7, stable8, stable9, stable10, stable11, stable12, stable13, stable14, stable15, stable16, stable17, stable18, stable19, stable20};
-        TextView test = findViewById(R.id.test);
+        String[] stableName = {"1동", "2동", "3동", "4동", "5동", "6동", "7동", "8동", "9동", "10동", "11동", "12동", "13동","14동", "15동", "16동", "17동", "18동", "19동", "20동"};
         Intent intent = getIntent();
         result = intent.getStringExtra("water_Tank_Clean_Num");
+        for(int j=0; j<stableName.length; j++) {
+            if(result.equals(stableName[j])) {
+                for(int i=1+j; i<stable.length; i++) {
+                    stable[i].setVisibility(view.GONE);
+                }
+            }
+        }
 
-        if(result.equals("1동")) {
-            for(int i=1; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("2동")) {
-            for(int i=2; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("3동")) {
-            for(int i=3; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("4동")) {
-            for(int i=4; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("5동")) {
-            for(int i=5; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("6동")) {
-            for(int i=6; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("7동")) {
-            for(int i=7; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("8동")) {
-            for(int i=8; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("9동")) {
-            for(int i=9; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("10동")) {
-            for(int i=10; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("11동")) {
-            for(int i=11; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("12동")) {
-            for(int i=12; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("13동")) {
-            for(int i=13; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("14동")) {
-            for(int i=14; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("15동")) {
-            for(int i=15; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("16동")) {
-            for(int i=16; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("17동")) {
-            for(int i=17; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("18동")) {
-            for(int i=18; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
-        else if(result.equals("19동")) {
-            for(int i=19; i<stable.length; i++) {
-                stable[i].setVisibility(view.GONE);
-            }
-        }
         EditText ed_1_waitNum = (EditText) findViewById(R.id.freestall_wait_num_a1);
         ed_1_waitNum.addTextChangedListener(new TextWatcher(){
             @Override

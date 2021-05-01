@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,6 +17,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.fragmentexample2.Input_userinfo;
+import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.category1;
 
 public class Fragment_category_1_fatten extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
@@ -164,7 +169,9 @@ public class Fragment_category_1_fatten extends Fragment implements category1.on
     public String fattenPoorRateRatio(String total, String rate){
         Float totalFloat = Float.parseFloat(total);
         Float rateFloat = Float.parseFloat(rate);
-        double result = ((rateFloat / totalFloat) * 100);
+
+        double result = (rateFloat / totalFloat) * 100;
+
             return String.format("%.2f",result);
     }
     public String fattenPoorRateScore(String ratio){

@@ -1,4 +1,4 @@
-package com.example.fragmentexample2;
+package com.example.fragmentexample2.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,12 +25,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener{
+import com.example.fragmentexample2.Input_userinfo;
+import com.example.fragmentexample2.MainActivity;
+import com.example.fragmentexample2.Milk_cow;
+import com.example.fragmentexample2.R;
+import com.example.fragmentexample2.WaterTankClean;
+import com.example.fragmentexample2.category1;
+
+public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener {
     private View view;
-    private String result;
+    String result, water_Tank_Clean_Num;
     private Button btn_move;
     private EditText ed_1_poorRate;
-    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0, water_Tank_Clean_Num = 0;
+    Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
     public String total_cow_count = ((Input_userinfo)Input_userinfo.context_userinfo).total_cow_count;
 
@@ -40,6 +50,7 @@ public class fragment_category_1_freestall extends Fragment implements category1
 
         RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
         RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Clean_rdogrp3); //3번 문항
+        Spinner spinner_4_water_clean_num = (Spinner) view.findViewById(R.id.freestall_spinner_a4);//4번 문항
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.freestall_poorRate_a1); //1번 문항
@@ -47,8 +58,14 @@ public class fragment_category_1_freestall extends Fragment implements category1
         TextView freestall_water_Tank_Num_q2 = (TextView) view.findViewById(R.id.freestall_water_Tank_Num_q2);
         TextView freestall_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.freestall_water_Tank_Clean_q3);
         TextView freestall_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.freestall_water_Tank_Time_q4);
+
         TextView freestall_poor_Rate_ratio = (TextView) view.findViewById(R.id.freestall_poor_Rate_ratio);
         TextView freestall_poor_Rate_score = (TextView) view.findViewById(R.id.freestall_poor_Rate_score);
+
+        Button freestall_poorRate_btn = view.findViewById(R.id.freestall_poorRate_btn);
+
+        // 1번문항 버튼 생기고, 다음 화면으로 넘어가는 동작
+//        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_1_poorRate,freestall_poorRate_btn,scrollview_freestall_1,freestall_water_Tank_Num_q2);
 
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -76,12 +93,12 @@ public class fragment_category_1_freestall extends Fragment implements category1
                 }
             }
         });
-        EditText freestall_water_Tank_Clean_a4 = (EditText) view.findViewById(R.id.freestall_water_Tank_Clean_a4);
+
         Button water_tank_clean_btn = (Button) view.findViewById(R.id.freestall_water_Tank_Clean_btn);
         water_tank_clean_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                water_Tank_Clean_Num = Integer.parseInt(freestall_water_Tank_Clean_a4.getText().toString());
+                water_Tank_Clean_Num = spinner_4_water_clean_num.getSelectedItem().toString();
                 Intent intent = new Intent(getActivity(), WaterTankClean.class);
                 intent.putExtra("water_Tank_Clean_Num", water_Tank_Clean_Num);
                 startActivity(intent);

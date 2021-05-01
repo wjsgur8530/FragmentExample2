@@ -8,12 +8,17 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
+
+import android.view.MotionEvent;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import android.widget.Toast;
+
 
 public class Input_userinfo extends AppCompatActivity {
     private static EditText editText;
@@ -21,10 +26,15 @@ public class Input_userinfo extends AppCompatActivity {
     public static Context context_userinfo;
     public String result;
     public String total_cow_count;
+
     public String sample_size_count;
 
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
+    private EditText et_address;
 
-    Integer input_checked;
+    Integer input_checked = null;
+    String farm_name;
+    String farm_location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +46,10 @@ public class Input_userinfo extends AppCompatActivity {
 
         EditText total_cow = (EditText)findViewById(R.id.total_cow);
         TextView sample_size = (TextView)findViewById(R.id.sample_size);
+
+
+
+
 
         input_farm.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -57,11 +71,35 @@ public class Input_userinfo extends AppCompatActivity {
         farm_selector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Input_userinfo.this, category1.class);
-                intent.putExtra("input_checked", input_checked);
-                startActivity(intent);
+                if(input_checked != null) {
+                    Intent intent = new Intent(Input_userinfo.this, category1.class);
+                    intent.putExtra("input_checked", input_checked);
+                    startActivity(intent);
+                } else {
+                        String msg = "농장 종류를 선택해주세요";
+                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }
             }
         });
+        total_cow.addTextChangedListener(new TextWatcher(){
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                if(TextUtils.isEmpty(total_cow.getText().toString())) {
+                    sample_size.setText("값을 입력해주세요");
+                } else {
+                    result = getSampleSizeScore(total_cow.getText().toString());
+                    sample_size.setText(result);
+                    total_cow_count = total_cow.getText().toString();
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+
         total_cow.addTextChangedListener(new TextWatcher(){
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -81,7 +119,45 @@ public class Input_userinfo extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
         });
+        // 주소 입력을 위한 창
+        et_address = (EditText) findViewById(R.id.et_address);
+
+
+        if (et_address != null) {
+            et_address.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event)
+                {
+                    if(event.getAction() == MotionEvent.ACTION_UP) {
+                        Intent i = new Intent(Input_userinfo.this, com.example.fragmentexample2.WebViewActivity.class);
+                        startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+                        return true;
+                    }
+                    return false;
+                }
+            });
+        }
     }
+
+
+
+    // 주소지 결과 창
+    public void onActivityResult(int requestCode, int resultCode, Intent intent)
+    {
+        super.onActivityResult(requestCode, resultCode, intent);
+        switch (requestCode) {
+            case SEARCH_ADDRESS_ACTIVITY:
+                if (resultCode == RESULT_OK) {
+                    String data = intent.getExtras().getString("data");
+                    if (data != null) {
+                        et_address.setText(data);
+                    }
+                }
+                break;
+        }
+    }
+    //--------------------------------
+
     public String getSampleSizeScore(String inputVal){
         int inputIntval = Integer.parseInt(inputVal);
 
@@ -142,6 +218,11 @@ public class Input_userinfo extends AppCompatActivity {
         }else {
             return "73";
         }
+
+
+
+
+
     }
 
 }

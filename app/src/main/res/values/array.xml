@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="축사동">
+        <item>1동</item>
+        <item>2동</item>
+        <item>3동</item>
+        <item>4동</item>
+        <item>5동</item>
+        <item>6동</item>
+        <item>7동</item>
+        <item>8동</item>
+        <item>9동</item>
+        <item>10동</item>
+        <item>11동</item>
+        <item>12동</item>
+        <item>13동</item>
+        <item>14동</item>
+        <item>15동</item>
+        <item>16동</item>
+        <item>17동</item>
+        <item>18동</item>
+        <item>19동</item>
+        <item>20동</item>
+    </string-array>
+</resources>

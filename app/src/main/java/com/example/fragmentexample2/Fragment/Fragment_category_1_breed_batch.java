@@ -1,5 +1,7 @@
 package com.example.fragmentexample2.Fragment;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -19,6 +21,7 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,7 +35,7 @@ import com.example.fragmentexample2.R;
 import com.example.fragmentexample2.category1;
 import com.example.fragmentexample2.getStrawScore;
 
-public class Fragment_category_1_breed_batch extends Fragment implements category1.onKeyBackPressedListener {
+public class Fragment_category_1_breed_batch extends Fragment implements category1.onKeyBackPressedListener{
     private View view;
     private String result;
     private Button btn_move;
@@ -41,6 +44,8 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
     Integer water_Tank_Num = 0, water_Tank_Clean = 0, water_Tank_Time = 0;
 
     public String total_cow_count = ((Input_userinfo) Input_userinfo.context_userinfo).total_cow_count;
+    public MainActivity activity;
+
 
     @Nullable
     @Override
@@ -87,11 +92,17 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
             @Override
             public void onClick(View view){
                 String dong_count = Integer.toString(selectedItemIndex[0]);
-                int exInt = Integer.parseInt(dong_count);
-                Intent intent = new Intent(getActivity(), Breed_q4.class);
-                intent.putExtra("dong_count",dong_count); /*송신*/
+                if(Integer.parseInt(dong_count) == 0){
+                    String msg = "축사 동 수를 선택해주세요";
+                    Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }else{
+                    int dong_size = Integer.parseInt(dong_count);
+                    Intent intent = new Intent(getActivity(), Breed_q4.class);
+                    intent.putExtra("dong_count",dong_size); /*송신*/
 
-                startActivity(intent);
+                    startActivity(intent);
+                }
+
             }
         });
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

@@ -1,7 +1,9 @@
 package com.example.fragmentexample2.Fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -10,11 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ProgressBar;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -29,7 +31,7 @@ import com.example.fragmentexample2.Input_userinfo;
 import com.example.fragmentexample2.MainActivity;
 import com.example.fragmentexample2.Milk_cow;
 import com.example.fragmentexample2.R;
-import com.example.fragmentexample2.WaterTankClean;
+import com.example.fragmentexample2.MilkCow_Question.Freestall_q4;
 import com.example.fragmentexample2.category1;
 
 public class fragment_category_1_freestall extends Fragment implements category1.onKeyBackPressedListener {
@@ -48,14 +50,16 @@ public class fragment_category_1_freestall extends Fragment implements category1
 
         ScrollView scrollview_freestall_1 = view.findViewById(R.id.scrollview_freestall_1);
 
-        RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2);//2번 문항
+        RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2_1);//2번 문항 급수기 선택
+        RadioGroup rdiog_2_water_tank_num_1 = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2_1);//2번 문항 개별 급수기 선택
+        RadioGroup rdiog_2_water_tank_num_2 = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Num_rdogrp2_2);//2번 문항 대형 급수기 선택
         RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.freestall_water_Tank_Clean_rdogrp3); //3번 문항
         Spinner spinner_4_water_clean_num = (Spinner) view.findViewById(R.id.freestall_spinner_a4);//4번 문항
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
         ed_1_poorRate = (EditText) view.findViewById(R.id.freestall_poorRate_a1); //1번 문항
 
-        TextView freestall_water_Tank_Num_q2 = (TextView) view.findViewById(R.id.freestall_water_Tank_Num_q2);
+        TextView freestall_water_Tank_Num_q2 = (TextView) view.findViewById(R.id.freestall_water_Tank_Num_q2_1);
         TextView freestall_water_Tank_Clean_q3 = (TextView) view.findViewById(R.id.freestall_water_Tank_Clean_q3);
         TextView freestall_water_Tank_Time_q4 = (TextView) view.findViewById(R.id.freestall_water_Tank_Time_q4);
 
@@ -67,18 +71,80 @@ public class fragment_category_1_freestall extends Fragment implements category1
         // 1번문항 버튼 생기고, 다음 화면으로 넘어가는 동작
 //        ((MainActivity)MainActivity.mContext).addButtonScroll(ed_1_poorRate,freestall_poorRate_btn,scrollview_freestall_1,freestall_water_Tank_Num_q2);
 
+        RadioButton freestall_water_Tank_Num_a2_1 = view.findViewById(R.id.freestall_water_Tank_Num_a2_1_1); //개별 급수기 1번 버튼(개별 급수 10두 이하)
+        RadioButton freestall_water_Tank_Num_a2_2 = view.findViewById(R.id.freestall_water_Tank_Num_a2_2_1); //개별 급수기 2번 버튼(개별 급수 11두 이상)
+//        RadioButton freestall_water_Tank_Num_a2_2 = view.findViewById(R.id.freestall_water_Tank_Num_a2_2_1); //대형 급수기 1번 버튼(개별 급수 20두 이하)
+//        RadioButton freestall_water_Tank_Num_a2_2 = view.findViewById(R.id.freestall_water_Tank_Num_a2_2_1); //대형 급수기 2번 버튼(개별 급수 21두 이상)
+
+        freestall_water_Tank_Num_a2_1.setChecked(RadioUpdate("freestall_water_Tank_Num_a2_1")); //sharedprefs 저장되어 있던 라디오 버튼 호출(개별 급수 10두 이하)
+        freestall_water_Tank_Num_a2_2.setChecked(RadioUpdate("freestall_water_Tank_Num_a2_2")); //sharedprefs 저장되어 있던 라디오 버튼 호출(개별 급수 11두 이상)
+
+        freestall_water_Tank_Num_a2_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SaveIntoSharedPrefsRadio("freestall_water_Tank_Num_a2_1", isChecked);
+            }
+        });
+        freestall_water_Tank_Num_a2_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SaveIntoSharedPrefsRadio("freestall_water_Tank_Num_a2_2", isChecked);
+            }
+        });
+
+        //2번 문항 상위 문항(급수기 선택)
         rdiog_2_water_tank_num.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.freestall_water_Tank_Num_a2_1) { //개별 급수기 선택
+                    LinearLayout L1 = view.findViewById(R.id.freestall_water_Tank_Num_L1);
+                    L1.setVisibility(view.GONE);
+                } else if (checkedId == R.id.freestall_water_Tank_Num_a2_2) { //대형 급수기 선택
+                    LinearLayout L2 = view.findViewById(R.id.freestall_water_Tank_Num_L2);
+                    L2.setVisibility(view.GONE);
+                }
+            }
+        });
+
+        //2번 문항 하위 문항(개별 급수기)
+        rdiog_2_water_tank_num_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
                 ((MainActivity) MainActivity.mContext).scrollToView(freestall_water_Tank_Clean_q3, scrollview_freestall_1, 0);
-                if (checkedId == R.id.freestall_water_Tank_Num_a2_1) {
+                if (checkedId == R.id.freestall_water_Tank_Num_a2_1_1) {
                     water_Tank_Num = 1;
-                } else if (checkedId == R.id.freestall_water_Tank_Num_a2_2) {
+                } else if (checkedId == R.id.freestall_water_Tank_Num_a2_2_1) {
                     water_Tank_Num = 2;
                 }
             }
         });
 
+        RadioButton freestall_water_Tank_Num_a3_1 = view.findViewById(R.id.freestall_water_Tank_Clean_a3_1);
+        RadioButton freestall_water_Tank_Num_a3_2 = view.findViewById(R.id.freestall_water_Tank_Clean_a3_2);
+        RadioButton freestall_water_Tank_Num_a3_3 = view.findViewById(R.id.freestall_water_Tank_Clean_a3_3);
+
+        freestall_water_Tank_Num_a3_1.setChecked(RadioUpdate("freestall_water_Tank_Num_a3_1"));
+        freestall_water_Tank_Num_a3_2.setChecked(RadioUpdate("freestall_water_Tank_Num_a3_2"));
+        freestall_water_Tank_Num_a3_3.setChecked(RadioUpdate("freestall_water_Tank_Num_a3_3"));
+
+        freestall_water_Tank_Num_a3_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SaveIntoSharedPrefsRadio("freestall_water_Tank_Num_a3_1", isChecked);
+            }
+        });
+        freestall_water_Tank_Num_a3_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SaveIntoSharedPrefsRadio("freestall_water_Tank_Num_a3_2", isChecked);
+            }
+        });
+        freestall_water_Tank_Num_a3_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SaveIntoSharedPrefsRadio("freestall_water_Tank_Num_a3_3", isChecked);
+            }
+        });
 
         rdiog_3_water_tank_clean.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -99,7 +165,7 @@ public class fragment_category_1_freestall extends Fragment implements category1
             @Override
             public void onClick(View v) {
                 water_Tank_Clean_Num = spinner_4_water_clean_num.getSelectedItem().toString();
-                Intent intent = new Intent(getActivity(), WaterTankClean.class);
+                Intent intent = new Intent(getActivity(), Freestall_q4.class);
                 intent.putExtra("water_Tank_Clean_Num", water_Tank_Clean_Num);
                 startActivity(intent);
             }
@@ -169,9 +235,49 @@ public class fragment_category_1_freestall extends Fragment implements category1
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
         });
+        ed_1_poorRate.setText(StringUpdate()); //sharedpref로 저장된 값 호출
 
         return view;
     }
+
+    private void SaveIntoSharedPrefsString(String key) {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("value", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("value", key);
+        editor.commit();
+    }
+    private String StringUpdate() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("value", Context.MODE_PRIVATE);
+        return sharedPreferences.getString("value", "");
+
+    }
+
+    // 라디오 버튼 값 저장
+    private void SaveIntoSharedPrefsRadio(String key, boolean value) {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("value", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(key, value);
+        editor.apply();
+    }
+    // 라디오 버튼 값 업데이트
+    private boolean RadioUpdate(String key) {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("value", Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean(key, false);
+    }
+    // 값 전체 삭제
+    private void ClearPreferences(){
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("value", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        SaveIntoSharedPrefsString(ed_1_poorRate.getText().toString());
+    }
+
     @Override
     public void onBackKey() {
         category1 activity = (category1) getActivity();

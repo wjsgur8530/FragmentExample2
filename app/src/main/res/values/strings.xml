@@ -2,5 +2,104 @@
     <string name="app_name">FragmentExample</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pen_location_1">
+        1동 표본 펜 위치
+    </string>
+    <string name="pen_location_2">
+        2동 표본 펜 위치
+    </string>
+    <string name="pen_location_3">
+        3동 표본 펜 위치
+    </string>
+    <string name="pen_location_4">
+        4동 표본 펜 위치
+    </string>
+    <string name="pen_location_5">
+        5동 표본 펜 위치
+    </string>
+    <string name="pen_location_6">
+        6동 표본 펜 위치
+    </string>
+    <string name="pen_location_7">
+        7동 표본 펜 위치
+    </string>
+    <string name="pen_location_8">
+        8동 표본 펜 위치
+    </string>
+    <string name="pen_location_9">
+        9동 표본 펜 위치
+    </string>
+    <string name="pen_location_10">
+        10동 표본 펜 위치
+    </string>
+    <string name="pen_location_11">
+        11동 표본 펜 위치
+    </string>
+    <string name="pen_location_12">
+        12동 표본 펜 위치
+    </string>
+    <string name="pen_location_13">
+        13동 표본 펜 위치
+    </string>
+    <string name="pen_location_14">
+        14동 표본 펜 위치
+    </string>
+    <string name="pen_location_15">
+        15동 표본 펜 위치
+    </string>
+    <string name="pen_location_16">
+        16동 표본 펜 위치
+    </string>
+    <string name="pen_location_17">
+        17동 표본 펜 위치
+    </string>
+    <string name="pen_location_18">
+        18동 표본 펜 위치
+    </string>
+    <string name="pen_location_19">
+        19동 표본 펜 위치
+    </string>
+    <string name="pen_location_20">
+        20동 표본 펜 위치
+    </string>
 
+
+    <string name="pen_location_hint">
+        표본 펜 위치를 입력해주세요 ex ) 1 , 2 , 3
+    </string>
+    <string name="water_tank_time_pen_1">
+        표본 펜 음수 행동 간이측정 점수
+    </string>
+    <string name="pen_total_cow">
+        펜에 있는 소는 총 몇 두입니까?
+    </string>
+    <string name="pen_total_cow_hint">
+        펜에 있는 소의 총 두 수를 입력해주세요
+    </string>
+    <string name="wating_drink_cow">
+        펜의 음수 대기 우 수는 몇 두 입니까?
+    </string>
+    <string name="wating_drink_cow_hint">
+        펜의 음수 대기 우 수를 입력해주세요
+    </string>
+    <string name="drinking_water_time">
+        음수 우의 음수 시간은 몇 분입니까?
+    </string>s
+    <string name="drinking_water_time_hint">
+        음수 우의 음수 시간을 입력해주세요 (분 단위)
+    </string>
+    <string name="wating_ratio_cow">
+        음수를 대기하고 있는 대기 우 비율 (%)
+    </string>
+    <string name="water_tank_time">
+        음수 행동 간이 측정 점수
+    </string>
+    <string name="title_q4">
+        동별 음수 행동 간이 점수 측정
+    </string>
+
+    //프리스톨
+    <string name="water_tank_form">
+        음수조는 어떤 형태입니까?
+    </string>
 </resources>

@@ -34,9 +34,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Breed_q4 extends AppCompatActivity {
-
-
-
     private int dong_size;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -862,7 +859,7 @@ public class Breed_q4 extends AppCompatActivity {
                 if (TextUtils.isEmpty(waitngCowEt_20.getText().toString()) || TextUtils.isEmpty(drinkTimeEt_20.getText().toString()))   {
                     drinkScoreTv_20.setText("값을 입력해주세요");
                 } else{
-                    drinkScoreArray[19] =setDrinkWaterScore(totalCowEt_20,waitngCowEt_20,drinkTimeEt_20,waitngRatioTv_20,drinkScoreTv_20);
+                    drinkScoreArray[19] = setDrinkWaterScore(totalCowEt_20,waitngCowEt_20,drinkTimeEt_20,waitngRatioTv_20,drinkScoreTv_20);
                 }
             }});
 
@@ -908,6 +905,7 @@ public class Breed_q4 extends AppCompatActivity {
         int drinkScore = getDrinkWaterScore(waitngRatio,drinkTime);
         drinkScoreTv.setText(String.valueOf(drinkScore));
 
+        // 수정 해야 됨
         return drinkScore;
     }
     public void setWaitingCowEt(EditText totalCowEt,EditText waitngCowEt,TextView waitngRatioTv){

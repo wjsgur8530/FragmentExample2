@@ -81,16 +81,16 @@
                         android:imeOptions="actionDone"
                         android:inputType="number"></EditText>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="전체 두수의 여윈 개체의 비율 "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16dp" />
+
 
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:text="전체 두수의 여윈 개체의 비율 "
-                    android:textColor="@color/colorWhite"
-                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/breed_poor_Rate_ratio"

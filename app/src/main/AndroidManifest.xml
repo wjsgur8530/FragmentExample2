@@ -12,15 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Qustion_dong.Breed_q4"/>
+        <activity android:name=".Qustion_dong.Breed_q5"></activity>
+        <activity android:name=".Qustion_dong.Breed_q4" />
         <activity android:name=".WaterTankClean" />
         <activity android:name=".getStrawScore" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".Result" />
         <activity android:name=".Input_userinfo" />
         <activity android:name=".category1" />
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

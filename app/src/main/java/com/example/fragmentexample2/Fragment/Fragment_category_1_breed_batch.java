@@ -52,7 +52,7 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_category_1_breed_batch, container, false);
         ScrollView scrollview_freestall_1 = view.findViewById(R.id.scrollview_freestall_1); //fatten으로
-        Spinner Spinner_breed_q4 = view.findViewById(R.id.spinner_breed_q4);
+
         RadioGroup rdiog_2_water_tank_num = (RadioGroup) view.findViewById(R.id.breed_batch_water_Tank_Num_rdogrp2);//2번 문항
         RadioGroup rdiog_3_water_tank_clean = (RadioGroup) view.findViewById(R.id.breed_batch_water_Tank_Clean_rdogrp3); //3번 문항
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
@@ -71,7 +71,7 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
         Spinner mSpinner = view.findViewById(R.id.spinner_breed_q4);
         mSpinner.setAdapter( spinnerAdapter );
         final int[] selectedItemIndex = new int[1];
-        Spinner_breed_q4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 선택된 데이터 값
@@ -158,6 +158,7 @@ public class Fragment_category_1_breed_batch extends Fragment implements categor
                 String water_tank_time = Integer.toString(water_Tank_Time);
 
                 String[] protocol1 = {poorRate, water_tank_num, water_tank_clean, water_tank_time};
+
 
                 Bundle bundle = new Bundle(); // 무언가를 담는 공간
                 bundle.putString("submit", poorRate); //id, content 마지막 페이지로 데이터 전달

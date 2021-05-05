@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/animal_new" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/animal_php" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/animal_welfare" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/mysqlcon" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/original_animal_walfare" vcs="Git" />
   </component>
 </project>

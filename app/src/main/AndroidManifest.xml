@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Qustion_dong.Breed_q4"></activity>
+        <activity android:name=".Qustion_dong.Breed_q5"></activity>
+        <activity android:name=".Qustion_dong.Breed_q4" />
         <activity android:name=".WaterTankClean" />
         <activity android:name=".getStrawScore" />
         <activity android:name=".WebViewActivity" />

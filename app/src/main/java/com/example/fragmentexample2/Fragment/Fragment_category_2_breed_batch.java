@@ -1,19 +1,26 @@
 package com.example.fragmentexample2.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.fragmentexample2.Qustion_dong.Breed_q4;
+import com.example.fragmentexample2.Qustion_dong.Breed_q5;
 import com.example.fragmentexample2.R;
 import com.example.fragmentexample2.category1;
 
@@ -31,9 +38,8 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
         view = inflater.inflate(R.layout.fragment_category_2_breed_batch, container, false);
 
         //fragment에서는 findById가 바로 동작하지 않아서 view를 사용해 써야함.
-        RadioGroup rdiog_5_straw_feed_tank = (RadioGroup) view.findViewById(R.id.breed_batch_straw_Feed_Tank_rdogrp5);
-        RadioGroup rdiog_6_straw_normal = (RadioGroup) view.findViewById(R.id.breed_batch_straw_Normal_rdogrp6);
-        RadioGroup rdiog_7_straw_resting_place = (RadioGroup) view.findViewById(R.id.breed_batch_straw_Resting_Place_rdogrp7); //7번 문항(프리스톨)
+
+
         ed_8_outward_Hygiene = (EditText) view.findViewById(R.id.breed_batch_outward_Hygiene_a8);
         RadioGroup rdiog_9_shade = (RadioGroup) view.findViewById(R.id.breed_batch_shade_rdogrp9); //9번 문항
         RadioGroup rdiog_10_summer_ventilating = (RadioGroup) view.findViewById(R.id.breed_batch_summer_Ventilating_rdogrp10); //10번 문항
@@ -48,49 +54,52 @@ public class Fragment_category_2_breed_batch extends Fragment implements categor
         TextView breed_winter_rest_score = (TextView)view.findViewById(R.id.breed_winter_rest_score);
         TextView breed_calf_winter_rest_score = (TextView)view.findViewById(R.id.breed_calf_winter_rest_score);
 
-        rdiog_5_straw_feed_tank.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        ArrayAdapter spinnerAdapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.dong_size,
+                android.R.layout.simple_spinner_item);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Spinner mSpinner = view.findViewById(R.id.spinner_breed_q5);
+        mSpinner.setAdapter( spinnerAdapter );
+        final int[] selectedItemIndex = new int[1];
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.breed_batch_straw_Feed_Tank_a5_1) {
-                    straw_Feed_Tank = 1;
-                } else if (checkedId == R.id.breed_batch_straw_Feed_Tank_a5_2) {
-                    straw_Feed_Tank = 2;
-                } else if (checkedId == R.id.breed_batch_straw_Feed_Tank_a5_3) {
-                    straw_Feed_Tank = 3;
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // 선택된 데이터 값
+                String selectedItem = parent.getSelectedItem().toString();
+
+                // 선택된 데이터 위치( 0 부터 )
+                selectedItemIndex[0] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        Button breed_btn_q5 = view.findViewById(R.id.breed_btn_q5);
+
+
+        breed_btn_q5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String dong_count = Integer.toString(selectedItemIndex[0]);
+                if(Integer.parseInt(dong_count) == 0){
+                    String msg = "축사 동 수를 선택해주세요";
+                    Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                }else{
+                    int dong_size = Integer.parseInt(dong_count);
+                    Intent intent = new Intent(getActivity(), Breed_q5.class);
+                    intent.putExtra("dong_count",dong_size); /*송신*/
+
+                    startActivity(intent);
                 }
+
             }
         });
 
 
-        rdiog_6_straw_normal.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.breed_batch_straw_Normal_a6_1) {
-                    straw_Normal = 1;
-                } else if (checkedId == R.id.breed_batch_straw_Normal_a6_2) {
-                    straw_Normal = 2;
-                } else if (checkedId == R.id.breed_batch_straw_Normal_a6_3) {
-                    straw_Normal = 3;
-                } else if (checkedId == R.id.breed_batch_straw_Normal_a6_4) {
-                    straw_Normal = 4;
-                }
-            }
-        });
 
-        rdiog_7_straw_resting_place.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.breed_batch_straw_Resting_Place_a7_1) {
-                    straw_Resting_Place = 1;
-                } else if (checkedId == R.id.breed_batch_straw_Resting_Place_a7_2) {
-                    straw_Resting_Place = 2;
-                } else if (checkedId == R.id.breed_batch_straw_Resting_Place_a7_3) {
-                    straw_Resting_Place = 3;
-                } else if (checkedId == R.id.breed_batch_straw_Resting_Place_a7_4) {
-                    straw_Resting_Place = 4;
-                }
-            }
-        });
 
         rdiog_9_shade.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

@@ -2,7 +2,6 @@ package com.example.fragmentexample2.MilkCow_Question;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.fragmentexample2.Fragment.fragment_category_1_freestall;
 import com.example.fragmentexample2.R;
 
 import java.util.Arrays;
